@@ -29,7 +29,7 @@ Tokens: --paper --paper-2 --panel --ink --ink-soft --muted --line --line-strong 
 `.fig` images: add `loading="lazy"` is NOT needed. Keep alt text.
 
 ## Broken photos
-These files are pure black (HEIC decode failed): delta-priority/delta-1.jpg, delta-2.jpg, sanjose/sanjose-1.jpg, nz-lounge/nz-1..4.jpg. Keep the `<img>` but add `data-pending` on their `.fig` (styled placeholder "原图待补" is built in).
+These files are pure black (HEIC decode failed): nz-lounge/nz-1..4.jpg. Keep the `<img>` but add `data-pending` on their `.fig` (styled placeholder "原图待补" is built in).
 Hong Kong videos are portrait 2160×3840 (9:16). Beijing/Taipei photos are only 512×512.
 
 ## Verify
