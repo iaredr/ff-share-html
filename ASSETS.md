@@ -1,0 +1,23 @@
+# Media inventory for redesign
+
+## Videos (playable in browser — do NOT replace with still frames)
+- media/hk-plaza/video/plaza-buffet.mp4 — 香港环亚自助餐台
+- media/hk-plaza/video/plaza-meal.mp4 — 香港环亚托盘餐
+
+## User photos (keep captions; clickable lightbox)
+- media/beijing/beijing-1..5.jpg — 北京机场（部分仅 512px HEIC 解码上限）
+- media/delta-priority/delta-1..3.jpg — 达美优先行李
+- media/sanjose/sanjose-1.jpg — 行李到了 San Jose
+- media/nz-lounge/nz-1..4.jpg — 新西兰休息室
+- media/taipei/taipei-1..3.jpg — 台北休息室（担担面彩蛋口播）
+
+## oneworld
+- logos: oneworld.svg, cathay.svg, qantas.svg, aa-symbol.svg, aa-wordmark.svg
+- planes: cx-oneworld.jpg, qantas-plane.jpg, aa-plane.jpg
+- emerald-sapphire.png — Emerald/Sapphire 示意（非官方卡面）
+
+## SkyTeam (need many on that slide)
+- skyteam-livery.jpg, mu-chinaeastern.jpg, mf-xiamen.jpg, ci-chinaairlines.jpg, dl-delta.jpg
+
+## Star Alliance
+- star-livery.jpg, ca-airchina.jpg, zh-shenzhen.jpg, br-eva.jpg, sq-singapore.jpg, lh-lufthansa.jpg, nz-airnz.jpg, ua-united.jpg
