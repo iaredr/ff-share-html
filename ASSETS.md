@@ -14,7 +14,7 @@
 ## oneworld
 - logos: oneworld.svg, cathay.svg, qantas.svg, aa-symbol.svg, aa-wordmark.svg
 - planes: cx-oneworld.jpg, qantas-plane.jpg, aa-plane.jpg
-- emerald-sapphire.png — Emerald/Sapphire 示意（非官方卡面）
+- emerald-sapphire.png — 旧示意图（已弃用：P18 改为 s18.html 内联 SVG 卡片）
 
 ## SkyTeam (need many on that slide)
 - skyteam-livery.jpg, mu-chinaeastern.jpg, mf-xiamen.jpg, ci-chinaairlines.jpg, dl-delta.jpg
