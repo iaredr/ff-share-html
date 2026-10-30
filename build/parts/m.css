@@ -1,0 +1,95 @@
+/* ===== Route maps · 为什么组联盟 + 04–06 航线网 ===== */
+.m-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* —— Map canvas (land + routes share one viewBox) —— */
+.m-map { --sw: 2.2; display: flex; align-items: center; justify-content: center; min-height: 0; background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; overflow: hidden; }
+.m-canvas { position: relative; aspect-ratio: 1000 / 398; height: 100%; max-width: 100%; }
+.m-canvas > svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.m-land { fill: var(--line); }
+.m-routes { overflow: visible; }
+.m-rt { fill: none; stroke: var(--ink-soft); stroke-width: var(--sw); stroke-linecap: round; opacity: 0.78; }
+.m-l0 .m-rt { stroke: var(--accent); stroke-width: calc(var(--sw) * 1.35); opacity: 1; }
+.m-dot { fill: var(--ink-soft); }
+.m-hub circle { fill: var(--panel); stroke: var(--ink-soft); stroke-width: calc(var(--sw) * 1.1); }
+.m-hub .m-hub-c { fill: var(--ink-soft); stroke: none; }
+.m-hub0 circle { stroke: var(--accent); }
+.m-hub0 .m-hub-c { fill: var(--accent); }
+.m-hub text { font-family: var(--mono); font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: var(--panel); stroke-width: 5px; stroke-linejoin: round; letter-spacing: 0.04em; }
+.m-hub0 text { fill: var(--accent); }
+
+/* Draw-in: own routes first, then each partner */
+.slide.active .m-rt { stroke-dasharray: 1; stroke-dashoffset: 1; animation: m-draw 0.9s cubic-bezier(.4,.1,.2,1) forwards; animation-delay: var(--d, 0.2s); }
+.slide.active .m-l0 { --d: 0.25s; }
+.slide.active .m-l1 { --d: 1.25s; }
+.slide.active .m-l2 { --d: 2.1s; }
+.slide.active .m-hub, .slide.active .m-dots { opacity: 0; animation: m-fade 0.4s ease forwards; }
+.slide.active .m-hub0 { animation-delay: 0.1s; }
+.slide.active .m-hub1 { animation-delay: 1.1s; }
+.slide.active .m-hub2 { animation-delay: 1.95s; }
+.slide.active .m-dots { animation-delay: 2.7s; }
+@keyframes m-draw { to { stroke-dashoffset: 0; } }
+@keyframes m-fade { to { opacity: 1; } }
+
+/* —— 03b Why alliances —— */
+.m-why-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 20px; }
+.m-why-top h2 { margin: 0; white-space: nowrap; }
+.m-why-lead { margin: 0 0 8px; font-size: 26px; line-height: 1.45; color: var(--ink-soft); text-align: right; }
+.m-why-lead strong { color: var(--accent); }
+.m-map-big { padding: 10px 14px; }
+.m-trip { position: absolute; left: 1.5%; bottom: 5%; display: flex; flex-direction: column; gap: 10px; padding: 14px 18px 14px; background: var(--paper); border: 1.5px solid var(--line-strong); border-radius: 10px; }
+.m-trip-k { font-family: var(--mono); font-size: 14px; letter-spacing: 0.2em; color: var(--muted); }
+.m-trip-r { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 26px; font-weight: 700; color: var(--ink); }
+.m-trip-r i { font-style: normal; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 4px; border: 1.5px solid currentColor; color: var(--ink-soft); }
+.m-trip-r i.m-own { color: var(--accent); }
+.m-trip-r span { color: var(--line-strong); font-weight: 500; }
+.m-trip-v { font-size: 18px; color: var(--ink-soft); padding-top: 10px; border-top: 1.5px dashed var(--line-strong); }
+.m-steps { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.m-step { display: flex; align-items: center; gap: 18px; padding: 14px 22px; background: var(--paper-2); border: 1.5px solid var(--line); border-radius: 12px; }
+.m-step > b { flex: 0 0 auto; font-family: var(--display); font-size: 52px; font-weight: 800; line-height: 1; color: var(--ink-soft); padding-right: 18px; border-right: 1.5px dashed var(--line-strong); }
+.m-step h4 { margin: 0; font-size: 26px; line-height: 1.25; color: var(--ink); }
+.m-step p { margin: 4px 0 0; font-size: 20px; line-height: 1.35; color: var(--ink-soft); }
+.m-step-own { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.m-step-own > b, .m-step-own h4 { color: var(--accent); }
+.slide.active .m-step { opacity: 0; animation: m-fade 0.4s ease forwards; }
+.slide.active .m-step:nth-child(1) { animation-delay: 0.1s; }
+.slide.active .m-step:nth-child(2) { animation-delay: 1.1s; }
+.slide.active .m-step:nth-child(3) { animation-delay: 1.95s; }
+
+/* —— 04–06 Network card beside the photos —— */
+.m-split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; min-height: 0; }
+.m-card { display: flex; flex-direction: column; min-height: 0; padding: 16px 20px 16px; background: var(--panel); border: 1.5px solid var(--line); border-radius: 12px; position: relative; }
+.m-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--accent); border-radius: 12px 12px 0 0; }
+.m-card-k { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 14px; letter-spacing: 0.2em; color: var(--muted); padding: 4px 0 10px; }
+.m-card-k b { color: var(--accent); }
+.m-card .m-map { --sw: 3.4; border: 0; border-radius: 8px; background: var(--paper-2); flex: 0 0 auto; }
+.m-card .m-canvas { height: auto; width: 100%; }
+.m-card .m-land { fill: color-mix(in srgb, var(--line) 85%, var(--line-strong)); }
+.m-card .m-hub text { stroke: var(--paper-2); }
+.m-card .m-hub circle { fill: var(--paper-2); }
+.m-card .m-hub .m-hub-c { fill: var(--ink-soft); }
+.m-card .m-hub0 .m-hub-c { fill: var(--accent); }
+.m-legend { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; justify-content: space-around; flex: 1; }
+.m-legend li { display: flex; align-items: center; gap: 16px; font-size: 24px; color: var(--ink); padding: 8px 0; border-top: 1px solid var(--line); }
+.m-legend li:first-child { border-top: 0; }
+.m-legend .m-code { flex: 0 0 auto; width: 74px; text-align: center; font-family: var(--mono); font-size: 18px; font-weight: 700; letter-spacing: 0.06em; color: var(--ink-soft); border: 2px solid currentColor; border-radius: 6px; padding: 3px 0; }
+.m-legend .m-own .m-code { color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+.m-legend b { font-weight: 700; }
+.m-legend span { color: var(--ink-soft); }
+.m-legend .m-own b { color: var(--accent); }
+
+/* photos re-flow into the narrower right column */
+.m-split .a-mosaic { min-height: 0; }
+.m-split .a-mosaic-3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.4fr 1fr; }
+.m-split .a-mosaic-3 .fig:first-child { grid-row: auto; grid-column: 1 / -1; }
+.m-split .a-mosaic-5 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.3fr 1fr 1fr; gap: 14px; }
+.m-split .a-mosaic-5 .fig:first-child { grid-row: auto; grid-column: 1 / -1; }
+.m-split .a-mosaic-8 { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); gap: 12px; }
+.m-split .a-mosaic-8 .fig:first-child, .m-split .a-mosaic-8 .fig:last-child { grid-column: auto; grid-row: auto; }
+.m-split .a-mosaic-8 .fig:first-child .cap { font-size: 16px; }
+
+/* —— 03c Qantas route map photos —— */
+.m-qf-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; min-height: 0; }
+.m-qf-row .fig { border-radius: 12px; box-shadow: inset 0 0 0 1px var(--line); }
+.m-qf-row .fig::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--accent); z-index: 1; }
+.m-qf-row .cap { font-size: 18px; padding: 7px 14px; left: 12px; bottom: 12px; }
+.m-qf-row .cap .code { padding: 1px 7px; border: 1.5px solid currentColor; border-radius: 4px; font-size: 16px; }

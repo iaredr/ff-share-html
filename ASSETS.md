@@ -8,8 +8,8 @@
 - media/beijing/beijing-1..5.jpg — 国泰北京休息室实拍（落地窗/入口/邀请函·已打码/座位区/吧台）
 - media/delta-priority/delta-1..3.jpg — 达美优先行李
 - media/sanjose/sanjose-1.jpg — 行李到了 San Jose
-- media/nz-lounge/nz-1..4.jpg — 新西兰休息室
-- media/taipei/taipei-1..3.jpg — 台北休息室（担担面彩蛋口播）
+- media/nz-lounge/nz-1..4.jpg — 奥克兰澳航休息室（扶梯指示/入口/淋浴间/机上苹果酒）
+- media/taipei/taipei-1..3.jpg — 台北环亚休息室（牛肉面/现点菜单/百岳墙，牛肉面彩蛋口播）
 
 ## oneworld
 - logos: oneworld.svg, cathay.svg, qantas.svg, aa-symbol.svg, aa-wordmark.svg
