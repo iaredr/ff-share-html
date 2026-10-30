@@ -4,52 +4,80 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>常旅客入门分享 · 升舱通道</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Airport wayfinding · 16:9 projector stage */
+/*
+  DESIGN PLAN — Premium Cabin Boarding Pass
+  Palette:
+    Cabin Navy      #0A1B33
+    Champagne Metal #C4A46A
+    Paper Cool      #F3F5F8   (cool blue-grey paper)
+    Mist Panel      #FFFFFF
+    Ink Deep        #121A26
+    Ember Copper    #A85A2E   (upgrade-section accent only)
+  Type:
+    Display/gate: Barlow Condensed (aviation data-plate)
+    Body CJK: PingFang SC / system
+  Layout: left perforated boarding-pass stub + left-aligned content stage
+  Motif: ONE — stub perforation. Everything else quiet.
+  Self-critique: no cream/clay defaults, no acid green, no broadsheet,
+    no SaaS card kit / soft grey shadows, no ALL-CAPS eyebrows,
+    no · meta joins, no WORD — fragments, no → link tails.
+*/
+
 :root {
-  --ink: #15202b;
-  --ink-soft: #3a4a5c;
-  --muted: #6a7b8f;
-  --paper: #f0f3f8;
-  --paper-2: #e4eaf2;
-  --panel: #ffffff;
-  --line: #c8d2de;
-  --line-strong: #8fa0b5;
-  --accent: #0c4a7a;
-  --ow: #8b1530;
-  --ow-2: #5c2d6b;
-  --st: #1560a0;
-  --sa: #b8860b;
-  --warn: #c45c26;
-  --ok: #1a6b4a;
-  --letterbox: #070b10;
-  --nav-bg: rgba(240, 243, 248, 0.92);
-  --shadow: 0 2px 12px rgba(15, 25, 40, 0.08);
-  --img-shadow: 0 4px 18px rgba(15, 25, 40, 0.14);
+  --navy: #0A1B33;
+  --champagne: #C4A46A;
+  --champagne-deep: #9A7A45;
+  --paper: #F3F5F8;
+  --paper-2: #E6EBF2;
+  --panel: #FFFFFF;
+  --ink: #121A26;
+  --ink-soft: #3A4658;
+  --muted: #6B7A8F;
+  --line: #D0D8E4;
+  --line-strong: #9AABBF;
+  --ember: #A85A2E;
+  --ow: #8B1E3F;
+  --ow-2: #5C2A6E;
+  --st: #1A6BA5;
+  --sa: #9A7B2F;
+  --ok: #1F6B4A;
+  --letterbox: #05080E;
+  --nav-bg: rgba(243, 245, 248, 0.94);
+  --stub-bg: #0A1B33;
+  --stub-ink: #E8EDF5;
+  --stub-muted: #8A9BB0;
+  --stub-accent: #C4A46A;
   --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Noto Sans SC", "Segoe UI", system-ui, sans-serif;
-  --display: "DIN Alternate", "Avenir Next Condensed", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --display: "Barlow Condensed", "DIN Alternate", "Avenir Next Condensed", "PingFang SC", system-ui, sans-serif;
 }
 
 [data-theme="dark"] {
-  --ink: #e8eef6;
-  --ink-soft: #b4c2d4;
-  --muted: #8496ab;
-  --paper: #121a24;
-  --paper-2: #182230;
-  --panel: #1c2838;
-  --line: #2c3d52;
-  --line-strong: #4a6180;
-  --accent: #5ba8e0;
-  --ow: #e85a72;
-  --ow-2: #c090e0;
-  --st: #6bb3e8;
-  --sa: #e0b84a;
-  --warn: #e8955a;
-  --ok: #5ecf9a;
-  --letterbox: #040608;
-  --nav-bg: rgba(12, 18, 28, 0.92);
-  --shadow: 0 2px 16px rgba(0,0,0,0.35);
-  --img-shadow: 0 4px 22px rgba(0,0,0,0.5);
+  --paper: #0A1B33;
+  --paper-2: #0F2438;
+  --panel: #132638;
+  --ink: #E8EDF5;
+  --ink-soft: #B4C2D4;
+  --muted: #8496AB;
+  --line: #243848;
+  --line-strong: #3D5570;
+  --champagne: #D4B87A;
+  --champagne-deep: #C4A46A;
+  --ember: #D4875A;
+  --ow: #E85A72;
+  --ow-2: #C090E0;
+  --st: #6BB3E8;
+  --sa: #E0B84A;
+  --ok: #5ECF9A;
+  --letterbox: #020406;
+  --nav-bg: rgba(8, 18, 30, 0.94);
+  --stub-bg: #061220;
+  --stub-ink: #E8EDF5;
+  --stub-muted: #7A8FA5;
+  --stub-accent: #D4B87A;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -79,79 +107,138 @@ body {
   position: relative;
   width: min(100vw, calc(100vh * 16 / 9), 1920px);
   height: min(100vh, calc(100vw * 9 / 16), 1080px);
-  background: linear-gradient(165deg, var(--paper) 0%, var(--paper-2) 100%);
+  background: var(--paper);
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 20px 60px rgba(0,0,0,0.45);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 24px 64px rgba(0,0,0,0.55);
 }
 
 .deck {
   position: absolute;
   inset: 0;
-  padding-bottom: 2.6rem;
+  padding-bottom: 2.5rem;
 }
 
+/* —— Boarding-pass stub (signature motif) —— */
 .slide {
   position: absolute; inset: 0;
   display: none;
-  flex-direction: column;
-  padding: clamp(1.1rem, 2.4%, 2.2rem) clamp(1.4rem, 3.2%, 3rem);
-  padding-bottom: calc(clamp(1.1rem, 2.4%, 2.2rem) + 0.2rem);
+  flex-direction: row;
   opacity: 0;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
 }
 .slide.active { display: flex; opacity: 1; }
-.slide::before {
+
+.stub {
+  flex: 0 0 clamp(4.2rem, 7.2%, 5.6rem);
+  background: var(--stub-bg);
+  color: var(--stub-ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(0.9rem, 1.8%, 1.4rem) 0.35rem;
+  position: relative;
+  z-index: 2;
+}
+.stub::after {
+  /* perforated tear edge — holes punch through to stage paper */
   content: "";
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--accent);
+  position: absolute;
+  top: 0; bottom: 0; right: -6px;
+  width: 12px;
+  background:
+    radial-gradient(circle at center, var(--paper) 3.2px, transparent 3.5px) center / 12px 13px repeat-y;
+  pointer-events: none;
 }
-.slide[data-alliance="ow"]::before {
-  background: linear-gradient(90deg, var(--ow), var(--ow-2));
+.stub-num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--stub-accent);
+  writing-mode: horizontal-tb;
+  font-variant-numeric: tabular-nums;
 }
-.slide[data-alliance="st"]::before { background: var(--st); }
-.slide[data-alliance="sa"]::before { background: var(--sa); }
-.slide[data-section="upgrade"]::before {
-  background: linear-gradient(90deg, var(--warn), var(--accent));
+.stub-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: clamp(0.62rem, 0.95vw, 0.78rem);
+  letter-spacing: 0.18em;
+  color: var(--stub-muted);
+  font-weight: 500;
+  max-height: 55%;
+  overflow: hidden;
+}
+.stub-mark {
+  width: 1.1rem; height: 1.1rem;
+  border: 1.5px solid var(--stub-accent);
+  border-radius: 50%;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+.slide[data-section="upgrade"] .stub-num,
+.slide[data-section="upgrade"] .stub-mark {
+  color: var(--ember);
+  border-color: var(--ember);
+}
+.slide[data-alliance="ow"] .stub-num { color: #E8A0B0; }
+.slide[data-alliance="ow"] .stub-mark { border-color: #E8A0B0; }
+.slide[data-alliance="st"] .stub-num { color: #7EC0E8; }
+.slide[data-alliance="st"] .stub-mark { border-color: #7EC0E8; }
+.slide[data-alliance="sa"] .stub-num { color: #E0C878; }
+.slide[data-alliance="sa"] .stub-mark { border-color: #E0C878; }
+.slide[data-section="upgrade"][data-alliance="ow"] .stub-num { color: #E8A0B0; }
+.slide[data-section="upgrade"][data-alliance="ow"] .stub-mark { border-color: #E8A0B0; }
+
+.slide-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 2.2%, 2rem) clamp(1.2rem, 2.8%, 2.6rem);
+  padding-bottom: 0.4rem;
+  overflow: hidden;
 }
 
-.gate {
-  display: flex; align-items: baseline; gap: 0.75rem;
-  margin-bottom: 0.45rem; flex-shrink: 0;
+.kicker {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  margin-bottom: 0.35rem; flex-shrink: 0;
 }
-.gate-num {
-  font-family: var(--display);
-  font-size: clamp(0.72rem, 1.1vw, 0.9rem);
-  font-weight: 700; letter-spacing: 0.1em;
-  color: var(--muted); font-variant-numeric: tabular-nums;
-}
-.gate-label {
-  font-size: clamp(0.68rem, 1vw, 0.82rem);
+.kicker-sec {
+  font-size: clamp(0.68rem, 1vw, 0.8rem);
   color: var(--muted);
+  font-weight: 500;
 }
 
 h1 {
   font-family: var(--display);
-  font-size: clamp(1.9rem, 4.2vw, 3.2rem);
-  font-weight: 700; line-height: 1.12;
-  margin: 0 0 0.4rem; letter-spacing: -0.02em;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-weight: 700; line-height: 1.1;
+  margin: 0 0 0.35rem; letter-spacing: -0.01em;
+  color: var(--ink);
 }
 h2 {
   font-family: var(--display);
-  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
-  font-weight: 700; line-height: 1.18;
-  margin: 0 0 0.55rem; letter-spacing: -0.015em;
+  font-size: clamp(1.5rem, 2.9vw, 2.25rem);
+  font-weight: 700; line-height: 1.15;
+  margin: 0 0 0.45rem; letter-spacing: -0.01em;
 }
 h3 {
   font-family: var(--display);
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  font-weight: 700; margin: 0 0 0.35rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 700; margin: 0 0 0.3rem;
 }
 .subtitle {
-  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-  color: var(--ink-soft); margin: 0 0 0.8rem; line-height: 1.4; max-width: 38em;
+  font-size: clamp(0.95rem, 1.55vw, 1.18rem);
+  color: var(--ink-soft); margin: 0 0 0.7rem; line-height: 1.4; max-width: 38em;
+}
+.subtitle em {
+  font-style: normal; color: var(--ember); font-weight: 600;
 }
 .lead {
-  font-size: clamp(0.92rem, 1.45vw, 1.12rem);
-  color: var(--ink-soft); line-height: 1.5; max-width: 42em; margin: 0 0 0.7rem;
+  font-size: clamp(0.92rem, 1.4vw, 1.1rem);
+  color: var(--ink-soft); line-height: 1.5; max-width: 42em; margin: 0 0 0.65rem;
 }
 .content {
   flex: 1; display: flex; flex-direction: column;
@@ -163,146 +250,148 @@ ul.bullets {
 }
 ul.bullets li {
   position: relative;
-  padding: 0.38rem 0 0.38rem 1.15rem;
-  font-size: clamp(0.9rem, 1.4vw, 1.12rem);
+  padding: 0.4rem 0 0.4rem 1.05rem;
+  font-size: clamp(0.9rem, 1.35vw, 1.1rem);
   line-height: 1.4; color: var(--ink);
   border-bottom: 1px solid var(--line);
 }
 ul.bullets li:last-child { border-bottom: none; }
 ul.bullets li::before {
   content: ""; position: absolute; left: 0; top: 0.85em;
-  width: 0.42rem; height: 0.42rem; border-radius: 1px;
-  background: var(--accent); transform: translateY(-50%);
+  width: 0.35rem; height: 0.35rem;
+  background: var(--champagne); transform: translateY(-50%);
 }
 ul.bullets.ow li::before { background: var(--ow); }
 ul.bullets.st li::before { background: var(--st); }
 ul.bullets.sa li::before { background: var(--sa); }
-ul.bullets.warn li::before { background: var(--warn); }
+ul.bullets.warn li::before { background: var(--ember); }
 
 .tag {
   display: inline-block; font-size: 0.68rem; font-weight: 600;
-  padding: 0.12rem 0.4rem; border-radius: 3px; margin-right: 0.25rem; vertical-align: middle;
+  padding: 0.1rem 0.38rem; margin-right: 0.2rem; vertical-align: middle;
+  border: 1px solid currentColor; border-radius: 1px;
 }
-.tag-tip {
-  background: color-mix(in srgb, var(--warn) 18%, transparent);
-  color: var(--warn);
-  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
-}
-.tag-core {
-  background: color-mix(in srgb, var(--warn) 20%, transparent);
-  color: var(--warn);
-  border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent);
-}
-.tag-exp {
-  background: color-mix(in srgb, var(--accent) 15%, transparent);
-  color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-}
+.tag-tip { color: var(--ember); }
+.tag-core { color: var(--ember); }
+.tag-exp { color: var(--champagne-deep); }
+[data-theme="dark"] .tag-exp { color: var(--champagne); }
 
-/* Alliance cards */
+/* Alliance columns — hard edges, top metal bar, NOT soft SaaS cards */
 .alliance-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem; margin-top: 0.2rem; flex: 1; min-height: 0;
+  gap: 0; margin-top: 0.15rem; flex: 1; min-height: 0;
+  border: 1px solid var(--line);
 }
 .alliance-card {
-  background: var(--panel); border: 1px solid var(--line); border-top-width: 4px;
-  padding: 0.75rem 0.9rem; box-shadow: var(--shadow);
+  background: var(--panel);
+  padding: 0.85rem 1rem;
   display: flex; flex-direction: column;
+  border-right: 1px solid var(--line);
+  border-top: 3px solid var(--line-strong);
 }
+.alliance-card:last-child { border-right: none; }
 .alliance-card.ow { border-top-color: var(--ow); }
 .alliance-card.st { border-top-color: var(--st); }
 .alliance-card.sa { border-top-color: var(--sa); }
-.alliance-card h3 { margin: 0 0 0.15rem; font-size: clamp(1rem, 1.7vw, 1.25rem); }
-.alliance-card .en { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.4rem; }
+.alliance-card h3 { margin: 0 0 0.12rem; font-size: clamp(1.05rem, 1.8vw, 1.3rem); }
+.alliance-card .en { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; font-family: var(--display); letter-spacing: 0.04em; }
 .alliance-card ul { list-style: none; margin: 0; padding: 0; }
 .alliance-card li {
   font-size: clamp(0.82rem, 1.2vw, 0.95rem);
-  padding: 0.15rem 0; color: var(--ink-soft); line-height: 1.3;
+  padding: 0.18rem 0; color: var(--ink-soft); line-height: 1.3;
 }
 
 .benefit-row {
-  display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.4rem;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; margin-top: 0.35rem;
+  border: 1px solid var(--line);
 }
 .benefit-pill {
-  flex: 1 1 100px; background: var(--panel); border: 1px solid var(--line);
-  padding: 0.7rem 0.8rem; text-align: center; min-width: 90px;
+  background: var(--panel);
+  padding: 0.85rem 0.7rem; text-align: center;
+  border-right: 1px solid var(--line);
 }
+.benefit-pill:last-child { border-right: none; }
 .benefit-pill.hot {
-  border-color: color-mix(in srgb, var(--warn) 55%, var(--line));
-  box-shadow: inset 0 -3px 0 var(--warn);
+  background: color-mix(in srgb, var(--ember) 10%, var(--panel));
+  box-shadow: inset 0 -3px 0 var(--ember);
 }
 .benefit-pill .icon-letter {
-  font-family: var(--display); font-size: 1.25rem; font-weight: 700;
-  color: var(--accent); margin-bottom: 0.2rem;
+  font-family: var(--display); font-size: 1.35rem; font-weight: 700;
+  color: var(--champagne-deep); margin-bottom: 0.15rem;
 }
-.benefit-pill.hot .icon-letter { color: var(--warn); }
+.benefit-pill.hot .icon-letter { color: var(--ember); }
 .benefit-pill .label {
-  font-size: clamp(0.85rem, 1.3vw, 1.02rem); font-weight: 600;
+  font-size: clamp(0.85rem, 1.25vw, 1rem); font-weight: 600;
 }
 
 .callout {
-  margin-top: 0.55rem; padding: 0.65rem 0.9rem;
-  background: color-mix(in srgb, var(--warn) 12%, var(--panel));
-  border-left: 4px solid var(--warn); border-radius: 0 4px 4px 0;
+  margin-top: 0.5rem; padding: 0.6rem 0.85rem;
+  background: var(--panel);
+  border-left: 3px solid var(--ember);
   flex-shrink: 0;
 }
-.callout.ok {
-  background: color-mix(in srgb, var(--ok) 12%, var(--panel));
-  border-left-color: var(--ok);
-}
+.callout.ok { border-left-color: var(--ok); }
 .callout .who {
-  font-size: 0.7rem; font-weight: 600; color: var(--warn); margin-bottom: 0.2rem;
+  font-family: var(--display);
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--ember); margin-bottom: 0.15rem;
+  letter-spacing: 0.04em;
 }
 .callout.ok .who { color: var(--ok); }
 .callout p {
-  margin: 0; font-size: clamp(0.88rem, 1.35vw, 1.05rem); line-height: 1.4; color: var(--ink);
+  margin: 0; font-size: clamp(0.88rem, 1.3vw, 1.02rem); line-height: 1.4; color: var(--ink);
 }
 
 .hook-row {
-  display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 0.7rem;
+  display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.65rem;
 }
 .hook {
   background: var(--panel); border: 1px solid var(--line);
-  padding: 0.4rem 0.7rem; font-size: clamp(0.82rem, 1.25vw, 0.95rem);
-  color: var(--ink-soft); border-radius: 3px;
+  padding: 0.38rem 0.7rem; font-size: clamp(0.82rem, 1.2vw, 0.95rem);
+  color: var(--ink-soft);
 }
-.hook strong { color: var(--warn); font-weight: 600; }
+.hook strong { color: var(--ember); font-weight: 600; }
 
 .agenda { list-style: none; margin: 0; padding: 0; max-width: 36em; }
 .agenda li {
   display: flex; align-items: baseline; gap: 0.85rem;
   padding: 0.55rem 0; border-bottom: 1px solid var(--line);
-  font-size: clamp(0.95rem, 1.55vw, 1.18rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
 }
 .agenda li:last-child { border-bottom: none; }
 .agenda .n {
-  font-family: var(--display); font-weight: 700; color: var(--accent);
-  font-variant-numeric: tabular-nums; min-width: 1.4em;
+  font-family: var(--display); font-weight: 700; color: var(--champagne-deep);
+  font-variant-numeric: tabular-nums; min-width: 1.4em; font-size: 1.05em;
 }
-.agenda li.main .n { color: var(--warn); }
+.agenda li.main .n { color: var(--ember); }
 .agenda li.main { font-weight: 600; }
 
-.slide-title { justify-content: center; }
+.slide-title .slide-body { justify-content: center; }
 .slide-title .title-block { max-width: 42em; }
-.slide-title h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+.slide-title h1 { font-size: clamp(2.3rem, 5.2vw, 3.7rem); }
 .meta-row {
-  display: flex; flex-wrap: wrap; gap: 0.55rem 1.2rem; margin-top: 1.2rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; margin-top: 1.1rem;
   font-size: 0.82rem; color: var(--muted);
 }
-.meta-row span { display: inline-flex; align-items: center; gap: 0.35rem; }
-.meta-row .dot {
-  width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+.meta-row span {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.meta-row .bar {
+  width: 12px; height: 2px; background: var(--champagne);
 }
 
-.slide-end { justify-content: center; text-align: center; align-items: center; }
-.slide-end h1 { margin-bottom: 0.35rem; }
+.slide-end .slide-body {
+  justify-content: center; text-align: center; align-items: center;
+}
+.slide-end h1 { margin-bottom: 0.3rem; }
 .slide-end .subtitle { margin-left: auto; margin-right: auto; }
 .note-chip {
   display: inline-flex; align-items: center; gap: 0.35rem;
   padding: 0.3rem 0.65rem;
   background: var(--panel);
   border: 1px dashed var(--line-strong);
-  border-radius: 4px; font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem;
+  font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem;
 }
 
 .two-col {
@@ -314,9 +403,9 @@ ul.bullets.warn li::before { background: var(--warn); }
 .two-col-equal { grid-template-columns: 1fr 1fr; }
 
 .fig {
-  position: relative; overflow: hidden; border-radius: 5px;
+  position: relative; overflow: hidden;
   background: var(--panel); border: 1px solid var(--line);
-  box-shadow: var(--img-shadow); min-height: 0;
+  min-height: 0;
   cursor: zoom-in;
 }
 .fig img, .fig video {
@@ -327,22 +416,19 @@ ul.bullets.warn li::before { background: var(--warn); }
   object-fit: contain; background: var(--panel); padding: 0.4rem; cursor: zoom-in;
 }
 .fig.fig-video { cursor: default; }
-.fig.fig-video video { object-fit: contain; background: #0a0e14; }
+.fig.fig-video video { object-fit: contain; background: #060a10; }
 .cap {
   position: absolute; left: 0; right: 0; bottom: 0;
   padding: 0.3rem 0.5rem;
-  background: linear-gradient(transparent, rgba(10, 14, 22, 0.82));
-  color: #f0f3f7; font-size: 0.68rem; font-weight: 500; pointer-events: none;
+  background: linear-gradient(transparent, rgba(8, 14, 24, 0.85));
+  color: #F0F3F7; font-size: 0.68rem; font-weight: 500; pointer-events: none;
 }
 .cap-static {
   margin-top: 0.25rem; font-size: 0.72rem; color: var(--muted); text-align: center;
 }
 .tiny { font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }
 
-/* Photo grids */
-.gallery {
-  display: grid; gap: 0.45rem; flex: 1; min-height: 0;
-}
+.gallery { display: grid; gap: 0.4rem; flex: 1; min-height: 0; }
 .gallery-5 { grid-template-columns: repeat(5, 1fr); }
 .gallery-5 .fig { aspect-ratio: 1; }
 .gallery-4 { grid-template-columns: repeat(4, 1fr); }
@@ -350,21 +436,16 @@ ul.bullets.warn li::before { background: var(--warn); }
 .gallery-3 { grid-template-columns: repeat(3, 1fr); }
 .gallery-3 .fig { aspect-ratio: 4/3; min-height: 0; }
 .gallery-hero-3 {
-  grid-template-columns: repeat(3, 1fr); margin-top: 0.35rem;
+  grid-template-columns: repeat(3, 1fr); margin-top: 0.3rem;
 }
 .gallery-hero-3 .fig { aspect-ratio: 16/10; }
 
-/* SkyTeam / Star photo grids */
-.photo-grid {
-  display: grid; gap: 0.4rem; flex: 1; min-height: 0;
-}
+.photo-grid { display: grid; gap: 0.35rem; flex: 1; min-height: 0; }
 .photo-grid.st-grid {
   grid-template-columns: 1.4fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-.photo-grid.st-grid .fig:first-child {
-  grid-row: 1 / -1;
-}
+.photo-grid.st-grid .fig:first-child { grid-row: 1 / -1; }
 .photo-grid.sa-grid {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -373,8 +454,8 @@ ul.bullets.warn li::before { background: var(--warn); }
 
 .logo-row {
   display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 1.1rem;
-  margin: 0 0 0.45rem; padding: 0.5rem 0.75rem;
-  background: var(--panel); border: 1px solid var(--line); border-radius: 5px;
+  margin: 0 0 0.4rem; padding: 0.45rem 0.7rem;
+  background: var(--panel); border: 1px solid var(--line);
   flex-shrink: 0;
 }
 .logo-row img {
@@ -393,123 +474,120 @@ ul.bullets.warn li::before { background: var(--warn); }
 
 .hot-badge {
   display: inline-flex; align-items: center; gap: 0.3rem; align-self: flex-start;
-  padding: 0.22rem 0.55rem;
-  background: color-mix(in srgb, var(--ow) 15%, var(--panel));
-  border: 1px solid color-mix(in srgb, var(--ow) 45%, transparent);
-  color: var(--ow); font-size: 0.72rem; font-weight: 600; border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--ow) 50%, transparent);
+  color: var(--ow); font-size: 0.72rem; font-weight: 600;
+  background: color-mix(in srgb, var(--ow) 10%, var(--panel));
 }
 
-/* Channel map cards */
+/* Channel map — ticket stubs, not rounded SaaS cards */
 .channel-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem; flex: 1; min-height: 0; align-content: start;
+  gap: 0.45rem; flex: 1; min-height: 0; align-content: start;
 }
 .channel-card {
-  background: var(--panel); border: 1px solid var(--line);
-  padding: 0.65rem 0.75rem; border-left: 3px solid var(--warn);
-  box-shadow: var(--shadow);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.7rem 0.65rem 0.85rem;
+  position: relative;
+  border-left: none;
+}
+.channel-card::before {
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--ember);
 }
 .channel-card .num {
-  font-family: var(--display); font-size: 0.7rem; font-weight: 700;
-  color: var(--warn); letter-spacing: 0.06em; margin-bottom: 0.2rem;
+  font-family: var(--display); font-size: 0.85rem; font-weight: 700;
+  color: var(--ember); letter-spacing: 0.04em; margin-bottom: 0.15rem;
 }
-.channel-card h3 { font-size: clamp(0.9rem, 1.35vw, 1.05rem); margin: 0 0 0.2rem; }
+.channel-card h3 { font-size: clamp(0.9rem, 1.3vw, 1.05rem); margin: 0 0 0.18rem; }
 .channel-card p {
-  margin: 0; font-size: clamp(0.75rem, 1.1vw, 0.88rem);
+  margin: 0; font-size: clamp(0.74rem, 1.05vw, 0.86rem);
   color: var(--ink-soft); line-height: 1.35;
 }
 
 .egg-split {
-  display: grid; grid-template-columns: 1.35fr 1fr; gap: 0.75rem;
+  display: grid; grid-template-columns: 1.35fr 1fr; gap: 0.7rem;
   flex: 1; min-height: 0;
 }
-.egg-left { display: flex; flex-direction: column; min-height: 0; gap: 0.35rem; }
+.egg-left { display: flex; flex-direction: column; min-height: 0; gap: 0.3rem; }
 .nz-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; flex: 1; min-height: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem; flex: 1; min-height: 0;
 }
 .nz-grid .fig { aspect-ratio: 4/3; min-height: 0; }
 
 .video-row {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem;
   flex: 1; min-height: 0;
 }
-.video-row .fig {
-  display: flex; flex-direction: column; min-height: 0;
-}
+.video-row .fig { display: flex; flex-direction: column; min-height: 0; }
 .video-row video {
-  flex: 1; width: 100%; min-height: 0;
-  background: #0a0e14;
+  flex: 1; width: 100%; min-height: 0; background: #060a10;
 }
 .stills-strip {
   display: grid; grid-template-columns: repeat(5, 1fr);
-  gap: 0.35rem; margin-top: 0.4rem; flex-shrink: 0;
+  gap: 0.3rem; margin-top: 0.35rem; flex-shrink: 0;
   max-height: 18%;
 }
 .stills-strip .fig { aspect-ratio: 16/10; max-height: 100%; }
 
-/* Chrome inside stage */
+/* Chrome */
 .chrome {
   position: absolute; bottom: 0; left: 0; right: 0; z-index: 40;
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
-  padding: 0.35rem 0.7rem;
+  padding: 0.32rem 0.65rem 0.32rem clamp(4.4rem, 7.5%, 5.8rem);
   background: var(--nav-bg); border-top: 1px solid var(--line);
   backdrop-filter: blur(8px); font-size: 0.72rem; color: var(--muted);
 }
 .chrome-left, .chrome-right { display: flex; align-items: center; gap: 0.35rem; }
 .dots {
   display: flex; align-items: center; justify-content: center;
-  gap: 0.28rem; flex: 1; flex-wrap: wrap; max-width: 52%;
+  gap: 0.26rem; flex: 1; flex-wrap: wrap; max-width: 50%;
 }
 .dot-btn {
   appearance: none; border: none; padding: 0; margin: 0;
-  width: 6px; height: 6px; border-radius: 50%;
+  width: 6px; height: 6px; border-radius: 1px;
   background: var(--line-strong); opacity: 0.4; cursor: pointer;
 }
 .dot-btn:hover { opacity: 0.7; }
 .dot-btn[aria-current="true"] {
-  background: var(--accent); opacity: 1; transform: scale(1.25);
+  background: var(--champagne); opacity: 1; transform: scaleY(1.4) scaleX(1.6);
 }
-.dot-btn.sec-up[aria-current="true"] { background: var(--warn); }
-.dot-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.dot-btn.sec-up[aria-current="true"] { background: var(--ember); }
+.dot-btn:focus-visible { outline: 2px solid var(--champagne); outline-offset: 2px; }
 .btn {
   appearance: none; border: 1px solid var(--line-strong);
   background: var(--panel); color: var(--ink);
-  padding: 0.25rem 0.5rem; border-radius: 3px;
+  padding: 0.22rem 0.48rem;
   font-size: 0.7rem; font-family: inherit; cursor: pointer; line-height: 1.2;
 }
-.btn:hover { border-color: var(--accent); color: var(--accent); }
-.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn:hover { border-color: var(--champagne-deep); color: var(--champagne-deep); }
+.btn:focus-visible { outline: 2px solid var(--champagne); outline-offset: 2px; }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .slide-counter {
   font-variant-numeric: tabular-nums; font-family: var(--display);
-  min-width: 3.2em; text-align: center;
+  font-weight: 600; min-width: 3.2em; text-align: center;
+  color: var(--ink-soft);
 }
-.hint-keys { opacity: 0.65; font-size: 0.65rem; }
+.hint-keys { opacity: 0.6; font-size: 0.65rem; }
 
 /* Lightbox */
 .lightbox {
   display: none;
   position: fixed; inset: 0; z-index: 200;
-  background: rgba(4, 6, 10, 0.94);
+  background: rgba(4, 8, 14, 0.95);
   align-items: center; justify-content: center;
   flex-direction: column;
 }
 .lightbox.open { display: flex; }
 .lightbox img {
   max-width: 94vw; max-height: 86vh;
-  object-fit: contain; border-radius: 2px;
+  object-fit: contain;
 }
 .lightbox-cap {
   margin-top: 0.6rem; color: #c8d2de; font-size: 0.85rem;
-}
-.lightbox-bar {
-  position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);
-  display: flex; gap: 0.5rem; align-items: center;
-}
-.lightbox-bar .btn {
-  background: rgba(30,40,55,0.9); color: #e8eef6; border-color: #4a5f78;
-  padding: 0.4rem 0.75rem; font-size: 0.8rem;
 }
 .lightbox-close {
   position: absolute; top: 0.8rem; right: 1rem;
@@ -518,8 +596,8 @@ ul.bullets.warn li::before { background: var(--warn); }
 }
 .lightbox-nav {
   position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(30,40,55,0.7); border: 1px solid #4a5f78;
-  color: #e8eef6; width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  background: rgba(20, 32, 48, 0.75); border: 1px solid #4a5f78;
+  color: #e8eef6; width: 2.4rem; height: 2.4rem;
   font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
 .lightbox-nav.prev { left: 0.8rem; }
@@ -527,6 +605,21 @@ ul.bullets.warn li::before { background: var(--warn); }
 .lightbox-hint {
   position: absolute; top: 0.9rem; left: 50%; transform: translateX(-50%);
   color: #8494a8; font-size: 0.72rem;
+}
+
+@media (max-width: 640px) {
+  .stub { flex-basis: 2.8rem; padding: 0.6rem 0.15rem; }
+  .stub-num { font-size: 1.1rem; }
+  .stub-label { display: none; }
+  .alliance-grid, .benefit-row, .channel-grid {
+    grid-template-columns: 1fr;
+  }
+  .alliance-card { border-right: none; border-bottom: 1px solid var(--line); }
+  .benefit-pill { border-right: none; border-bottom: 1px solid var(--line); }
+  .two-col, .two-col-equal, .two-col-55-45, .egg-split, .video-row {
+    grid-template-columns: 1fr;
+  }
+  .chrome { padding-left: 3.2rem; }
 }
 </style>
 </head>
@@ -536,516 +629,604 @@ ul.bullets.warn li::before { background: var(--warn); }
 
   <!-- 1 Title -->
   <section class="slide slide-title active" data-title="常旅客入门分享" aria-label="标题">
-    <div class="title-block">
-      <div class="gate">
-        <span class="gate-num">01</span>
-        <span class="gate-label">周会分享 · ~20–30 分钟</span>
-      </div>
-      <h1>常旅客入门分享</h1>
-      <p class="subtitle">暖场认联盟 → <strong style="color:var(--warn)">升舱通道深挖</strong> → 休息室调味</p>
-      <div class="meta-row">
-        <span><i class="dot"></i>同事向，不是航司宣传册</span>
-        <span><i class="dot"></i>← → / Space 翻页 · F 全屏 · 点图放大</span>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">01</span>
+      <span class="stub-label">BOARDING</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="title-block">
+        <div class="kicker"><span class="kicker-sec">周会分享 · ~20–30 分钟</span></div>
+        <h1>常旅客入门分享</h1>
+        <p class="subtitle">暖场认联盟 → <em>升舱通道深挖</em> → 休息室调味</p>
+        <div class="meta-row">
+          <span><i class="bar"></i>同事向，不是航司宣传册</span>
+          <span><i class="bar"></i>← → / Space 翻页 · F 全屏 · 点图放大</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 2 Agenda -->
   <section class="slide" data-title="今天聊什么" aria-label="议程">
-    <div class="gate">
-      <span class="gate-num">02</span>
-      <span class="gate-label">Agenda</span>
-    </div>
-    <h2>今天聊什么</h2>
-    <div class="content">
-      <div class="hook-row" aria-label="开场钩子">
-        <span class="hook">经济舱飞长途，能不能<strong>坐上去一点</strong>？</span>
-        <span class="hook">身份、里程、卡点——哪条路<strong>真的有戏</strong>？</span>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">02</span>
+      <span class="stub-label">AGENDA</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">议程</span></div>
+      <h2>今天聊什么</h2>
+      <div class="content">
+        <div class="hook-row" aria-label="开场钩子">
+          <span class="hook">经济舱飞长途，能不能<strong>坐上去一点</strong>？</span>
+          <span class="hook">身份、里程、卡点——哪条路<strong>真的有戏</strong>？</span>
+        </div>
+        <ol class="agenda">
+          <li><span class="n">01</span>暖场：三大联盟是谁、身边例子怎么认</li>
+          <li class="main"><span class="n">02</span>正片：升舱通道——里程 / 卡点 / 闲鱼 / 促销舱 / PE / 匹配 / 提名</li>
+          <li><span class="n">03</span>调味：休息室怎么进（PP、龙腾、实拍切片）</li>
+          <li><span class="n">04</span>Q&amp;A —— 你们问，我讲故事</li>
+        </ol>
+        <p class="tiny">没有一条路 100% 靠谱；航司要的是你多花钱。今天讲「有哪些门、门后大概啥感觉」。</p>
       </div>
-      <ol class="agenda">
-        <li><span class="n">01</span>暖场：三大联盟是谁、身边例子怎么认</li>
-        <li class="main"><span class="n">02</span>正片：升舱通道——里程 / 卡点 / 闲鱼 / 促销舱 / PE / 匹配 / 提名</li>
-        <li><span class="n">03</span>调味：休息室怎么进（PP、龙腾、实拍切片）</li>
-        <li><span class="n">04</span>Q&amp;A —— 你们问，我讲故事</li>
-      </ol>
-      <p class="tiny">没有一条路 100% 靠谱；航司要的是你多花钱。今天讲「有哪些门、门后大概啥感觉」。</p>
     </div>
   </section>
 
   <!-- 3 Alliances overview -->
   <section class="slide" data-title="三大联盟一览" aria-label="三大联盟一览">
-    <div class="gate">
-      <span class="gate-num">03</span>
-      <span class="gate-label">暖场 · 联盟</span>
-    </div>
-    <h2>联盟是什么？一句话</h2>
-    <div class="content">
-      <p class="lead">几家航司「朋友圈」：里程互通、身份互认——飞 A，好处在 B 也能用（大体上）。</p>
-      <div class="alliance-grid">
-        <div class="alliance-card ow">
-          <h3>oneworld</h3>
-          <div class="en">寰宇一家 · 红宝石 / 紫调</div>
-          <ul>
-            <li>国泰 CX</li>
-            <li>Qantas · AA …</li>
-          </ul>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">03</span>
+      <span class="stub-label">联盟</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">暖场</span></div>
+      <h2>联盟是什么？一句话</h2>
+      <div class="content">
+        <p class="lead">几家航司「朋友圈」：里程互通、身份互认——飞 A，好处在 B 也能用（大体上）。</p>
+        <div class="alliance-grid">
+          <div class="alliance-card ow">
+            <h3>oneworld</h3>
+            <div class="en">寰宇一家 · 红宝石 / 紫调</div>
+            <ul>
+              <li>国泰 CX</li>
+              <li>Qantas · AA …</li>
+            </ul>
+          </div>
+          <div class="alliance-card st">
+            <h3>天合联盟</h3>
+            <div class="en">SkyTeam · 蓝</div>
+            <ul>
+              <li>东航 · 厦航 · 华航</li>
+              <li>Delta …</li>
+            </ul>
+          </div>
+          <div class="alliance-card sa">
+            <h3>星空联盟</h3>
+            <div class="en">Star Alliance · 金</div>
+            <ul>
+              <li>国航 · 深航 · 长荣</li>
+              <li>新航 · 汉莎 · United · NZ …</li>
+            </ul>
+          </div>
         </div>
-        <div class="alliance-card st">
-          <h3>天合联盟</h3>
-          <div class="en">SkyTeam · 蓝</div>
-          <ul>
-            <li>东航 · 厦航 · 华航</li>
-            <li>Delta …</li>
-          </ul>
-        </div>
-        <div class="alliance-card sa">
-          <h3>星空联盟</h3>
-          <div class="en">Star Alliance · 金</div>
-          <ul>
-            <li>国航 · 深航 · 长荣</li>
-            <li>新航 · 汉莎 · United · NZ …</li>
-          </ul>
-        </div>
+        <p class="tiny">完整成员以官网为准；下一页起用图认脸，然后进入升舱正片。</p>
       </div>
-      <p class="tiny">完整成员以官网为准；下一页起用图认脸，然后进入升舱正片。</p>
     </div>
   </section>
 
   <!-- 4 oneworld -->
   <section class="slide" data-alliance="ow" data-title="oneworld" aria-label="oneworld">
-    <div class="gate">
-      <span class="gate-num">04</span>
-      <span class="gate-label">暖场 · oneworld</span>
-    </div>
-    <h2>oneworld · 身边例子</h2>
-    <div class="content">
-      <div class="logo-row">
-        <img src="media/oneworld/oneworld.svg" alt="oneworld" height="36">
-        <span class="sep" aria-hidden="true"></span>
-        <img src="media/oneworld/cathay.svg" alt="国泰航空" class="logo-invert" height="32">
-        <img src="media/oneworld/qantas.svg" alt="Qantas" height="32">
-        <img src="media/oneworld/aa-symbol.svg" alt="American Airlines" height="32">
-        <img src="media/oneworld/aa-wordmark.svg" alt="AA wordmark" height="20">
-      </div>
-      <p class="lead" style="margin-bottom:0.35rem">国泰是亚洲侧常见入口；长途搭子常见 <strong>Qantas</strong>、<strong>AA</strong>。后面讲 Emerald 提名会再碰到 Qantas。</p>
-      <div class="gallery gallery-hero-3">
-        <div class="fig" data-gallery="ow"><img src="media/oneworld/cx-oneworld.jpg" alt="国泰 oneworld 机身" loading="lazy"><span class="cap">国泰 CX · oneworld</span></div>
-        <div class="fig" data-gallery="ow"><img src="media/oneworld/qantas-plane.jpg" alt="Qantas 飞机" loading="lazy"><span class="cap">Qantas</span></div>
-        <div class="fig" data-gallery="ow"><img src="media/oneworld/aa-plane.jpg" alt="American Airlines 飞机" loading="lazy"><span class="cap">American Airlines</span></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">04</span>
+      <span class="stub-label">oneworld</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">暖场</span></div>
+      <h2>oneworld · 身边例子</h2>
+      <div class="content">
+        <div class="logo-row">
+          <img src="media/oneworld/oneworld.svg" alt="oneworld" height="36">
+          <span class="sep" aria-hidden="true"></span>
+          <img src="media/oneworld/cathay.svg" alt="国泰航空" class="logo-invert" height="32">
+          <img src="media/oneworld/qantas.svg" alt="Qantas" height="32">
+          <img src="media/oneworld/aa-symbol.svg" alt="American Airlines" height="32">
+          <img src="media/oneworld/aa-wordmark.svg" alt="AA wordmark" height="20">
+        </div>
+        <p class="lead" style="margin-bottom:0.35rem">国泰是亚洲侧常见入口；长途搭子常见 <strong>Qantas</strong>、<strong>AA</strong>。后面讲 Emerald 提名会再碰到 Qantas。</p>
+        <div class="gallery gallery-hero-3">
+          <div class="fig" data-gallery="ow"><img src="media/oneworld/cx-oneworld.jpg" alt="国泰 oneworld 机身" loading="lazy"><span class="cap">国泰 CX · oneworld</span></div>
+          <div class="fig" data-gallery="ow"><img src="media/oneworld/qantas-plane.jpg" alt="Qantas 飞机" loading="lazy"><span class="cap">Qantas</span></div>
+          <div class="fig" data-gallery="ow"><img src="media/oneworld/aa-plane.jpg" alt="American Airlines 飞机" loading="lazy"><span class="cap">American Airlines</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 5 SkyTeam photo-rich -->
+  <!-- 5 SkyTeam -->
   <section class="slide" data-alliance="st" data-title="天合联盟 SkyTeam" aria-label="天合联盟">
-    <div class="gate">
-      <span class="gate-num">05</span>
-      <span class="gate-label">暖场 · SkyTeam</span>
-    </div>
-    <h2>天合联盟 · 用图认脸</h2>
-    <div class="content">
-      <p class="lead" style="margin-bottom:0.35rem">国内不少人从东航 / 厦航入门；跨洋常见搭子 Delta（后面有行李故事）。</p>
-      <div class="photo-grid st-grid">
-        <div class="fig" data-gallery="st"><img src="media/skyteam/skyteam-livery.jpg" alt="SkyTeam 涂装" loading="lazy"><span class="cap">SkyTeam 涂装</span></div>
-        <div class="fig" data-gallery="st"><img src="media/skyteam/mu-chinaeastern.jpg" alt="中国东方航空" loading="lazy"><span class="cap">中国东方航空</span></div>
-        <div class="fig" data-gallery="st"><img src="media/skyteam/mf-xiamen.jpg" alt="厦门航空" loading="lazy"><span class="cap">厦门航空</span></div>
-        <div class="fig" data-gallery="st"><img src="media/skyteam/ci-chinaairlines.jpg" alt="中华航空" loading="lazy"><span class="cap">中华航空</span></div>
-        <div class="fig" data-gallery="st"><img src="media/skyteam/dl-delta.jpg" alt="Delta 达美" loading="lazy"><span class="cap">Delta 达美</span></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">05</span>
+      <span class="stub-label">SkyTeam</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">暖场</span></div>
+      <h2>天合联盟 · 用图认脸</h2>
+      <div class="content">
+        <p class="lead" style="margin-bottom:0.35rem">国内不少人从东航 / 厦航入门；跨洋常见搭子 Delta（后面有行李故事）。</p>
+        <div class="photo-grid st-grid">
+          <div class="fig" data-gallery="st"><img src="media/skyteam/skyteam-livery.jpg" alt="SkyTeam 涂装" loading="lazy"><span class="cap">SkyTeam 涂装</span></div>
+          <div class="fig" data-gallery="st"><img src="media/skyteam/mu-chinaeastern.jpg" alt="中国东方航空" loading="lazy"><span class="cap">中国东方航空</span></div>
+          <div class="fig" data-gallery="st"><img src="media/skyteam/mf-xiamen.jpg" alt="厦门航空" loading="lazy"><span class="cap">厦门航空</span></div>
+          <div class="fig" data-gallery="st"><img src="media/skyteam/ci-chinaairlines.jpg" alt="中华航空" loading="lazy"><span class="cap">中华航空</span></div>
+          <div class="fig" data-gallery="st"><img src="media/skyteam/dl-delta.jpg" alt="Delta 达美" loading="lazy"><span class="cap">Delta 达美</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 6 Star photo-rich -->
+  <!-- 6 Star -->
   <section class="slide" data-alliance="sa" data-title="星空联盟 Star Alliance" aria-label="星空联盟">
-    <div class="gate">
-      <span class="gate-num">06</span>
-      <span class="gate-label">暖场 · Star</span>
-    </div>
-    <h2>星空联盟 · 用图认脸</h2>
-    <div class="content">
-      <p class="lead" style="margin-bottom:0.35rem">成员面广：国航 / 深航入门；长途有新航、汉莎、United、新西兰航空。</p>
-      <div class="photo-grid sa-grid">
-        <div class="fig" data-gallery="sa"><img src="media/star/star-livery.jpg" alt="Star Alliance 涂装" loading="lazy"><span class="cap">Star Alliance 涂装</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/ca-airchina.jpg" alt="中国国际航空" loading="lazy"><span class="cap">中国国际航空</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/zh-shenzhen.jpg" alt="深圳航空" loading="lazy"><span class="cap">深圳航空</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/br-eva.jpg" alt="长荣航空" loading="lazy"><span class="cap">长荣航空</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/sq-singapore.jpg" alt="新加坡航空" loading="lazy"><span class="cap">新加坡航空</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/lh-lufthansa.jpg" alt="汉莎航空" loading="lazy"><span class="cap">汉莎航空</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/nz-airnz.jpg" alt="新西兰航空" loading="lazy"><span class="cap">新西兰航空</span></div>
-        <div class="fig" data-gallery="sa"><img src="media/star/ua-united.jpg" alt="United 联合航空" loading="lazy"><span class="cap">United 联合航空</span></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">06</span>
+      <span class="stub-label">Star</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">暖场</span></div>
+      <h2>星空联盟 · 用图认脸</h2>
+      <div class="content">
+        <p class="lead" style="margin-bottom:0.35rem">成员面广：国航 / 深航入门；长途有新航、汉莎、United、新西兰航空。</p>
+        <div class="photo-grid sa-grid">
+          <div class="fig" data-gallery="sa"><img src="media/star/star-livery.jpg" alt="Star Alliance 涂装" loading="lazy"><span class="cap">Star Alliance 涂装</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/ca-airchina.jpg" alt="中国国际航空" loading="lazy"><span class="cap">中国国际航空</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/zh-shenzhen.jpg" alt="深圳航空" loading="lazy"><span class="cap">深圳航空</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/br-eva.jpg" alt="长荣航空" loading="lazy"><span class="cap">长荣航空</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/sq-singapore.jpg" alt="新加坡航空" loading="lazy"><span class="cap">新加坡航空</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/lh-lufthansa.jpg" alt="汉莎航空" loading="lazy"><span class="cap">汉莎航空</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/nz-airnz.jpg" alt="新西兰航空" loading="lazy"><span class="cap">新西兰航空</span></div>
+          <div class="fig" data-gallery="sa"><img src="media/star/ua-united.jpg" alt="United 联合航空" loading="lazy"><span class="cap">United 联合航空</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 7 Benefits → bridge to upgrade -->
+  <!-- 7 Benefits -->
   <section class="slide" data-title="权益四件套" aria-label="权益总览">
-    <div class="gate">
-      <span class="gate-num">07</span>
-      <span class="gate-label">过渡</span>
-    </div>
-    <h2>有了精英身份，大致买到什么</h2>
-    <div class="content">
-      <p class="lead">等级名称各家不同，福利大类高度重合。今天<strong>正片只深挖升舱</strong>；厅 / 柜台 / 行李后面当调味。</p>
-      <div class="benefit-row">
-        <div class="benefit-pill hot"><div class="icon-letter">↑</div><div class="label">升舱 ← 正片</div></div>
-        <div class="benefit-pill"><div class="icon-letter">◇</div><div class="label">休息室</div></div>
-        <div class="benefit-pill"><div class="icon-letter">▣</div><div class="label">值机柜台</div></div>
-        <div class="benefit-pill"><div class="icon-letter">⊞</div><div class="label">行李</div></div>
-      </div>
-      <div class="callout" style="margin-top:auto">
-        <div class="who">接下来</div>
-        <p>升舱不是「有卡必升」。下面按通道拆：里程、卡点、闲鱼/代理、促销舱、PE、状态匹配、Qantas Emerald 提名。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">07</span>
+      <span class="stub-label">过渡</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">过渡</span></div>
+      <h2>有了精英身份，大致买到什么</h2>
+      <div class="content">
+        <p class="lead">等级名称各家不同，福利大类高度重合。今天<strong>正片只深挖升舱</strong>；厅 / 柜台 / 行李后面当调味。</p>
+        <div class="benefit-row">
+          <div class="benefit-pill hot"><div class="icon-letter">↑</div><div class="label">升舱 ← 正片</div></div>
+          <div class="benefit-pill"><div class="icon-letter">◇</div><div class="label">休息室</div></div>
+          <div class="benefit-pill"><div class="icon-letter">▣</div><div class="label">值机柜台</div></div>
+          <div class="benefit-pill"><div class="icon-letter">⊞</div><div class="label">行李</div></div>
+        </div>
+        <div class="callout" style="margin-top:auto">
+          <div class="who">接下来</div>
+          <p>升舱不是「有卡必升」。下面按通道拆：里程、卡点、闲鱼/代理、促销舱、PE、状态匹配、Qantas Emerald 提名。</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 8 Upgrade map -->
   <section class="slide" data-section="upgrade" data-title="升舱通道地图" aria-label="升舱通道地图">
-    <div class="gate">
-      <span class="gate-num">08</span>
-      <span class="gate-label">正片 · 升舱</span>
-    </div>
-    <h2>升舱通道地图</h2>
-    <div class="content">
-      <p class="lead">几扇门，没有一扇写着「保证」。航司想要的是：你多飞、多刷、多付钱。</p>
-      <div class="channel-grid">
-        <div class="channel-card"><div class="num">01</div><h3>里程池 / 归集</h3><p>把里程堆在能升的那家，或用联盟互通去兑升舱。</p></div>
-        <div class="channel-card"><div class="num">02</div><h3>信用卡积分</h3><p>银行点转航司里程 / 直接兑升舱券——看当期汇率。</p></div>
-        <div class="channel-card"><div class="num">03</div><h3>闲鱼 / 代理</h3><p>市场上有人卖票、卖升舱、卖匹配——自己甄别风险。</p></div>
-        <div class="channel-card"><div class="num">04</div><h3>促销舱位</h3><p>官网闪促、商务舱打折，有时比「升」更划算。</p></div>
-        <div class="channel-card"><div class="num">05</div><h3>超级经济舱 PE</h3><p>不必一口吃成商务；PE 常常是性价比甜点。</p></div>
-        <div class="channel-card"><div class="num">06</div><h3>状态匹配 / 提名</h3><p>Status match；Qantas Emerald 提名——身份捷径，规则常变。</p></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">08</span>
+      <span class="stub-label">正片</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">升舱</span></div>
+      <h2>升舱通道地图</h2>
+      <div class="content">
+        <p class="lead">几扇门，没有一扇写着「保证」。航司想要的是：你多飞、多刷、多付钱。</p>
+        <div class="channel-grid">
+          <div class="channel-card"><div class="num">01</div><h3>里程池 / 归集</h3><p>把里程堆在能升的那家，或用联盟互通去兑升舱。</p></div>
+          <div class="channel-card"><div class="num">02</div><h3>信用卡积分</h3><p>银行点转航司里程 / 直接兑升舱券——看当期汇率。</p></div>
+          <div class="channel-card"><div class="num">03</div><h3>闲鱼 / 代理</h3><p>市场上有人卖票、卖升舱、卖匹配——自己甄别风险。</p></div>
+          <div class="channel-card"><div class="num">04</div><h3>促销舱位</h3><p>官网闪促、商务舱打折，有时比「升」更划算。</p></div>
+          <div class="channel-card"><div class="num">05</div><h3>超级经济舱 PE</h3><p>不必一口吃成商务；PE 常常是性价比甜点。</p></div>
+          <div class="channel-card"><div class="num">06</div><h3>状态匹配 / 提名</h3><p>Status match；Qantas Emerald 提名——身份捷径，规则常变。</p></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 9 Mileage pool -->
   <section class="slide" data-section="upgrade" data-title="里程池与归集" aria-label="里程池">
-    <div class="gate">
-      <span class="gate-num">09</span>
-      <span class="gate-label">正片 · 里程</span>
-    </div>
-    <h2>里程池 / 归集</h2>
-    <div class="content">
-      <ul class="bullets warn">
-        <li>升舱常要<strong>同一计划里有足够里程</strong>——散落五家等于五份不够用</li>
-        <li>联盟互通：飞 A 存 B，再拿 B 的里程去申请升舱（规则、比例各家不同）</li>
-        <li>先想清楚「我最常飞哪条线、哪家厅/升舱最香」，再决定主积哪家</li>
-        <li><span class="tag tag-tip">坑</span>过期、合作终止、动态定价——里程不是存款</li>
-      </ul>
-      <div class="callout">
-        <div class="who">口播</div>
-        <p>别追求「集齐三联盟」。多数人认准一条主航司 + 一个联盟，升舱成功率体感会高很多。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">09</span>
+      <span class="stub-label">里程</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>里程池 / 归集</h2>
+      <div class="content">
+        <ul class="bullets warn">
+          <li>升舱常要<strong>同一计划里有足够里程</strong>——散落五家等于五份不够用</li>
+          <li>联盟互通：飞 A 存 B，再拿 B 的里程去申请升舱（规则、比例各家不同）</li>
+          <li>先想清楚「我最常飞哪条线、哪家厅/升舱最香」，再决定主积哪家</li>
+          <li><span class="tag tag-tip">坑</span>过期、合作终止、动态定价——里程不是存款</li>
+        </ul>
+        <div class="callout">
+          <div class="who">口播</div>
+          <p>别追求「集齐三联盟」。多数人认准一条主航司 + 一个联盟，升舱成功率体感会高很多。</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 10 Card points -->
   <section class="slide" data-section="upgrade" data-title="信用卡积分" aria-label="信用卡积分">
-    <div class="gate">
-      <span class="gate-num">10</span>
-      <span class="gate-label">正片 · 卡点</span>
-    </div>
-    <h2>信用卡积分 → 升舱燃料</h2>
-    <div class="content">
-      <ul class="bullets warn">
-        <li>银行积分可<strong>转航司里程</strong>，或兑升舱相关权益——看当期合作表</li>
-        <li>开卡奖励、消费倍数、转点比例：同一张卡，今年和明年可能完全两样</li>
-        <li><span class="tag tag-exp">思路</span>大额消费前先问：这笔刷哪张，转哪家里程最划算</li>
-        <li>别为了点去硬消费；算完「点的价值」再动卡</li>
-      </ul>
-      <div class="callout">
-        <div class="who">提醒</div>
-        <p>具体哪张卡、几点换一里程——现场以银行 App / 航司页为准，这里不背死表。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">10</span>
+      <span class="stub-label">卡点</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>信用卡积分 → 升舱燃料</h2>
+      <div class="content">
+        <ul class="bullets warn">
+          <li>银行积分可<strong>转航司里程</strong>，或兑升舱相关权益——看当期合作表</li>
+          <li>开卡奖励、消费倍数、转点比例：同一张卡，今年和明年可能完全两样</li>
+          <li><span class="tag tag-exp">思路</span>大额消费前先问：这笔刷哪张，转哪家里程最划算</li>
+          <li>别为了点去硬消费；算完「点的价值」再动卡</li>
+        </ul>
+        <div class="callout">
+          <div class="who">提醒</div>
+          <p>具体哪张卡、几点换一里程——现场以银行 App / 航司页为准，这里不背死表。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 11 Xianyu / agency -->
+  <!-- 11 Xianyu -->
   <section class="slide" data-section="upgrade" data-title="闲鱼与代理" aria-label="闲鱼代理">
-    <div class="gate">
-      <span class="gate-num">11</span>
-      <span class="gate-label">正片 · 市场渠道</span>
-    </div>
-    <h2>闲鱼 / 代理：有人在卖「捷径」</h2>
-    <div class="content">
-      <ul class="bullets warn">
-        <li>市场上能看到：便宜票、升舱名额、状态匹配代办、各类「包过」话术</li>
-        <li><span class="tag tag-tip">风险</span>账号、证件、支付纠纷、政策一变全废——自己甄别，别轻信包票</li>
-        <li>真要碰：小额试水、留证据、默认可能失败</li>
-        <li>合法合规边界因地区而异；公司差旅单另说</li>
-      </ul>
-      <div class="callout">
-        <div class="who">同事向</div>
-        <p>我提这个不是推荐去买，是让你知道「门外还有这条巷子」——坑也很深。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">11</span>
+      <span class="stub-label">市场</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>闲鱼 / 代理：有人在卖「捷径」</h2>
+      <div class="content">
+        <ul class="bullets warn">
+          <li>市场上能看到：便宜票、升舱名额、状态匹配代办、各类「包过」话术</li>
+          <li><span class="tag tag-tip">风险</span>账号、证件、支付纠纷、政策一变全废——自己甄别，别轻信包票</li>
+          <li>真要碰：小额试水、留证据、默认可能失败</li>
+          <li>合法合规边界因地区而异；公司差旅单另说</li>
+        </ul>
+        <div class="callout">
+          <div class="who">同事向</div>
+          <p>我提这个不是推荐去买，是让你知道「门外还有这条巷子」——坑也很深。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 12 Promo cabins -->
+  <!-- 12 Promo -->
   <section class="slide" data-section="upgrade" data-title="促销舱位" aria-label="促销舱位">
-    <div class="gate">
-      <span class="gate-num">12</span>
-      <span class="gate-label">正片 · 促销舱</span>
-    </div>
-    <h2>促销舱位：有时比「升」更香</h2>
-    <div class="content">
-      <ul class="bullets warn">
-        <li>官网闪促、商务舱 / PE 打折、错误价（少见且易取消）——直接买到位</li>
-        <li>「经济舱 + 赌升舱」vs「咬牙买促销商务」：算总价和确定性</li>
-        <li>关注航司 App 推送、邮件、常旅客日——窗口往往很短</li>
-        <li><span class="tag tag-exp">经验</span>淡季、新开航线、红眼班，促销密度更高</li>
-      </ul>
-      <div class="callout ok">
-        <div class="who">心态</div>
-        <p>升舱是机会；促销是价格。两扇门都开着，别只盯着一扇。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">12</span>
+      <span class="stub-label">促销舱</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>促销舱位：有时比「升」更香</h2>
+      <div class="content">
+        <ul class="bullets warn">
+          <li>官网闪促、商务舱 / PE 打折、错误价（少见且易取消）——直接买到位</li>
+          <li>「经济舱 + 赌升舱」vs「咬牙买促销商务」：算总价和确定性</li>
+          <li>关注航司 App 推送、邮件、常旅客日——窗口往往很短</li>
+          <li><span class="tag tag-exp">经验</span>淡季、新开航线、红眼班，促销密度更高</li>
+        </ul>
+        <div class="callout ok">
+          <div class="who">心态</div>
+          <p>升舱是机会；促销是价格。两扇门都开着，别只盯着一扇。</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 13 PE -->
   <section class="slide" data-section="upgrade" data-alliance="ow" data-title="超级经济舱 PE" aria-label="超级经济舱">
-    <div class="gate">
-      <span class="gate-num">13</span>
-      <span class="gate-label">正片 · PE</span>
-    </div>
-    <h2>超级经济舱 · 经常是甜点</h2>
-    <div class="content">
-      <ul class="bullets ow">
-        <li>不必一口吃成商务：PE 空间、餐食、登机次序往往已经舒服一截</li>
-        <li>有身份时，某些航线 PE 门槛更友好——或用里程补差升到 PE</li>
-        <li><span class="tag tag-exp">故事</span>国泰 PEK–HKG：有 Emerald 级身份时，超级经济舱体感已经够用</li>
-        <li>长途再考虑要不要继续追商务；短段 PE 性价比常胜</li>
-      </ul>
-      <div class="callout ok">
-        <div class="who">口播位</div>
-        <p>北京–香港这段，Emerald + PE 对我来说已经「值了」——不是每段都要商务。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">13</span>
+      <span class="stub-label">PE</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>超级经济舱 · 经常是甜点</h2>
+      <div class="content">
+        <ul class="bullets ow">
+          <li>不必一口吃成商务：PE 空间、餐食、登机次序往往已经舒服一截</li>
+          <li>有身份时，某些航线 PE 门槛更友好——或用里程补差升到 PE</li>
+          <li><span class="tag tag-exp">故事</span>国泰 PEK–HKG：有 Emerald 级身份时，超级经济舱体感已经够用</li>
+          <li>长途再考虑要不要继续追商务；短段 PE 性价比常胜</li>
+        </ul>
+        <div class="callout ok">
+          <div class="who">口播位</div>
+          <p>北京–香港这段，Emerald + PE 对我来说已经「值了」——不是每段都要商务。</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 14 Status match -->
   <section class="slide" data-section="upgrade" data-title="状态匹配" aria-label="状态匹配">
-    <div class="gate">
-      <span class="gate-num">14</span>
-      <span class="gate-label">正片 · Status match</span>
-    </div>
-    <h2>状态匹配 · Status match</h2>
-    <div class="content">
-      <ul class="bullets warn">
-        <li>拿着 A 航司的精英身份，去申请 B 航司对等或接近的等级（活动制）</li>
-        <li>常见窗口：航司抢人、新开计划、信用卡联名、并购过渡期</li>
-        <li>匹配到手往往是<strong>试用期</strong>——还要在时限内飞够才保级</li>
-        <li><span class="tag tag-tip">变</span>规则、材料、是否开放，几乎年年不同；看到就收藏，别背死</li>
-      </ul>
-      <div class="callout">
-        <div class="who">现实</div>
-        <p>匹配是捷径，不是永居。航司借你身份，是为了让你在他那儿继续花钱。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">14</span>
+      <span class="stub-label">匹配</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>状态匹配 · Status match</h2>
+      <div class="content">
+        <ul class="bullets warn">
+          <li>拿着 A 航司的精英身份，去申请 B 航司对等或接近的等级（活动制）</li>
+          <li>常见窗口：航司抢人、新开计划、信用卡联名、并购过渡期</li>
+          <li>匹配到手往往是<strong>试用期</strong>——还要在时限内飞够才保级</li>
+          <li><span class="tag tag-tip">变</span>规则、材料、是否开放，几乎年年不同；看到就收藏，别背死</li>
+        </ul>
+        <div class="callout">
+          <div class="who">现实</div>
+          <p>匹配是捷径，不是永居。航司借你身份，是为了让你在他那儿继续花钱。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 15 Qantas Emerald nomination -->
+  <!-- 15 Qantas Emerald -->
   <section class="slide" data-section="upgrade" data-alliance="ow" data-title="Qantas Emerald 提名" aria-label="Qantas 提名">
-    <div class="gate">
-      <span class="gate-num">15</span>
-      <span class="gate-label">正片 · 提名</span>
-    </div>
-    <h2>Qantas Emerald 提名</h2>
-    <div class="content">
-      <ul class="bullets ow">
-        <li>Qantas 高等级会员可<strong>提名</strong>他人获得 oneworld Emerald 级体验（名额 / 规则以当期为准）</li>
-        <li>对朋友 / 家人是一条「借身份」的路——前提是你身边真有那位高等级</li>
-        <li>和匹配类似：有时限、有条件，不是永久金卡</li>
-        <li><span class="tag tag-core">正片重点</span>知道有这扇门；具体条款出发前查 Qantas / oneworld 说明</li>
-      </ul>
-      <div class="callout">
-        <div class="who">口播</div>
-        <p>别在群里公开求提名——私下关系、互惠、别把别人卡号当公共资源。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">15</span>
+      <span class="stub-label">提名</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>Qantas Emerald 提名</h2>
+      <div class="content">
+        <ul class="bullets ow">
+          <li>Qantas 高等级会员可<strong>提名</strong>他人获得 oneworld Emerald 级体验（名额 / 规则以当期为准）</li>
+          <li>对朋友 / 家人是一条「借身份」的路——前提是你身边真有那位高等级</li>
+          <li>和匹配类似：有时限、有条件，不是永久金卡</li>
+          <li><span class="tag tag-core">正片重点</span>知道有这扇门；具体条款出发前查 Qantas / oneworld 说明</li>
+        </ul>
+        <div class="callout">
+          <div class="who">口播</div>
+          <p>别在群里公开求提名——私下关系、互惠、别把别人卡号当公共资源。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 16 Reality check -->
+  <!-- 16 No silver bullet -->
   <section class="slide" data-section="upgrade" data-title="没有银弹" aria-label="没有银弹">
-    <div class="gate">
-      <span class="gate-num">16</span>
-      <span class="gate-label">正片 · 收束</span>
-    </div>
-    <h2>没有银弹</h2>
-    <div class="content">
-      <ul class="bullets warn">
-        <li>以上通道<strong>没有一条 100% 可靠</strong></li>
-        <li>航司产品设计目标：让你多飞、多刷、多付钱</li>
-        <li>空位、票价舱位、当天政策、你的身份——缺一可能挂</li>
-        <li>把「升舱」当彩票期望，把「买对舱 / 选对厅」当基本盘</li>
-      </ul>
-      <div class="callout ok">
-        <div class="who">过渡</div>
-        <p>正片到这。下面用休息室和行李故事调个味——轻松点，不考试。</p>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">16</span>
+      <span class="stub-label">收束</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">正片</span></div>
+      <h2>没有银弹</h2>
+      <div class="content">
+        <ul class="bullets warn">
+          <li>以上通道<strong>没有一条 100% 可靠</strong></li>
+          <li>航司产品设计目标：让你多飞、多刷、多付钱</li>
+          <li>空位、票价舱位、当天政策、你的身份——缺一可能挂</li>
+          <li>把「升舱」当彩票期望，把「买对舱 / 选对厅」当基本盘</li>
+        </ul>
+        <div class="callout ok">
+          <div class="who">过渡</div>
+          <p>正片到这。下面用休息室和行李故事调个味——轻松点，不考试。</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 17 Lounge + Beijing -->
   <section class="slide" data-alliance="ow" data-title="玉衡堂与北京" aria-label="休息室玉衡堂">
-    <div class="gate">
-      <span class="gate-num">17</span>
-      <span class="gate-label">调味 · 休息室</span>
-    </div>
-    <h2>休息室最夯 · 国泰玉衡堂</h2>
-    <div class="content">
-      <span class="hot-badge">口碑很顶 · 分享经验</span>
-      <p class="lead" style="margin-top:0.4rem;margin-bottom:0.35rem">圈子里常被点名。进厅条件因身份 / 舱位 / 政策而异。下面是<strong>北京机场</strong>实拍。</p>
-      <div class="gallery gallery-5">
-        <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-1.jpg" alt="北京机场 1" loading="lazy"><span class="cap">北京机场</span></div>
-        <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-2.jpg" alt="北京机场 2" loading="lazy"><span class="cap">北京机场</span></div>
-        <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-3.jpg" alt="北京机场 3" loading="lazy"><span class="cap">北京机场</span></div>
-        <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-4.jpg" alt="北京机场 4" loading="lazy"><span class="cap">北京机场</span></div>
-        <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-5.jpg" alt="北京机场 5" loading="lazy"><span class="cap">北京机场</span></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">17</span>
+      <span class="stub-label">休息室</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">调味</span></div>
+      <h2>休息室最夯 · 国泰玉衡堂</h2>
+      <div class="content">
+        <span class="hot-badge">口碑很顶 · 分享经验</span>
+        <p class="lead" style="margin-top:0.4rem;margin-bottom:0.35rem">圈子里常被点名。进厅条件因身份 / 舱位 / 政策而异。下面是<strong>北京机场</strong>实拍。</p>
+        <div class="gallery gallery-5">
+          <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-1.jpg" alt="北京机场 1" loading="lazy"><span class="cap">北京机场</span></div>
+          <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-2.jpg" alt="北京机场 2" loading="lazy"><span class="cap">北京机场</span></div>
+          <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-3.jpg" alt="北京机场 3" loading="lazy"><span class="cap">北京机场</span></div>
+          <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-4.jpg" alt="北京机场 4" loading="lazy"><span class="cap">北京机场</span></div>
+          <div class="fig" data-gallery="bj"><img src="media/beijing/beijing-5.jpg" alt="北京机场 5" loading="lazy"><span class="cap">北京机场</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 18 Emerald / Sapphire check-in -->
+  <!-- 18 Check-in -->
   <section class="slide" data-alliance="ow" data-title="值机 · 绿宝石蓝宝石" aria-label="值机柜台">
-    <div class="gate">
-      <span class="gate-num">18</span>
-      <span class="gate-label">调味 · 值机</span>
-    </div>
-    <h2>值机柜台 · Emerald / Sapphire</h2>
-    <div class="content">
-      <div class="two-col two-col-55-45">
-        <div>
-          <p class="lead">oneworld <strong>Emerald / Sapphire</strong> → 常能走优先 / 商务专柜。</p>
-          <ul class="bullets ow">
-            <li>不同联盟叫法不同，体感类似</li>
-            <li>伙伴航司认不认——看当日</li>
-            <li>右图为<strong>示意</strong>，非官方卡面</li>
-          </ul>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">18</span>
+      <span class="stub-label">值机</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">调味</span></div>
+      <h2>值机柜台 · Emerald / Sapphire</h2>
+      <div class="content">
+        <div class="two-col two-col-55-45">
+          <div>
+            <p class="lead">oneworld <strong>Emerald / Sapphire</strong> → 常能走优先 / 商务专柜。</p>
+            <ul class="bullets ow">
+              <li>不同联盟叫法不同，体感类似</li>
+              <li>伙伴航司认不认——看当日</li>
+              <li>右图为<strong>示意</strong>，非官方卡面</li>
+            </ul>
+          </div>
+          <div class="fig fig-contain" data-gallery="es" style="min-height:0">
+            <img src="media/oneworld/emerald-sapphire.png" alt="Emerald Sapphire 示意" loading="lazy">
+          </div>
         </div>
-        <div class="fig fig-contain" data-gallery="es" style="min-height:0">
-          <img src="media/oneworld/emerald-sapphire.png" alt="Emerald Sapphire 示意" loading="lazy">
-        </div>
+        <p class="cap-static">示意 · oneworld Emerald / Sapphire</p>
       </div>
-      <p class="cap-static">示意 · oneworld Emerald / Sapphire</p>
     </div>
   </section>
 
-  <!-- 19 Delta bags + San Jose -->
+  <!-- 19 Bags -->
   <section class="slide" data-alliance="st" data-title="行李 · 达美与 San Jose" aria-label="行李故事">
-    <div class="gate">
-      <span class="gate-num">19</span>
-      <span class="gate-label">调味 · 行李</span>
-    </div>
-    <h2>行李故事 · 达美优先 → San Jose</h2>
-    <div class="content">
-      <div class="two-col two-col-equal" style="flex:1">
-        <div style="display:flex;flex-direction:column;gap:0.4rem;min-height:0">
-          <div class="gallery gallery-3" style="flex:1">
-            <div class="fig" data-gallery="delta"><img src="media/delta-priority/delta-1.jpg" alt="达美优先 1" loading="lazy"><span class="cap">达美优先行李</span></div>
-            <div class="fig" data-gallery="delta"><img src="media/delta-priority/delta-2.jpg" alt="达美优先 2" loading="lazy"><span class="cap">达美优先行李</span></div>
-            <div class="fig" data-gallery="delta"><img src="media/delta-priority/delta-3.jpg" alt="达美优先 3" loading="lazy"><span class="cap">达美优先行李</span></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">19</span>
+      <span class="stub-label">行李</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">调味</span></div>
+      <h2>行李故事 · 达美优先 → San Jose</h2>
+      <div class="content">
+        <div class="two-col two-col-equal" style="flex:1">
+          <div style="display:flex;flex-direction:column;gap:0.4rem;min-height:0">
+            <div class="gallery gallery-3" style="flex:1">
+              <div class="fig" data-gallery="delta"><img src="media/delta-priority/delta-1.jpg" alt="达美优先 1" loading="lazy"><span class="cap">达美优先行李</span></div>
+              <div class="fig" data-gallery="delta"><img src="media/delta-priority/delta-2.jpg" alt="达美优先 2" loading="lazy"><span class="cap">达美优先行李</span></div>
+              <div class="fig" data-gallery="delta"><img src="media/delta-priority/delta-3.jpg" alt="达美优先 3" loading="lazy"><span class="cap">达美优先行李</span></div>
+            </div>
+            <div class="callout" style="margin:0">
+              <div class="who">口播</div>
+              <p>美国达美：8 人一起买票，行李不用额外买。</p>
+            </div>
           </div>
-          <div class="callout" style="margin:0">
-            <div class="who">口播</div>
-            <p>美国达美：8 人一起买票，行李不用额外买。</p>
+          <div class="fig" data-gallery="sj" style="min-height:0">
+            <img src="media/sanjose/sanjose-1.jpg" alt="行李到了 San Jose" loading="lazy">
+            <span class="cap">行李到了 · San Jose</span>
           </div>
-        </div>
-        <div class="fig" data-gallery="sj" style="min-height:0">
-          <img src="media/sanjose/sanjose-1.jpg" alt="行李到了 San Jose" loading="lazy">
-          <span class="cap">行李到了 · San Jose</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 20 PP + 龙腾 -->
+  <!-- 20 PP + Longteng -->
   <section class="slide" data-title="休息室怎么进" aria-label="PP与龙腾">
-    <div class="gate">
-      <span class="gate-num">20</span>
-      <span class="gate-label">调味 · 进厅</span>
-    </div>
-    <h2>休息室怎么进</h2>
-    <div class="content">
-      <div class="two-col two-col-equal">
-        <div>
-          <h3>Priority Pass（PP）</h3>
-          <ul class="bullets">
-            <li>和航司身份平行的合约厅网络</li>
-            <li><span class="tag tag-tip">实用</span>闲鱼等有人分享办卡经验——自己甄别</li>
-            <li>次数、带人、厅列表：以卡面和 App 为准</li>
-          </ul>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">20</span>
+      <span class="stub-label">进厅</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">调味</span></div>
+      <h2>休息室怎么进</h2>
+      <div class="content">
+        <div class="two-col two-col-equal">
+          <div>
+            <h3>Priority Pass（PP）</h3>
+            <ul class="bullets">
+              <li>和航司身份平行的合约厅网络</li>
+              <li><span class="tag tag-tip">实用</span>闲鱼等有人分享办卡经验——自己甄别</li>
+              <li>次数、带人、厅列表：以卡面和 App 为准</li>
+            </ul>
+          </div>
+          <div>
+            <h3>龙腾卡</h3>
+            <ul class="bullets">
+              <li>国内常见通行方案之一</li>
+              <li><span class="tag tag-tip">实用</span>可通过<strong>农行办卡</strong>等渠道（以当期活动为准）</li>
+              <li><span class="tag tag-exp">经验</span>部分厅<strong>能洗澡</strong>——长途转机很香</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3>龙腾卡</h3>
-          <ul class="bullets">
-            <li>国内常见通行方案之一</li>
-            <li><span class="tag tag-tip">实用</span>可通过<strong>农行办卡</strong>等渠道（以当期活动为准）</li>
-            <li><span class="tag tag-exp">经验</span>部分厅<strong>能洗澡</strong>——长途转机很香</li>
-          </ul>
-        </div>
+        <p class="tiny">办卡、额度都在变，出发前用 App / 银行说明再确认一眼。</p>
       </div>
-      <p class="tiny">办卡、额度都在变，出发前用 App / 银行说明再确认一眼。</p>
     </div>
   </section>
 
-  <!-- 21 HK Plaza videos -->
+  <!-- 21 HK Plaza -->
   <section class="slide" data-title="香港环亚休息室" aria-label="香港环亚">
-    <div class="gate">
-      <span class="gate-num">21</span>
-      <span class="gate-label">调味 · PP 常见厅</span>
-    </div>
-    <h2>香港 · 环亚休息室</h2>
-    <div class="content">
-      <p class="lead" style="margin-bottom:0.35rem">Plaza Premium · <strong>视频可播</strong> · 口播补感受</p>
-      <div class="video-row">
-        <div class="fig fig-video">
-          <video controls playsinline preload="metadata" src="media/hk-plaza/video/plaza-buffet.mp4" title="香港环亚自助餐台"></video>
-          <span class="cap">自助餐台</span>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">21</span>
+      <span class="stub-label">环亚</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">调味</span></div>
+      <h2>香港 · 环亚休息室</h2>
+      <div class="content">
+        <p class="lead" style="margin-bottom:0.35rem">Plaza Premium · <strong>视频可播</strong> · 口播补感受</p>
+        <div class="video-row">
+          <div class="fig fig-video">
+            <video controls playsinline preload="metadata" src="media/hk-plaza/video/plaza-buffet.mp4" title="香港环亚自助餐台"></video>
+            <span class="cap">自助餐台</span>
+          </div>
+          <div class="fig fig-video">
+            <video controls playsinline preload="metadata" src="media/hk-plaza/video/plaza-meal.mp4" title="香港环亚托盘餐"></video>
+            <span class="cap">托盘餐</span>
+          </div>
         </div>
-        <div class="fig fig-video">
-          <video controls playsinline preload="metadata" src="media/hk-plaza/video/plaza-meal.mp4" title="香港环亚托盘餐"></video>
-          <span class="cap">托盘餐</span>
+        <div class="stills-strip">
+          <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-01.jpg" alt="环亚 1" loading="lazy"><span class="cap">环亚</span></div>
+          <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-02.jpg" alt="环亚 2" loading="lazy"><span class="cap">环亚</span></div>
+          <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-03.jpg" alt="环亚 3" loading="lazy"><span class="cap">环亚</span></div>
+          <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-04.jpg" alt="环亚 4" loading="lazy"><span class="cap">环亚</span></div>
+          <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-b-01.jpg" alt="环亚 5" loading="lazy"><span class="cap">环亚</span></div>
         </div>
-      </div>
-      <div class="stills-strip">
-        <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-01.jpg" alt="环亚 1" loading="lazy"><span class="cap">环亚</span></div>
-        <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-02.jpg" alt="环亚 2" loading="lazy"><span class="cap">环亚</span></div>
-        <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-03.jpg" alt="环亚 3" loading="lazy"><span class="cap">环亚</span></div>
-        <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-a-04.jpg" alt="环亚 4" loading="lazy"><span class="cap">环亚</span></div>
-        <div class="fig" data-gallery="hk"><img src="media/hk-plaza/plaza-b-01.jpg" alt="环亚 5" loading="lazy"><span class="cap">环亚</span></div>
       </div>
     </div>
   </section>
 
-  <!-- 22 NZ + Taipei -->
+  <!-- 22 Eggs -->
   <section class="slide" data-title="体验彩蛋" aria-label="体验彩蛋">
-    <div class="gate">
-      <span class="gate-num">22</span>
-      <span class="gate-label">调味 · 彩蛋</span>
-    </div>
-    <h2>体验彩蛋</h2>
-    <div class="content">
-      <div class="egg-split">
-        <div class="egg-left">
-          <h3>新西兰休息室</h3>
-          <p class="tiny" style="margin:0">实拍 · 口播可讲洗澡</p>
-          <div class="nz-grid">
-            <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-1.jpg" alt="NZ 1" loading="lazy"><span class="cap">新西兰休息室</span></div>
-            <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-2.jpg" alt="NZ 2" loading="lazy"><span class="cap">新西兰休息室</span></div>
-            <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-3.jpg" alt="NZ 3" loading="lazy"><span class="cap">新西兰休息室</span></div>
-            <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-4.jpg" alt="NZ 4" loading="lazy"><span class="cap">新西兰休息室</span></div>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">22</span>
+      <span class="stub-label">彩蛋</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <div class="kicker"><span class="kicker-sec">调味</span></div>
+      <h2>体验彩蛋</h2>
+      <div class="content">
+        <div class="egg-split">
+          <div class="egg-left">
+            <h3>新西兰休息室</h3>
+            <p class="tiny" style="margin:0">实拍 · 口播可讲洗澡</p>
+            <div class="nz-grid">
+              <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-1.jpg" alt="NZ 1" loading="lazy"><span class="cap">新西兰休息室</span></div>
+              <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-2.jpg" alt="NZ 2" loading="lazy"><span class="cap">新西兰休息室</span></div>
+              <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-3.jpg" alt="NZ 3" loading="lazy"><span class="cap">新西兰休息室</span></div>
+              <div class="fig" data-gallery="nz"><img src="media/nz-lounge/nz-4.jpg" alt="NZ 4" loading="lazy"><span class="cap">新西兰休息室</span></div>
+            </div>
           </div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0.35rem;min-height:0">
-          <h3>台北休息室</h3>
-          <div class="nz-grid" style="grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr">
-            <div class="fig" data-gallery="tp"><img src="media/taipei/taipei-1.jpg" alt="台北 1" loading="lazy"><span class="cap">台北休息室</span></div>
-            <div class="fig" data-gallery="tp"><img src="media/taipei/taipei-2.jpg" alt="台北 2" loading="lazy"><span class="cap">台北休息室</span></div>
-            <div class="fig" data-gallery="tp" style="grid-column:1/-1"><img src="media/taipei/taipei-3.jpg" alt="台北 3" loading="lazy"><span class="cap">台北休息室</span></div>
+          <div style="display:flex;flex-direction:column;gap:0.35rem;min-height:0">
+            <h3>台北休息室</h3>
+            <div class="nz-grid" style="grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr">
+              <div class="fig" data-gallery="tp"><img src="media/taipei/taipei-1.jpg" alt="台北 1" loading="lazy"><span class="cap">台北休息室</span></div>
+              <div class="fig" data-gallery="tp"><img src="media/taipei/taipei-2.jpg" alt="台北 2" loading="lazy"><span class="cap">台北休息室</span></div>
+              <div class="fig" data-gallery="tp" style="grid-column:1/-1"><img src="media/taipei/taipei-3.jpg" alt="台北 3" loading="lazy"><span class="cap">台北休息室</span></div>
+            </div>
+            <p class="tiny" style="margin:0">口播可讲担担面彩蛋</p>
           </div>
-          <p class="tiny" style="margin:0">口播可讲担担面彩蛋</p>
         </div>
       </div>
     </div>
@@ -1053,13 +1234,16 @@ ul.bullets.warn li::before { background: var(--warn); }
 
   <!-- 23 Q&A -->
   <section class="slide slide-end" data-title="收尾 Q&A" aria-label="收尾">
-    <div class="gate" style="justify-content:center">
-      <span class="gate-num">23</span>
-      <span class="gate-label">Fin</span>
+    <aside class="stub" aria-hidden="true">
+      <span class="stub-num">23</span>
+      <span class="stub-label">FIN</span>
+      <span class="stub-mark"></span>
+    </aside>
+    <div class="slide-body">
+      <h1>就这些 · 问吧</h1>
+      <p class="subtitle">升舱哪条路试过、卡值不值得办、哪家厅好吃好喝——现场聊。</p>
+      <p class="note-chip">← → / Space · F 全屏 · Esc 关灯箱</p>
     </div>
-    <h1>就这些 · 问吧</h1>
-    <p class="subtitle">升舱哪条路试过、卡值不值得办、哪家厅好吃好喝——现场聊。</p>
-    <p class="note-chip">← → / Space · F 全屏 · Esc 关灯箱</p>
   </section>
 
 </div>
@@ -1160,7 +1344,6 @@ ul.bullets.warn li::before { background: var(--warn); }
     else document.exitFullscreen?.();
   });
 
-  /* —— Lightbox —— */
   const lb = document.getElementById("lightbox");
   const lbImg = document.getElementById("lbImg");
   const lbCap = document.getElementById("lbCap");
@@ -1231,7 +1414,7 @@ ul.bullets.warn li::before { background: var(--warn); }
       return;
     }
     if (e.target && (e.target.tagName === "VIDEO" || e.target.closest("video"))) {
-      if (e.key === " " ) return;
+      if (e.key === " ") return;
     }
     if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
       e.preventDefault(); next();
