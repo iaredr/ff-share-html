@@ -31,6 +31,5 @@ nz-lounge/nz-1..4.jpg
 - upgrade/cx-business-cabin.jpg — P08 国泰 A330 商务舱 · Edwin Leong / CC BY-SA 2.0
 - upgrade/jal-sapphire-card.jpg — P09 JMB Sapphire 卡 · 663highland / Public domain
 - upgrade/credit-cards.jpg — P10 信用卡 · Yuri Samoilov / CC BY 2.0
-- upgrade/xianyu-shop.jpg — P11 闲鱼循环商店 · Shwangtianyuan / CC BY-SA 4.0
 - upgrade/cx-business-seat.jpg — P12 国泰 747 商务舱座位 · Melv_L / CC BY-SA 2.0
 - upgrade/cx-premium-economy.jpg — P13 国泰 777 PE · XiaYZ2023 / CC BY-SA 4.0
