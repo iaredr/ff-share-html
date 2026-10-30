@@ -5,7 +5,7 @@
 - media/hk-plaza/video/plaza-meal.mp4 — 香港环亚托盘餐
 
 ## User photos (keep captions; clickable lightbox)
-- media/beijing/beijing-1..5.jpg — 北京机场（部分仅 512px HEIC 解码上限）
+- media/beijing/beijing-1..5.jpg — 国泰北京休息室实拍（落地窗/入口/邀请函·已打码/座位区/吧台）
 - media/delta-priority/delta-1..3.jpg — 达美优先行李
 - media/sanjose/sanjose-1.jpg — 行李到了 San Jose
 - media/nz-lounge/nz-1..4.jpg — 新西兰休息室
