@@ -180,3 +180,5 @@
 .c-gem { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -58%); width: 178px; height: auto; z-index: 1; filter: drop-shadow(0 18px 22px rgba(0,0,0,0.45)) drop-shadow(0 0 28px color-mix(in srgb, var(--c-gem) 45%, transparent)); }
 .c-tier .hf-k { color: var(--on-navy-muted); }
 .c-tier .c-lane-v { font-size: 56px; }
+.c-np-photo.fig { flex: 1; aspect-ratio: auto; min-height: 0; margin: 22px 0; }
+.c-np-photo img { object-position: 50% 45%; }
