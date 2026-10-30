@@ -1,0 +1,102 @@
+/* ===== b- : upgrade channel slides 09–16 ===== */
+.b-body { --b-c: var(--ember); --b-c-soft: var(--ember-soft); }
+.b-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 500px; gap: 52px; }
+
+/* —— left: title + fare rules —— */
+.b-left { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.b-left .eyebrow { font-size: 16px; margin-bottom: 14px; }
+.b-left .eyebrow b { font-family: var(--display); font-size: 24px; letter-spacing: 0.04em; }
+.b-h2 { font-size: 58px; line-height: 1.12; margin: 0 0 26px; white-space: nowrap; letter-spacing: -0.01em; }
+.b-rules { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.b-rules li { flex: 1; align-content: center; padding: 14px 0; font-size: 29px; line-height: 1.42; grid-template-columns: 58px 1fr; }
+.b-rules li::before { font-size: 18px; }
+.b-rules li:last-child { border-bottom: 1.5px solid var(--ink); }
+.b-rules .tag { font-size: 15px; vertical-align: 5px; }
+
+/* —— right: tear-off fare-rule coupon —— */
+.b-card {
+  --b-c: var(--ember);
+  position: relative; min-height: 0;
+  display: flex; flex-direction: column;
+  background: var(--panel);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.b-card.b-ok { --b-c: var(--ok); }
+/* punched holes along the very top edge (perforated tear-off) */
+.b-card::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -7px; height: 14px; z-index: 2;
+  background: radial-gradient(circle 6px at 50% 50%, var(--paper) 96%, transparent 100%) 6px 0 / 22px 14px repeat-x;
+}
+.b-band {
+  flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between;
+  height: 78px; padding: 8px 30px 0;
+  background: var(--b-c); color: var(--paper);
+  font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.18em;
+}
+.b-band-code { font-family: var(--display); font-size: 26px; font-weight: 800; letter-spacing: 0.06em; }
+.b-owchip {
+  font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.08em;
+  padding: 5px 12px; border-radius: 999px; background: var(--paper); color: var(--ow);
+}
+/* perforation: dashed tear line with side notches */
+.b-perf { position: relative; flex: 0 0 auto; height: 0; border-top: 2px dashed var(--line-strong); margin: 0 26px; }
+.b-perf::before, .b-perf::after {
+  content: ""; position: absolute; top: -15px; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--paper); border: 1.5px solid var(--line-strong);
+}
+.b-perf::before { left: -42px; }
+.b-perf::after { right: -42px; }
+
+.b-card-body { flex: 1; min-height: 0; position: relative; display: flex; flex-direction: column; padding: 26px 36px 28px; }
+.b-hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.b-bignum {
+  font-family: var(--display); font-weight: 800; font-size: 250px; line-height: 0.78; letter-spacing: -0.02em;
+  color: transparent; -webkit-text-stroke: 2.5px var(--b-c);
+  margin: 8px 0 0 -6px; font-variant-numeric: tabular-nums;
+}
+.b-hero-side { display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 6px; padding-bottom: 2px; min-width: 0; }
+.b-hero-k { font-family: var(--mono); font-size: 13px; letter-spacing: 0.2em; color: var(--muted); }
+.b-hero-v { font-size: 46px; font-weight: 800; line-height: 1.1; color: var(--ink); letter-spacing: 0.02em; }
+.b-chname { font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: 0.2em; color: var(--b-c); line-height: 1.4; }
+.b-who { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.b-who-k { font-family: var(--mono); font-size: 14px; letter-spacing: 0.2em; color: var(--muted); }
+.b-who b { font-family: var(--mono); font-size: 18px; font-weight: 700; letter-spacing: 0.14em; color: var(--b-c); }
+.b-quote { margin: 18px 0 0; font-size: 36px; font-weight: 600; line-height: 1.42; color: var(--ink); text-wrap: pretty; }
+.b-quote em { font-style: normal; color: var(--b-c); }
+.b-quote-sm { font-size: 32px; }
+
+.b-fields {
+  flex: 0 0 auto; display: grid; grid-template-columns: 0.8fr 1fr 1.1fr;
+  padding: 18px 36px 22px; border-top: 1.5px dashed var(--line-strong); background: var(--paper-2);
+}
+.b-fields > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.b-fields .hf-k { font-size: 13px; }
+.b-fields .hf-v { font-size: 34px; margin-top: 4px; }
+.b-fields .hf-v.b-c { color: var(--b-c); }
+.b-fields .hf-v.b-cjk { font-family: var(--font); font-size: 26px; font-weight: 700; line-height: 1.3; }
+
+/* —— 16: conclusion —— */
+.b-endhead { display: flex; align-items: center; gap: 44px; margin-bottom: 26px; }
+.b-endhead .b-h2 { font-size: 96px; line-height: 1.02; margin: 0; }
+.b-stamp { transform: rotate(-7deg); padding: 12px 22px 10px; font-size: 40px; gap: 6px; }
+.b-stamp span { white-space: nowrap; }
+.b-stamp small { font-family: var(--font); font-size: 22px; font-weight: 700; letter-spacing: 0.5em; margin-right: -0.5em; }
+.b-end .b-card-body { padding-top: 22px; }
+.b-board { display: flex; flex-direction: column; }
+.b-board-row {
+  display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 12px;
+  height: 46px; border-bottom: 1px dashed var(--line);
+  font-size: 22px; color: var(--ink);
+}
+.b-board-row span:first-child { font-family: var(--display); font-size: 28px; font-weight: 800; color: var(--muted); }
+.b-board-row span:last-child { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; color: var(--ember);
+  border: 1.5px solid currentColor; border-radius: 4px; padding: 2px 8px; }
+.b-board-head { height: 34px; border-bottom: 1.5px solid var(--ink); }
+.b-board-head span, .b-board-head span:first-child, .b-board-head span:last-child {
+  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--muted); border: 0; padding: 0;
+}
+.b-end .b-who { margin-top: auto; }
+.b-quote-lg { font-size: 38px; }
+.b-rules li > span { text-wrap: pretty; }
