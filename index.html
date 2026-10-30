@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常旅客入门分享 · 三大联盟 · 权益 · 休息室</title>
+<style>
+/* ========== Airport wayfinding tokens ========== */
+:root {
+  --ink: #1a2332;
+  --ink-soft: #3d4a5c;
+  --muted: #6b7a8d;
+  --paper: #eef2f7;
+  --paper-2: #e2e8f0;
+  --panel: #ffffff;
+  --line: #c5d0dc;
+  --line-strong: #8a9bb0;
+  --accent: #0d4f8b;
+  --ow: #9b1b2e;
+  --st: #1a5f9e;
+  --sa: #b8860b;
+  --warn: #c45c26;
+  --placeholder-bg: #e8eef5;
+  --placeholder-border: #7a8fa3;
+  --nav-bg: rgba(238, 242, 247, 0.94);
+  --shadow: 0 1px 0 rgba(26, 35, 50, 0.06);
+  --img-shadow: 0 4px 20px rgba(26, 35, 50, 0.12);
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", system-ui, sans-serif;
+  --font-display: "DIN Alternate", "Avenir Next Condensed", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --slide-pad: clamp(1.75rem, 4.5vw, 4rem);
+}
+
+[data-theme="dark"] {
+  --ink: #e8eef5;
+  --ink-soft: #b8c5d4;
+  --muted: #8494a8;
+  --paper: #0f1620;
+  --paper-2: #172030;
+  --panel: #1a2535;
+  --line: #2a3a4f;
+  --line-strong: #4a5f78;
+  --accent: #5ba3e0;
+  --ow: #e85a6e;
+  --st: #6bb0e8;
+  --sa: #e0b84a;
+  --warn: #e8955a;
+  --placeholder-bg: #152030;
+  --placeholder-border: #5a7088;
+  --nav-bg: rgba(15, 22, 32, 0.94);
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  --img-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; height: 100%;
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+body { overflow: hidden; }
+
+.deck {
+  position: relative;
+  width: 100vw; height: 100vh; height: 100dvh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute; inset: 0;
+  display: none; flex-direction: column;
+  padding: var(--slide-pad);
+  padding-bottom: calc(var(--slide-pad) + 3.25rem);
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+  opacity: 0;
+}
+.slide.active { display: flex; opacity: 1; }
+.slide::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--accent); opacity: 0.9;
+}
+.slide[data-alliance="ow"]::before { background: var(--ow); }
+.slide[data-alliance="st"]::before { background: var(--st); }
+.slide[data-alliance="sa"]::before { background: var(--sa); }
+
+/* wayfinding gate header */
+.gate {
+  display: flex; align-items: baseline; gap: 1rem;
+  margin-bottom: 0.85rem; flex-shrink: 0;
+}
+.gate-num {
+  font-family: var(--font-display);
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
+  font-weight: 700; letter-spacing: 0.08em;
+  color: var(--muted); font-variant-numeric: tabular-nums;
+  min-width: 2.6em;
+}
+.gate-label {
+  font-size: clamp(0.72rem, 1.1vw, 0.88rem);
+  color: var(--muted); letter-spacing: 0.03em;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5.2vw, 3.5rem);
+  font-weight: 700; line-height: 1.15;
+  margin: 0 0 0.5rem; letter-spacing: -0.02em;
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.8vw, 2.55rem);
+  font-weight: 700; line-height: 1.2;
+  margin: 0 0 1rem; letter-spacing: -0.015em;
+}
+.subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  color: var(--ink-soft); margin: 0 0 1.25rem; line-height: 1.45; max-width: 36em;
+}
+.note-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--panel);
+  border: 1px dashed var(--line-strong);
+  border-radius: 4px; font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem;
+}
+
+.content {
+  flex: 1; display: flex; flex-direction: column;
+  min-height: 0; overflow: auto;
+}
+.lead {
+  font-size: clamp(1.05rem, 1.85vw, 1.28rem);
+  color: var(--ink-soft); line-height: 1.55; max-width: 40em; margin: 0 0 1.1rem;
+}
+
+ul.bullets {
+  list-style: none; margin: 0; padding: 0; max-width: 42em;
+}
+ul.bullets li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.3rem;
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  line-height: 1.45; color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+ul.bullets li:last-child { border-bottom: none; }
+ul.bullets li::before {
+  content: ""; position: absolute; left: 0; top: 1em;
+  width: 0.5rem; height: 0.5rem; border-radius: 1px;
+  background: var(--accent); transform: translateY(-50%);
+}
+ul.bullets.ow li::before { background: var(--ow); }
+ul.bullets.st li::before { background: var(--st); }
+ul.bullets.sa li::before { background: var(--sa); }
+
+.tag {
+  display: inline-block; font-size: 0.75rem; font-weight: 600;
+  padding: 0.18rem 0.45rem; border-radius: 3px; margin-right: 0.3rem; vertical-align: middle;
+}
+.tag-tip {
+  background: color-mix(in srgb, var(--warn) 18%, transparent);
+  color: var(--warn);
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+}
+.tag-exp {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+/* Alliance overview cards */
+.alliance-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin-top: 0.4rem;
+}
+@media (max-width: 900px) { .alliance-grid { grid-template-columns: 1fr; } }
+.alliance-card {
+  background: var(--panel); border: 1px solid var(--line); border-top-width: 4px;
+  padding: 1rem 1.15rem; box-shadow: var(--shadow);
+}
+.alliance-card.ow { border-top-color: var(--ow); }
+.alliance-card.st { border-top-color: var(--st); }
+.alliance-card.sa { border-top-color: var(--sa); }
+.alliance-card h3 {
+  margin: 0 0 0.25rem; font-size: clamp(1.1rem, 1.9vw, 1.35rem); font-weight: 700;
+}
+.alliance-card .en { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.65rem; }
+.alliance-card ul { list-style: none; margin: 0; padding: 0; }
+.alliance-card li {
+  font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+  padding: 0.22rem 0; color: var(--ink-soft); line-height: 1.35;
+}
+
+.benefit-row {
+  display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.75rem;
+}
+.benefit-pill {
+  flex: 1 1 130px; background: var(--panel); border: 1px solid var(--line);
+  padding: 1rem 1.1rem; text-align: center; min-width: 110px;
+}
+.benefit-pill .icon-letter {
+  font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 0.3rem;
+}
+.benefit-pill .label {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: 600;
+}
+
+/* Placeholders */
+.ph {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: var(--placeholder-bg);
+  border: 2px dashed var(--placeholder-border);
+  border-radius: 6px; color: var(--muted);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem); font-weight: 500;
+  line-height: 1.4; padding: 1.25rem; min-height: 160px; flex: 1; position: relative;
+}
+.ph::before {
+  content: "待补图"; position: absolute; top: 0.55rem; left: 0.7rem;
+  font-family: var(--font-display); font-size: 0.68rem;
+  letter-spacing: 0.1em; opacity: 0.55; font-weight: 700;
+}
+.ph-lg { min-height: 200px; }
+
+.two-col {
+  display: grid; grid-template-columns: 1fr 1.15fr; gap: 1.35rem;
+  flex: 1; min-height: 0; align-items: stretch;
+}
+@media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
+.two-col-40-60 { grid-template-columns: 0.9fr 1.2fr; }
+.two-col-45-55 { grid-template-columns: 1fr 1.15fr; }
+
+.callout {
+  margin-top: 0.9rem; padding: 0.9rem 1.1rem;
+  background: color-mix(in srgb, var(--warn) 12%, var(--panel));
+  border-left: 4px solid var(--warn); border-radius: 0 4px 4px 0;
+}
+.callout .who {
+  font-size: 0.78rem; font-weight: 600; color: var(--warn); margin-bottom: 0.3rem;
+}
+.callout p {
+  margin: 0; font-size: clamp(0.98rem, 1.6vw, 1.15rem); line-height: 1.45; color: var(--ink);
+}
+
+.hook-row {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.25rem;
+}
+.hook {
+  background: var(--panel); border: 1px solid var(--line);
+  padding: 0.55rem 0.9rem; font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  color: var(--ink-soft); border-radius: 4px;
+}
+.hook strong { color: var(--warn); font-weight: 600; }
+
+.agenda { list-style: none; margin: 0; padding: 0; max-width: 34em; }
+.agenda li {
+  display: flex; align-items: baseline; gap: 1rem;
+  padding: 0.75rem 0; border-bottom: 1px solid var(--line);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+.agenda li:last-child { border-bottom: none; }
+.agenda .n {
+  font-family: var(--font-display); font-weight: 700; color: var(--accent);
+  font-variant-numeric: tabular-nums; min-width: 1.5em;
+}
+
+.speaker-notes { margin-top: auto; flex-shrink: 0; padding-top: 0.75rem; }
+.speaker-notes details { font-size: 0.82rem; color: var(--muted); }
+.speaker-notes summary { cursor: pointer; user-select: none; outline: none; }
+.speaker-notes summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.speaker-notes p { margin: 0.35rem 0 0; line-height: 1.45; max-width: 48em; }
+
+.slide-title { justify-content: center; }
+.slide-title .title-block { max-width: 44em; }
+.slide-title h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+.meta-row {
+  display: flex; flex-wrap: wrap; gap: 0.7rem 1.4rem; margin-top: 1.75rem;
+  font-size: 0.92rem; color: var(--muted);
+}
+.meta-row span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.meta-row .dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+}
+
+.slide-end { justify-content: center; text-align: center; align-items: center; }
+.slide-end h1 { margin-bottom: 0.45rem; }
+.slide-end .subtitle { margin-left: auto; margin-right: auto; }
+
+/* Media figures */
+.fig {
+  position: relative; overflow: hidden; border-radius: 6px;
+  background: var(--panel); border: 1px solid var(--line);
+  box-shadow: var(--img-shadow); min-height: 0;
+}
+.fig img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+}
+.fig.fig-contain img { object-fit: contain; background: var(--panel); padding: 0.5rem; }
+.cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 0.4rem 0.65rem;
+  background: linear-gradient(transparent, rgba(15, 22, 32, 0.78));
+  color: #f0f3f7; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em;
+}
+.cap-static {
+  margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted); text-align: center;
+}
+
+/* Galleries */
+.gallery-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.55rem; flex: 1; min-height: 0;
+}
+.gallery-5 .fig { aspect-ratio: 1; }
+@media (max-width: 900px) {
+  .gallery-5 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .gallery-5 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.gallery-3 {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem; flex: 1; min-height: 0;
+}
+.gallery-3 .fig { min-height: 140px; aspect-ratio: 4/3; }
+@media (max-width: 700px) {
+  .gallery-3 { grid-template-columns: 1fr; }
+}
+
+.gallery-4 {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0.55rem; flex: 1; min-height: 0;
+}
+.gallery-4 .fig { aspect-ratio: 4/3; min-height: 120px; }
+@media (max-width: 900px) {
+  .gallery-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.gallery-hero-3 {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem; margin-top: 0.75rem; flex: 1; min-height: 0;
+}
+.gallery-hero-3 .fig { min-height: 120px; aspect-ratio: 16/10; }
+@media (max-width: 700px) {
+  .gallery-hero-3 { grid-template-columns: 1fr; }
+}
+
+/* oneworld logos row */
+.logo-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem;
+  margin: 0.25rem 0 0.85rem; padding: 0.75rem 1rem;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+}
+.logo-row img {
+  height: clamp(28px, 4vw, 42px); width: auto; max-width: 140px;
+  object-fit: contain;
+}
+.logo-row .sep {
+  width: 1px; height: 28px; background: var(--line); flex-shrink: 0;
+}
+[data-theme="dark"] .logo-row img {
+  filter: brightness(1.08) contrast(1.05);
+}
+[data-theme="dark"] .logo-row img.logo-invert {
+  filter: invert(1) brightness(1.15);
+}
+
+.airline-chip-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.55rem; margin-top: 0.5rem;
+}
+.airline-chip {
+  background: var(--panel); border: 1px solid var(--line);
+  padding: 0.7rem 0.85rem; font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+  font-weight: 600; color: var(--ink); border-left: 3px solid var(--st);
+}
+.airline-chip.sa { border-left-color: var(--sa); }
+.airline-chip .sub { display: block; font-size: 0.75rem; font-weight: 400; color: var(--muted); margin-top: 0.15rem; }
+
+.hot-badge {
+  display: inline-flex; align-items: center; gap: 0.35rem; align-self: flex-start;
+  padding: 0.28rem 0.65rem;
+  background: color-mix(in srgb, var(--ow) 15%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--ow) 45%, transparent);
+  color: var(--ow); font-size: 0.82rem; font-weight: 600; border-radius: 3px;
+}
+
+.egg-split {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem;
+  flex: 1; min-height: 0;
+}
+@media (max-width: 800px) { .egg-split { grid-template-columns: 1fr; } }
+.egg-left { display: flex; flex-direction: column; min-height: 0; gap: 0.5rem; }
+.egg-left h3 {
+  margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.25rem); font-weight: 700;
+}
+.nz-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; flex: 1; min-height: 0;
+}
+.nz-grid .fig { aspect-ratio: 4/3; min-height: 90px; }
+
+/* Nav chrome + dots */
+.chrome {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  background: var(--nav-bg); border-top: 1px solid var(--line);
+  backdrop-filter: blur(8px); font-size: 0.82rem; color: var(--muted);
+}
+.chrome-left, .chrome-right { display: flex; align-items: center; gap: 0.45rem; }
+.dots {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.35rem; flex: 1; flex-wrap: wrap; max-width: 420px;
+}
+.dot-btn {
+  appearance: none; border: none; padding: 0; margin: 0;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--line-strong); opacity: 0.45; cursor: pointer;
+}
+.dot-btn:hover { opacity: 0.75; }
+.dot-btn[aria-current="true"] {
+  background: var(--accent); opacity: 1; transform: scale(1.2);
+}
+.dot-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn {
+  appearance: none; border: 1px solid var(--line-strong);
+  background: var(--panel); color: var(--ink);
+  padding: 0.32rem 0.65rem; border-radius: 4px;
+  font-size: 0.78rem; font-family: inherit; cursor: pointer; line-height: 1.2;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.slide-counter {
+  font-variant-numeric: tabular-nums; font-family: var(--font-display);
+  min-width: 3.4em; text-align: center;
+}
+.hint-keys { opacity: 0.7; font-size: 0.72rem; }
+@media (max-width: 640px) { .hint-keys { display: none; } }
+
+.tiny { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+<div class="deck" id="deck" role="application" aria-label="常旅客入门分享幻灯片">
+
+  <!-- 1 Title -->
+  <section class="slide slide-title active" data-title="常旅客入门分享" aria-label="标题">
+    <div class="title-block">
+      <div class="gate">
+        <span class="gate-num">01</span>
+        <span class="gate-label">周会分享 · ~20–30 分钟</span>
+      </div>
+      <h1>常旅客入门分享</h1>
+      <p class="subtitle">三大联盟 · 权益 · 休息室</p>
+      <div class="meta-row">
+        <span><i class="dot"></i>同事向，不是航司宣传册</span>
+        <span><i class="dot"></i>← → / Space 翻页 · F 全屏</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 Agenda -->
+  <section class="slide" data-title="今天聊什么" aria-label="议程">
+    <div class="gate">
+      <span class="gate-num">02</span>
+      <span class="gate-label">Agenda</span>
+    </div>
+    <h2>今天聊什么</h2>
+    <div class="content">
+      <div class="hook-row" aria-label="开场钩子">
+        <span class="hook">值机<strong>排队</strong>排到怀疑人生？</span>
+        <span class="hook">托运<strong>行李加钱</strong>加到肉疼？</span>
+        <span class="hook">长途转机只想<strong>洗个澡</strong>？</span>
+      </div>
+      <ol class="agenda">
+        <li><span class="n">01</span>三大联盟是谁、身边例子怎么认</li>
+        <li><span class="n">02</span>精英身份大概买到啥：升舱 / 厅 / 柜台 / 行李</li>
+        <li><span class="n">03</span>休息室怎么进：PP、龙腾、国泰切片</li>
+        <li><span class="n">04</span>Q&amp;A —— 你们问，我讲故事</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3 Alliances overview -->
+  <section class="slide" data-title="三大联盟一览" aria-label="三大联盟一览">
+    <div class="gate">
+      <span class="gate-num">03</span>
+      <span class="gate-label">三大联盟</span>
+    </div>
+    <h2>联盟是什么？一句话</h2>
+    <div class="content">
+      <p class="lead">几家航司组成「朋友圈」：里程互通、身份互认——飞 A，好处在 B 也能用（大体上）。</p>
+      <div class="alliance-grid">
+        <div class="alliance-card ow">
+          <h3>oneworld</h3>
+          <div class="en">寰宇一家 · 红宝石系</div>
+          <ul>
+            <li>国泰 CX</li>
+            <li>Qantas · AA …</li>
+          </ul>
+        </div>
+        <div class="alliance-card st">
+          <h3>天合联盟</h3>
+          <div class="en">SkyTeam</div>
+          <ul>
+            <li>东航 · 厦航 · 华航</li>
+            <li>Delta …</li>
+          </ul>
+        </div>
+        <div class="alliance-card sa">
+          <h3>星空联盟</h3>
+          <div class="en">Star Alliance</div>
+          <ul>
+            <li>国航 · 深航 · 长荣</li>
+            <li>新航 · 汉莎 · United …</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tiny">完整成员以各联盟官网为准；下面按身边例子展开。</p>
+    </div>
+  </section>
+
+  <!-- 4 oneworld focus -->
+  <section class="slide" data-alliance="ow" data-title="oneworld 专页" aria-label="oneworld">
+    <div class="gate">
+      <span class="gate-num">04</span>
+      <span class="gate-label">oneworld · 重点</span>
+    </div>
+    <h2>oneworld · 身边例子</h2>
+    <div class="content">
+      <div class="logo-row">
+        <img src="media/oneworld/oneworld.svg" alt="oneworld" height="40">
+        <span class="sep" aria-hidden="true"></span>
+        <img src="media/oneworld/cathay.svg" alt="国泰航空 Cathay" class="logo-invert" height="36">
+        <img src="media/oneworld/qantas.svg" alt="Qantas" height="36">
+        <img src="media/oneworld/aa-symbol.svg" alt="American Airlines" height="36">
+        <img src="media/oneworld/aa-wordmark.svg" alt="American Airlines wordmark" height="22">
+      </div>
+      <p class="lead" style="margin-bottom:0.5rem">国泰 CX 是亚洲侧常见入口；身边长途例子：<strong>Qantas</strong>、<strong>AA</strong>。联盟 ≈ 里程互通、身份互认。</p>
+      <div class="gallery-hero-3">
+        <div class="fig">
+          <img src="media/oneworld/cx-oneworld.jpg" alt="国泰 / oneworld 机身" loading="lazy">
+          <span class="cap">国泰 CX · oneworld</span>
+        </div>
+        <div class="fig">
+          <img src="media/oneworld/qantas-plane.jpg" alt="Qantas 飞机" loading="lazy">
+          <span class="cap">Qantas</span>
+        </div>
+        <div class="fig">
+          <img src="media/oneworld/aa-plane.jpg" alt="American Airlines 飞机" loading="lazy">
+          <span class="cap">American Airlines</span>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <details>
+        <summary>讲者备注</summary>
+        <p>可顺带提 Ruby / Sapphire / Emerald 等级名——后面值机页会呼应绿宝石蓝宝石，不展开死记规则。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 5 SkyTeam -->
+  <section class="slide" data-alliance="st" data-title="天合联盟 SkyTeam" aria-label="天合联盟">
+    <div class="gate">
+      <span class="gate-num">05</span>
+      <span class="gate-label">SkyTeam</span>
+    </div>
+    <h2>天合联盟 · SkyTeam</h2>
+    <div class="content">
+      <p class="lead">国内不少人从东航 / 厦航入门；跨洋常见搭子是 Delta。</p>
+      <div class="airline-chip-grid">
+        <div class="airline-chip">中国东方航空<span class="sub">东航</span></div>
+        <div class="airline-chip">厦门航空<span class="sub">厦航</span></div>
+        <div class="airline-chip">中华航空<span class="sub">华航</span></div>
+        <div class="airline-chip">Delta<span class="sub">达美 · 后面行李故事</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Star Alliance -->
+  <section class="slide" data-alliance="sa" data-title="星空联盟 Star Alliance" aria-label="星空联盟">
+    <div class="gate">
+      <span class="gate-num">06</span>
+      <span class="gate-label">Star Alliance</span>
+    </div>
+    <h2>星空联盟 · Star Alliance</h2>
+    <div class="content">
+      <p class="lead">成员面广；国内常见入口国航 / 深航；长途有新航、汉莎、联合航空、新西兰航空。</p>
+      <div class="airline-chip-grid">
+        <div class="airline-chip sa">中国国际航空<span class="sub">国航</span></div>
+        <div class="airline-chip sa">深圳航空<span class="sub">深航</span></div>
+        <div class="airline-chip sa">长荣航空</div>
+        <div class="airline-chip sa">新加坡航空</div>
+        <div class="airline-chip sa">汉莎航空<span class="sub">Lufthansa</span></div>
+        <div class="airline-chip sa">Air New Zealand<span class="sub">新西兰航空</span></div>
+        <div class="airline-chip sa">United<span class="sub">联合航空</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 Benefits bridge -->
+  <section class="slide" data-title="权益总览" aria-label="权益总览">
+    <div class="gate">
+      <span class="gate-num">07</span>
+      <span class="gate-label">权益</span>
+    </div>
+    <h2>有了精英身份，大致买到什么</h2>
+    <div class="content">
+      <p class="lead">等级名称各家不同，福利大类高度重合。今天点这四块：</p>
+      <div class="benefit-row">
+        <div class="benefit-pill"><div class="icon-letter">↑</div><div class="label">升舱</div></div>
+        <div class="benefit-pill"><div class="icon-letter">◇</div><div class="label">休息室</div></div>
+        <div class="benefit-pill"><div class="icon-letter">▣</div><div class="label">值机柜台</div></div>
+        <div class="benefit-pill"><div class="icon-letter">⊞</div><div class="label">行李</div></div>
+      </div>
+      <p class="lead" style="margin-top:1.5rem;font-size:1.02rem">门槛、带人、哪条线认——以你当下的卡和航司规则为准，别背死表。</p>
+    </div>
+  </section>
+
+  <!-- 8 Upgrade -->
+  <section class="slide" data-title="升舱" aria-label="升舱">
+    <div class="gate">
+      <span class="gate-num">08</span>
+      <span class="gate-label">权益 · 升舱</span>
+    </div>
+    <h2>升舱：身份带来的「机会」</h2>
+    <div class="content">
+      <ul class="bullets">
+        <li>精英身份常对应<strong>舱位升级机会</strong>（候补 / 付费优惠 / 里程通道）</li>
+        <li>能不能升成：空位、票价舱位、航司规则——不是「有卡必升」</li>
+        <li>实战故事留给现场：各航司手感差很多</li>
+      </ul>
+      <div class="callout" style="margin-top:1.35rem">
+        <div class="who">口播位</div>
+        <p>这里故意不列假规则。有亲身升舱经历的，等会儿 Q&amp;A 直接讲。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 Lounge + Beijing gallery -->
+  <section class="slide" data-alliance="ow" data-title="休息室 · 玉衡堂与北京" aria-label="休息室">
+    <div class="gate">
+      <span class="gate-num">09</span>
+      <span class="gate-label">权益 · 休息室</span>
+    </div>
+    <h2>休息室最夯 · 国泰玉衡堂</h2>
+    <div class="content">
+      <span class="hot-badge">口碑很顶 · 分享经验</span>
+      <p class="lead" style="margin-top:0.65rem">圈子里常被点名的一档体验。进厅条件因身份 / 舱位 / 政策而异——以现场为准。</p>
+      <p class="tiny" style="margin:0 0 0.55rem">下面是<strong>北京机场</strong>实拍（部分 HEIC 仅解出 512px，仍可用）</p>
+      <div class="gallery-5">
+        <div class="fig"><img src="media/beijing/beijing-1.jpg" alt="北京机场 1" loading="lazy"><span class="cap">北京机场</span></div>
+        <div class="fig"><img src="media/beijing/beijing-2.jpg" alt="北京机场 2" loading="lazy"><span class="cap">北京机场</span></div>
+        <div class="fig"><img src="media/beijing/beijing-3.jpg" alt="北京机场 3" loading="lazy"><span class="cap">北京机场</span></div>
+        <div class="fig"><img src="media/beijing/beijing-4.jpg" alt="北京机场 4" loading="lazy"><span class="cap">北京机场</span></div>
+        <div class="fig"><img src="media/beijing/beijing-5.jpg" alt="北京机场 5" loading="lazy"><span class="cap">北京机场</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 Check-in Emerald/Sapphire -->
+  <section class="slide" data-alliance="ow" data-title="值机 · 绿宝石蓝宝石" aria-label="值机柜台">
+    <div class="gate">
+      <span class="gate-num">10</span>
+      <span class="gate-label">权益 · 值机</span>
+    </div>
+    <h2>值机柜台 · 绿宝石 / 蓝宝石</h2>
+    <div class="content">
+      <div class="two-col two-col-45-55">
+        <div>
+          <p class="lead">oneworld <strong>Emerald / Sapphire</strong> 级身份 → 常能走优先 / 商务专柜，少排队。</p>
+          <ul class="bullets ow">
+            <li>不同联盟叫法不同，体感类似：专柜、更快</li>
+            <li>伙伴航司认不认——看当日政策</li>
+            <li>右图为<strong>示意</strong>，非官方卡面</li>
+          </ul>
+        </div>
+        <div class="fig fig-contain" style="min-height:220px">
+          <img src="media/oneworld/emerald-sapphire.png" alt="oneworld Emerald / Sapphire 示意" loading="lazy">
+        </div>
+      </div>
+      <p class="cap-static">示意 · oneworld Emerald / Sapphire</p>
+    </div>
+  </section>
+
+  <!-- 11 Bags Delta story -->
+  <section class="slide" data-alliance="st" data-title="行李故事 · 达美" aria-label="行李故事">
+    <div class="gate">
+      <span class="gate-num">11</span>
+      <span class="gate-label">权益 · 行李</span>
+    </div>
+    <h2>行李故事 · 达美优先</h2>
+    <div class="content">
+      <div class="gallery-3">
+        <div class="fig"><img src="media/delta-priority/delta-1.jpg" alt="达美优先行李 1" loading="lazy"><span class="cap">达美优先行李</span></div>
+        <div class="fig"><img src="media/delta-priority/delta-2.jpg" alt="达美优先行李 2" loading="lazy"><span class="cap">达美优先行李</span></div>
+        <div class="fig"><img src="media/delta-priority/delta-3.jpg" alt="达美优先行李 3" loading="lazy"><span class="cap">达美优先行李</span></div>
+      </div>
+      <div class="callout">
+        <div class="who">故事梗 · 口播</div>
+        <p>美国达美：8 人一起买票，行李不用额外买。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 Bags arrived San Jose -->
+  <section class="slide" data-title="行李到了 San Jose" aria-label="行李到了">
+    <div class="gate">
+      <span class="gate-num">12</span>
+      <span class="gate-label">权益 · 行李</span>
+    </div>
+    <h2>行李到了</h2>
+    <div class="content">
+      <div class="fig" style="flex:1;min-height:240px;max-height:min(58vh,520px)">
+        <img src="media/sanjose/sanjose-1.jpg" alt="行李到达 San Jose" loading="lazy">
+        <span class="cap">行李到了 · San Jose</span>
+      </div>
+      <p class="lead" style="margin-top:0.85rem;margin-bottom:0">优先托运的另一面：出来也更快一点——细节现场讲。</p>
+    </div>
+  </section>
+
+  <!-- 13 How to enter lounges -->
+  <section class="slide" data-title="休息室怎么进" aria-label="休息室怎么进">
+    <div class="gate">
+      <span class="gate-num">13</span>
+      <span class="gate-label">休息室深入</span>
+    </div>
+    <h2>休息室怎么进</h2>
+    <div class="content">
+      <div class="two-col">
+        <div>
+          <h3 style="margin:0 0 0.5rem;font-size:1.25rem">Priority Pass（PP）</h3>
+          <ul class="bullets">
+            <li>和航司身份平行的一条路：合约休息室网络</li>
+            <li><span class="tag tag-tip">实用</span>闲鱼等渠道有人分享办卡 / 转让经验——自己甄别</li>
+            <li>次数、带人、哪些厅：以卡面和 App 当日列表为准</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 0.5rem;font-size:1.25rem">龙腾卡</h3>
+          <ul class="bullets">
+            <li>国内常见休息室通行方案之一</li>
+            <li><span class="tag tag-tip">实用</span>可通过<strong>农行办卡</strong>等银行渠道拿到相关权益（以当期活动为准）</li>
+            <li><span class="tag tag-exp">经验</span>部分厅<strong>能洗澡</strong>——长途转机很香</li>
+          </ul>
+        </div>
+      </div>
+      <p class="tiny">办卡、额度都在变，出发前用 App / 银行说明再确认一眼。</p>
+    </div>
+  </section>
+
+
+  <!-- 13b HK Plaza Premium -->
+  <section class="slide" data-title="香港环亚休息室" aria-label="香港环亚">
+    <div class="gate">
+      <span class="gate-num">13b</span>
+      <span class="gate-label">PP 常见厅</span>
+    </div>
+    <h2>香港 · 环亚休息室</h2>
+    <div class="content">
+      <p class="lead">Plaza Premium · 视频里抽的帧 · 口播补感受</p>
+      <div class="gallery gallery-5">
+        <div class="fig"><img src="media/hk-plaza/plaza-a-01.jpg" alt="香港环亚 1" loading="lazy"><span class="cap">香港环亚</span></div>
+        <div class="fig"><img src="media/hk-plaza/plaza-a-02.jpg" alt="香港环亚 2" loading="lazy"><span class="cap">香港环亚</span></div>
+        <div class="fig"><img src="media/hk-plaza/plaza-a-03.jpg" alt="香港环亚 3" loading="lazy"><span class="cap">香港环亚</span></div>
+        <div class="fig"><img src="media/hk-plaza/plaza-a-04.jpg" alt="香港环亚 4" loading="lazy"><span class="cap">香港环亚</span></div>
+        <div class="fig"><img src="media/hk-plaza/plaza-b-01.jpg" alt="香港环亚 5" loading="lazy"><span class="cap">香港环亚</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 Experience egg: NZ lounge + Taipei placeholder -->
+  <section class="slide" data-title="体验彩蛋" aria-label="体验彩蛋">
+    <div class="gate">
+      <span class="gate-num">14</span>
+      <span class="gate-label">体验切片</span>
+    </div>
+    <h2>体验彩蛋</h2>
+    <div class="content">
+      <div class="egg-split">
+        <div class="egg-left">
+          <h3>新西兰休息室</h3>
+          <p class="tiny" style="margin:0">分享人实拍 · 口播可讲洗澡体验</p>
+          <div class="nz-grid">
+            <div class="fig"><img src="media/nz-lounge/nz-1.jpg" alt="新西兰休息室 1" loading="lazy"><span class="cap">新西兰休息室</span></div>
+            <div class="fig"><img src="media/nz-lounge/nz-2.jpg" alt="新西兰休息室 2" loading="lazy"><span class="cap">新西兰休息室</span></div>
+            <div class="fig"><img src="media/nz-lounge/nz-3.jpg" alt="新西兰休息室 3" loading="lazy"><span class="cap">新西兰休息室</span></div>
+            <div class="fig"><img src="media/nz-lounge/nz-4.jpg" alt="新西兰休息室 4" loading="lazy"><span class="cap">新西兰休息室</span></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;min-height:0">
+          <h3 style="margin:0;font-size:clamp(1.05rem,1.8vw,1.25rem);font-weight:700">台北担担面</h3>
+          <div class="ph ph-lg" role="img" aria-label="待补图：台北担担面">
+            待补图<br>台北担担面
+          </div>
+          <p class="tiny" style="margin:0">治愈系口播位 · 图后补</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 Closing Q&A -->
+  <section class="slide slide-end" data-title="收尾 Q&A" aria-label="收尾">
+    <div class="gate" style="justify-content:center">
+      <span class="gate-num">15</span>
+      <span class="gate-label">Fin</span>
+    </div>
+    <h1>就这些 · 问吧</h1>
+    <p class="subtitle">联盟怎么选、卡值不值得办、哪家厅好吃好喝——现场聊。</p>
+    <p class="note-chip">← → / Space 翻页 · F 或点「全屏」</p>
+  </section>
+
+</div>
+
+<nav class="chrome" aria-label="幻灯片控制">
+  <div class="chrome-left">
+    <button type="button" class="btn" id="btnPrev" aria-label="上一页">←</button>
+    <button type="button" class="btn" id="btnNext" aria-label="下一页">→</button>
+    <span class="slide-counter" id="counter" aria-live="polite">1 / 15</span>
+    <span class="hint-keys">← → · Space · 点击两侧</span>
+  </div>
+  <div class="dots" id="dots" role="tablist" aria-label="进度"></div>
+  <div class="chrome-right">
+    <button type="button" class="btn" id="btnTheme" aria-label="切换浅色深色">主题</button>
+    <button type="button" class="btn" id="btnFs" aria-label="全屏">全屏</button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  const slides = Array.from(document.querySelectorAll(".slide"));
+  const total = slides.length;
+  let i = 0;
+  const counter = document.getElementById("counter");
+  const dotsEl = document.getElementById("dots");
+  const btnPrev = document.getElementById("btnPrev");
+  const btnNext = document.getElementById("btnNext");
+  const btnTheme = document.getElementById("btnTheme");
+  const btnFs = document.getElementById("btnFs");
+  const root = document.documentElement;
+
+  // progress dots
+  slides.forEach((_, idx) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "dot-btn";
+    b.setAttribute("aria-label", "第 " + (idx + 1) + " 页");
+    b.addEventListener("click", (e) => { e.stopPropagation(); show(idx); });
+    dotsEl.appendChild(b);
+  });
+  const dots = Array.from(dotsEl.querySelectorAll(".dot-btn"));
+
+  function defaultTheme() {
+    const h = new Date().getHours();
+    return (h >= 7 && h < 19) ? "light" : "dark";
+  }
+  function applyTheme(t) {
+    if (t === "light") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", "dark");
+    try { localStorage.setItem("ff-share-theme", t); } catch (e) {}
+    btnTheme.textContent = t === "dark" ? "浅色" : "深色";
+  }
+  let saved = null;
+  try { saved = localStorage.getItem("ff-share-theme"); } catch (e) {}
+  applyTheme(saved === "light" || saved === "dark" ? saved : defaultTheme());
+
+  function show(n) {
+    i = Math.max(0, Math.min(total - 1, n));
+    slides.forEach((s, idx) => s.classList.toggle("active", idx === i));
+    dots.forEach((d, idx) => d.setAttribute("aria-current", idx === i ? "true" : "false"));
+    counter.textContent = (i + 1) + " / " + total;
+    btnPrev.disabled = i === 0;
+    btnNext.disabled = i === total - 1;
+    const title = slides[i].getAttribute("data-title") || "";
+    document.title = title + " · 常旅客入门分享";
+  }
+
+  function next() { show(i + 1); }
+  function prev() { show(i - 1); }
+
+  btnPrev.addEventListener("click", (e) => { e.stopPropagation(); prev(); });
+  btnNext.addEventListener("click", (e) => { e.stopPropagation(); next(); });
+  btnTheme.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const now = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    applyTheme(now === "dark" ? "light" : "dark");
+  });
+  btnFs.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+    else document.exitFullscreen?.();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.target && (e.target.tagName === "SUMMARY" || e.target.closest("details"))) {
+      if (e.key === " " || e.key === "Enter") return;
+    }
+    if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
+      e.preventDefault(); next();
+    } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+      e.preventDefault(); prev();
+    } else if (e.key === "Home") { e.preventDefault(); show(0); }
+    else if (e.key === "End") { e.preventDefault(); show(total - 1); }
+    else if (e.key === "f" || e.key === "F") {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+      else document.exitFullscreen?.();
+    }
+  });
+
+  document.getElementById("deck").addEventListener("click", (e) => {
+    if (e.target.closest(".chrome") || e.target.closest("details") || e.target.closest("a") || e.target.closest("button")) return;
+    const x = e.clientX;
+    const w = window.innerWidth;
+    if (x > w * 0.62) next();
+    else if (x < w * 0.38) prev();
+  });
+
+  let touchX = null;
+  document.addEventListener("touchstart", (e) => {
+    touchX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  document.addEventListener("touchend", (e) => {
+    if (touchX == null) return;
+    const dx = e.changedTouches[0].screenX - touchX;
+    touchX = null;
+    if (Math.abs(dx) < 50) return;
+    if (dx < 0) next(); else prev();
+  }, { passive: true });
+
+  show(0);
+})();
+</script>
+</body>
+</html>
