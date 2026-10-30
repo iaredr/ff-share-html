@@ -4,7 +4,7 @@ Audience: the presenter's design team (designers). Craft matters: strong grid, g
 
 ## Files
 - `build/template.html` — shared shell (CSS design system + JS). READ IT FULLY first. DO NOT EDIT IT.
-- `build/old-index.html` — previous version; the source of all slide CONTENT (text, image paths, captions). Keep every fact/sentence's meaning; you may tighten wording slightly, never invent new facts/numbers.
+- `git show c45d557:index.html (旧版内容来源)` — previous version; the source of all slide CONTENT (text, image paths, captions). Keep every fact/sentence's meaning; you may tighten wording slightly, never invent new facts/numbers.
 - Write your slides as `build/parts/sNN.html` (NN = 2-digit slide number), one `<section>` per file.
 - Write your extra CSS in ONE file `build/parts/<yourprefix>.css`. Prefix every class you add with your prefix (e.g. `.a-board`). Don't override shared classes globally.
 - Don't touch other agents' files.

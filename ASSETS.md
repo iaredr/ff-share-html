@@ -21,3 +21,7 @@
 
 ## Star Alliance
 - star-livery.jpg, ca-airchina.jpg, zh-shenzhen.jpg, br-eva.jpg, sq-singapore.jpg, lh-lufthansa.jpg, nz-airnz.jpg, ua-united.jpg
+
+## 待补原图（当前为纯黑 jpg，HEIC 解码失败）
+delta-priority/delta-1.jpg, delta-2.jpg, sanjose/sanjose-1.jpg, nz-lounge/nz-1..4.jpg
+页面上显示「原图待补」占位。替换文件后，去 build/parts 对应 sNN.html 删掉该 .fig 的 `data-pending`，再 `python3 build/build.py` 重新生成 index.html。
