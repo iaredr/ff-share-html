@@ -14,7 +14,8 @@
 ## oneworld
 - logos: oneworld.svg, cathay.svg, qantas.svg, aa-symbol.svg, aa-wordmark.svg
 - planes: cx-oneworld.jpg, qantas-plane.jpg, aa-plane.jpg
-- emerald-sapphire.png — 旧示意图（已弃用：P18 改为 s18.html 内联 SVG 卡片）
+- emerald-sapphire.png — 旧示意图（已弃用）
+- media/hk-checkin/cx-first-hkg.jpg — P18 香港 T1 国泰头等值机柜台实拍（Wikimedia Commons · N509FZ · CC BY-SA 4.0）
 
 ## SkyTeam (need many on that slide)
 - skyteam-livery.jpg, mu-chinaeastern.jpg, mf-xiamen.jpg, ci-chinaairlines.jpg, dl-delta.jpg
@@ -25,3 +26,11 @@
 ## 待补原图（当前为纯黑 jpg，HEIC 解码失败）
 nz-lounge/nz-1..4.jpg
 页面上显示「原图待补」占位。替换文件后，去 build/parts 对应 sNN.html 删掉该 .fig 的 `data-pending`，再 `python3 build/build.py` 重新生成 index.html。
+
+## 升舱配图 P08–P13（Wikimedia Commons，署名已印在图上）
+- upgrade/cx-business-cabin.jpg — P08 国泰 A330 商务舱 · Edwin Leong / CC BY-SA 2.0
+- upgrade/jal-sapphire-card.jpg — P09 JMB Sapphire 卡 · 663highland / Public domain
+- upgrade/credit-cards.jpg — P10 信用卡 · Yuri Samoilov / CC BY 2.0
+- upgrade/xianyu-shop.jpg — P11 闲鱼循环商店 · Shwangtianyuan / CC BY-SA 4.0
+- upgrade/cx-business-seat.jpg — P12 国泰 747 商务舱座位 · Melv_L / CC BY-SA 2.0
+- upgrade/cx-premium-economy.jpg — P13 国泰 777 PE · XiaYZ2023 / CC BY-SA 4.0

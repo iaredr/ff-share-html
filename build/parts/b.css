@@ -100,3 +100,31 @@
 .b-end .b-who { margin-top: auto; }
 .b-quote-lg { font-size: 38px; }
 .b-rules li > span { text-wrap: pretty; }
+
+/* —— 09–13: photo header on the fare-rule coupon —— */
+.b-photo { flex: 0 0 300px; border-radius: 0; background: var(--navy); }
+.b-photo img { filter: saturate(0.9); }
+.b-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(8,14,24,0.3) 0%, transparent 26%, rgba(8,14,24,0.35) 50%, rgba(8,14,24,0.9) 100%); }
+.b-photo .b-hero { position: absolute; left: 30px; right: 30px; bottom: 22px; z-index: 1; pointer-events: none; }
+.b-photo .b-bignum { font-size: 168px; margin: 0; -webkit-text-stroke: 2.5px #fff; color: transparent; }
+.b-photo .b-hero-k { color: rgba(240,243,247,0.75); }
+.b-photo .b-hero-v { color: #fff; font-size: 44px; }
+.b-photo .b-chname { color: var(--champagne); }
+.b-credit { top: 14px; right: 14px; left: auto; bottom: auto; z-index: 1; font-size: 13px; padding: 4px 10px; }
+.b-photo + .b-card-body { padding-top: 22px; }
+.b-photo + .b-card-body .b-quote { font-size: 32px; }
+.b-photo + .b-card-body .b-quote-lg { font-size: 34px; }
+
+/* —— 15: nomination screenshots —— */
+.b-grid.b-grid-nom { grid-template-columns: 470px minmax(0, 1fr); gap: 40px; }
+.b-rules-nom li { font-size: 25px; line-height: 1.4; grid-template-columns: 48px 1fr; padding: 10px 0; }
+.b-rules-nom em { font-style: normal; color: var(--b-c); font-weight: 600; }
+.b-nom { min-height: 0; display: grid; grid-template-columns: 1fr 1fr 250px; gap: 14px; }
+.b-nom .fig { border: 1.5px solid var(--line-strong); }
+.b-nom-tall img { object-position: 50% 0; }
+.b-nom-col { min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.b-nom-cx { flex: 0 0 auto; aspect-ratio: 924 / 833; }
+.b-nom-at { flex: 1; }
+.b-nom-at img { object-position: 50% 0; }
+.b-nom .cap { font-size: 15px; }

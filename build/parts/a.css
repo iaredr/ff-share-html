@@ -177,3 +177,9 @@
 .a-al::after { content: attr(data-code); position: absolute; right: 18px; bottom: -14px; font-family: var(--display); font-size: 200px; font-weight: 800; line-height: 1; color: var(--c); opacity: 0.1; letter-spacing: -0.02em; pointer-events: none; }
 .a-ch-foot { margin-top: auto; padding-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-family: var(--mono); font-size: 14px; letter-spacing: 0.16em; color: var(--muted); }
 .a-ch-foot::after { content: ""; width: 96px; height: 22px; opacity: 0.55; background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px, var(--ink) 4px 5px, transparent 5px 8px, var(--ink) 8px 11px, transparent 11px 13px); }
+
+/* 08: header with destination photo */
+.a-maphead { display: flex; align-items: stretch; gap: 40px; }
+.a-maphead-text { flex: 1; min-width: 0; }
+.a-mapphoto { flex: 0 0 470px; height: 200px; align-self: flex-start; border-radius: 14px; margin-bottom: 26px; border: 1.5px solid var(--line-strong); }
+.a-mapphoto .cap { font-size: 14px; }
