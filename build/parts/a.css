@@ -6,7 +6,7 @@
 .a-t-pnr { display: flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 15px; letter-spacing: 0.2em; color: var(--muted); }
 .a-t-pnr b { font-size: 20px; color: var(--ink); letter-spacing: 0.16em; padding: 4px 12px; border: 1.5px solid var(--line-strong); border-radius: 6px; }
 .a-route { display: flex; align-items: stretch; gap: 8px; margin-top: 2px; }
-.a-port { flex: 0 0 auto; display: flex; flex-direction: column; min-width: 260px; }
+.a-port { flex: 0 0 auto; display: flex; flex-direction: column; }
 .a-port-to { align-items: flex-end; text-align: right; }
 .a-port-k { font-family: var(--mono); font-size: 15px; letter-spacing: 0.2em; color: var(--muted); }
 .a-port-code { font-family: var(--display); font-size: 300px; font-weight: 800; line-height: 0.78; letter-spacing: -0.02em; margin: 16px 0 14px; color: var(--ink); }
@@ -14,12 +14,12 @@
 .a-port-v { font-size: 26px; font-weight: 600; color: var(--ink); }
 .a-port-v span { font-family: var(--mono); font-size: 15px; font-weight: 500; letter-spacing: 0.2em; color: var(--muted); margin-left: 8px; }
 .a-port-to .a-port-v { color: var(--ember); }
-.a-arc { flex: 1; position: relative; color: var(--line-strong); margin: 40px 10px 46px; }
+.a-arc { flex: 1; position: relative; color: var(--line-strong); margin: 40px 6px 56px; }
 .a-arc > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .a-arc-plane { position: absolute; left: 50%; top: 34.5%; transform: translate(-50%, -50%) rotate(90deg); width: 52px; height: 52px; color: var(--ink); background: var(--paper); border-radius: 50%; padding: 8px; }
 .a-arc-plane svg { width: 100%; height: 100%; display: block; }
 .a-arc-k { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); font-family: var(--mono); font-size: 15px; letter-spacing: 0.22em; color: var(--muted); white-space: nowrap; }
-.a-t-title { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 30px; padding-top: 30px; border-top: 1.5px solid var(--ink); }
+.a-t-title { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 40px; padding-top: 40px; border-top: 1.5px solid var(--ink); }
 .a-t-sub { margin: 14px 0 0; font-size: 32px; color: var(--ink-soft); }
 .a-t-sub i { font-style: normal; font-family: var(--mono); color: var(--muted); margin: 0 6px; }
 .a-t-sub b { color: var(--ember); }
@@ -38,9 +38,9 @@
 
 /* —— 02 Agenda —— */
 .a-hooks { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 26px; }
-.a-hook { display: flex; align-items: center; gap: 26px; padding: 22px 30px 22px 28px; background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; position: relative; }
+.a-hook { display: flex; align-items: center; gap: 26px; padding: 20px 30px 20px 28px; background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; position: relative; }
 .a-hook-q { flex: 0 0 auto; font-family: var(--display); font-size: 64px; font-weight: 800; line-height: 1; color: var(--accent); padding-right: 26px; border-right: 1.5px dashed var(--line-strong); }
-.a-hook p { margin: 0; font-size: 30px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.a-hook p { margin: 0; text-wrap: balance; font-size: 34px; font-weight: 600; line-height: 1.4; color: var(--ink); }
 .a-hook strong { color: var(--ember); }
 .a-board { display: flex; flex-direction: column; background: var(--navy); color: var(--on-navy); border-radius: 16px; padding: 18px 30px 14px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06); }
 .a-board-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 15px; letter-spacing: 0.2em; color: var(--on-navy-muted); padding-bottom: 12px; }
@@ -96,7 +96,7 @@
 .a-ow .lead strong, .a-st .lead strong, .a-sa .lead strong { color: var(--accent); }
 .a-al-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
 .a-al-top h2 { white-space: nowrap; }
-.a-logos { flex: 0 1 auto; display: flex; align-items: center; gap: 22px; padding: 14px 24px; margin-bottom: 22px; background: #FFFFFF; border: 1.5px solid var(--line); border-radius: 12px; }
+.a-logos { flex: 0 1 auto; display: flex; align-items: center; gap: 18px; padding: 12px 20px; margin-bottom: 22px; background: #FFFFFF; border: 1.5px solid var(--line); border-radius: 12px; }
 .a-logos img { display: block; width: auto; }
 .a-logo-ow { height: 48px; }
 .a-logo-cx { height: 26px; }
