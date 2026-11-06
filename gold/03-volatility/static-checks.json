@@ -1,0 +1,12 @@
+{
+  "status": "static_checks_passed",
+  "han_main": 3866,
+  "evidence_figures": 13,
+  "source_anchors_resolve": true,
+  "external_resource_tags": 0,
+  "external_css_urls": 0,
+  "network_api_calls": 0,
+  "js_syntax": "pass",
+  "data_recalculation": "pass",
+  "browser_responsive_and_screenshots": "pending root QA"
+}

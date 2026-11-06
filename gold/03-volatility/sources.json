@@ -1,0 +1,34 @@
+[
+  {
+    "id": "s1",
+    "title": "NYU Stern / Aswath Damodaran Historical Returns",
+    "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html",
+    "date": "January 2026",
+    "accessed": "2026-11-06",
+    "usage": "1972–2025 Gold and S&P 500 includes dividends columns, fixed saved HTML version",
+    "raw_file": "source-damodaran.txt",
+    "version_note": "Published HTML rounds to two decimals. Other files/providers have small revision/timing differences; no mixing."
+  },
+  {
+    "id": "s2",
+    "title": "World Gold Council: Gold Price Volatility",
+    "url": "https://www.gold.org/goldhub/data/gold-price-volatility",
+    "accessed": "2026-11-06",
+    "usage": "Explanation of frequency differences only; not source for page numerical statistics"
+  },
+  {
+    "id": "s3",
+    "title": "S&P DJI FAQ S&P 500 Dividend Points Index",
+    "url": "https://www.spglobal.com/spdji/en/education/article/faq-sp-500-dividend-points-index/",
+    "accessed": "2026-11-06",
+    "usage": "Total-return definition includes reinvested dividends"
+  },
+  {
+    "id": "s4",
+    "title": "Page calculations",
+    "raw_file": "data.json",
+    "script": "calculate.py",
+    "result": "calculated.json",
+    "usage": "Sample SD, correlation, frequencies and hypothetical capital arithmetic"
+  }
+]

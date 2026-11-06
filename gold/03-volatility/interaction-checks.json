@@ -1,0 +1,37 @@
+{
+  "page": "03-volatility",
+  "interactionTests": [
+    {
+      "control": "yearSlider",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "1972 年起 · 54 年",
+      "changed": false,
+      "errors": []
+    },
+    {
+      "control": "1980 年起 · 46 年",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "2000 年起 · 26 年",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "principal",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "simYear",
+      "changed": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "at": "2026-11-06T15:30:40.201Z"
+}

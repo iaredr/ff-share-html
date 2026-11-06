@@ -1,0 +1,494 @@
+[
+  {
+    "width": 360,
+    "height": 20412,
+    "documentWidth": 345,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "annual-returns",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "deviation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "return-distribution",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "negative-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tail-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "period-compare",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "decades",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rolling10",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "scatter",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "correlation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "frequency-demo",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "page": "03-volatility",
+      "years": 54,
+      "first_year": 1972,
+      "last_year": 2025,
+      "gold_sd": 27.314599159034504,
+      "sp_sd": 17.043376202998196,
+      "gold_negative": 19,
+      "sp_negative": 11,
+      "gold_below_minus20": 4,
+      "both_negative": [
+        1981,
+        1990,
+        2000,
+        2018
+      ],
+      "figures": 13,
+      "data_rows": 54,
+      "errors": []
+    },
+    "pass": true
+  },
+  {
+    "width": 390,
+    "height": 19449,
+    "documentWidth": 375,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "annual-returns",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "deviation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "return-distribution",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "negative-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tail-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "period-compare",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "decades",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rolling10",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "scatter",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "correlation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "frequency-demo",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "page": "03-volatility",
+      "years": 54,
+      "first_year": 1972,
+      "last_year": 2025,
+      "gold_sd": 27.314599159034504,
+      "sp_sd": 17.043376202998196,
+      "gold_negative": 19,
+      "sp_negative": 11,
+      "gold_below_minus20": 4,
+      "both_negative": [
+        1981,
+        1990,
+        2000,
+        2018
+      ],
+      "figures": 13,
+      "data_rows": 54,
+      "errors": []
+    },
+    "pass": true
+  },
+  {
+    "width": 768,
+    "height": 15321,
+    "documentWidth": 753,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "annual-returns",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "deviation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "return-distribution",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "negative-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tail-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "period-compare",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "decades",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rolling10",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "scatter",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "correlation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "frequency-demo",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "page": "03-volatility",
+      "years": 54,
+      "first_year": 1972,
+      "last_year": 2025,
+      "gold_sd": 27.314599159034504,
+      "sp_sd": 17.043376202998196,
+      "gold_negative": 19,
+      "sp_negative": 11,
+      "gold_below_minus20": 4,
+      "both_negative": [
+        1981,
+        1990,
+        2000,
+        2018
+      ],
+      "figures": 13,
+      "data_rows": 54,
+      "errors": []
+    },
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "height": 16418,
+    "documentWidth": 1425,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "annual-returns",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "deviation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "return-distribution",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "negative-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tail-years",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "period-compare",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "decades",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rolling10",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "scatter",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "correlation",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "frequency-demo",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "page": "03-volatility",
+      "years": 54,
+      "first_year": 1972,
+      "last_year": 2025,
+      "gold_sd": 27.314599159034504,
+      "sp_sd": 17.043376202998196,
+      "gold_negative": 19,
+      "sp_negative": 11,
+      "gold_below_minus20": 4,
+      "both_negative": [
+        1981,
+        1990,
+        2000,
+        2018
+      ],
+      "figures": 13,
+      "data_rows": 54,
+      "errors": []
+    },
+    "pass": true
+  }
+]

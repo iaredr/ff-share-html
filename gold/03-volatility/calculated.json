@@ -1,0 +1,893 @@
+{
+  "1972": {
+    "n": 54,
+    "gold_sd": 27.3145991590345,
+    "sp_sd": 17.043376202998196,
+    "gold_mean": 11.704629629629629,
+    "sp_mean": 12.482592592592592,
+    "gold_negative": 19,
+    "sp_negative": 11,
+    "gold_below_minus20": 4,
+    "sp_below_minus20": 3,
+    "correlation": -0.16672830735369762,
+    "both_negative": [
+      1981,
+      1990,
+      2000,
+      2018
+    ]
+  },
+  "1980": {
+    "n": 46,
+    "gold_sd": 17.977838762488897,
+    "sp_sd": 16.292378143032266,
+    "gold_mean": 6.236086956521739,
+    "sp_mean": 13.405,
+    "gold_negative": 17,
+    "sp_negative": 8,
+    "gold_below_minus20": 3,
+    "sp_below_minus20": 2,
+    "correlation": 0.027423249780740153,
+    "both_negative": [
+      1981,
+      1990,
+      2000,
+      2018
+    ]
+  },
+  "2000": {
+    "n": 26,
+    "gold_sd": 17.93106521783226,
+    "sp_sd": 17.7918024382017,
+    "gold_mean": 12.320384615384615,
+    "sp_mean": 9.575,
+    "gold_negative": 5,
+    "sp_negative": 6,
+    "gold_below_minus20": 1,
+    "sp_below_minus20": 2,
+    "correlation": 0.15572187437110946,
+    "both_negative": [
+      2000,
+      2018
+    ]
+  },
+  "1979_squared_deviation_share": 0.3335503897524376,
+  "gold_loss_years": [
+    {
+      "year": 1975,
+      "sp500_total_return_pct": 37.0,
+      "tbill_pct": 5.79,
+      "gold_return_pct": -24.8,
+      "source_id": "damodaran-2026"
+    },
+    {
+      "year": 1981,
+      "sp500_total_return_pct": -4.7,
+      "tbill_pct": 14.04,
+      "gold_return_pct": -32.6,
+      "source_id": "damodaran-2026"
+    },
+    {
+      "year": 1997,
+      "sp500_total_return_pct": 33.1,
+      "tbill_pct": 5.2,
+      "gold_return_pct": -21.41,
+      "source_id": "damodaran-2026"
+    },
+    {
+      "year": 2013,
+      "sp500_total_return_pct": 32.15,
+      "tbill_pct": 0.06,
+      "gold_return_pct": -27.61,
+      "source_id": "damodaran-2026"
+    }
+  ],
+  "eras": [
+    {
+      "start": 1972,
+      "end": 1979,
+      "n": 8,
+      "gold_sd": 47.37844248706367,
+      "sp_sd": 21.334773384246265,
+      "gold_mean": 43.14875,
+      "sp_mean": 7.17875,
+      "gold_negative": 2,
+      "sp_negative": 3,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.4111209832685033,
+      "both_negative": []
+    },
+    {
+      "start": 1980,
+      "end": 1989,
+      "n": 10,
+      "gold_sd": 19.519537107444144,
+      "sp_sd": 12.369963127583597,
+      "gold_mean": -0.658,
+      "sp_mean": 17.951,
+      "gold_negative": 5,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.42181867666938827,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "start": 1990,
+      "end": 1999,
+      "n": 10,
+      "gold_sd": 9.6758042444945,
+      "sp_sd": 14.035952289270105,
+      "gold_mean": -2.689,
+      "sp_mean": 18.817,
+      "gold_negative": 7,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.32306711918271513,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "start": 2000,
+      "end": 2009,
+      "n": 10,
+      "gold_sd": 12.645315382034214,
+      "sp_sd": 20.861276300573962,
+      "gold_mean": 14.767,
+      "sp_mean": 1.1560000000000006,
+      "gold_negative": 1,
+      "sp_negative": 4,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 2,
+      "correlation": 0.4364973982659855,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "start": 2010,
+      "end": 2019,
+      "n": 10,
+      "gold_sd": 16.04711690962308,
+      "sp_sd": 12.138867602320518,
+      "gold_mean": 4.625,
+      "sp_mean": 14.022,
+      "gold_negative": 3,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.019447399235849577,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "start": 2020,
+      "end": 2025,
+      "n": 6,
+      "gold_sd": 25.179926462693782,
+      "sp_sd": 17.32801864034085,
+      "gold_mean": 21.068333333333335,
+      "sp_mean": 16.195,
+      "gold_negative": 1,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": 0.20190810952056598,
+      "both_negative": []
+    }
+  ],
+  "rolling10": [
+    {
+      "end": 1981,
+      "n": 10,
+      "gold_sd": 48.48488648824268,
+      "sp_sd": 20.855276470636074,
+      "gold_mean": 32.778,
+      "sp_mean": 8.447,
+      "gold_negative": 3,
+      "sp_negative": 4,
+      "gold_below_minus20": 2,
+      "sp_below_minus20": 1,
+      "correlation": -0.28177884513286233,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1982,
+      "n": 10,
+      "gold_sd": 48.40274597352693,
+      "sp_sd": 20.9528629971605,
+      "gold_mean": 29.462,
+      "sp_mean": 8.613,
+      "gold_negative": 3,
+      "sp_negative": 4,
+      "gold_below_minus20": 2,
+      "sp_below_minus20": 1,
+      "correlation": -0.32092637619367165,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1983,
+      "n": 10,
+      "gold_sd": 47.758470150446726,
+      "sp_sd": 19.663408091624852,
+      "gold_mean": 20.486,
+      "sp_mean": 12.278,
+      "gold_negative": 4,
+      "sp_negative": 3,
+      "gold_below_minus20": 2,
+      "sp_below_minus20": 1,
+      "correlation": -0.26482326968864744,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1984,
+      "n": 10,
+      "gold_sd": 46.30862915747393,
+      "sp_sd": 14.746445937166616,
+      "gold_mean": 11.933,
+      "sp_mean": 15.483,
+      "gold_negative": 5,
+      "sp_negative": 2,
+      "gold_below_minus20": 2,
+      "sp_below_minus20": 0,
+      "correlation": 0.0038295722590498704,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1985,
+      "n": 10,
+      "gold_sd": 44.586277672246496,
+      "sp_sd": 13.900851332842093,
+      "gold_mean": 15.013,
+      "sp_mean": 14.907,
+      "gold_negative": 4,
+      "sp_negative": 2,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.13233484174861693,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1986,
+      "n": 10,
+      "gold_sd": 44.08139074484833,
+      "sp_sd": 13.619713694168137,
+      "gold_mean": 17.319,
+      "sp_mean": 14.373,
+      "gold_negative": 3,
+      "sp_negative": 2,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.17307238441047035,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1987,
+      "n": 10,
+      "gold_sd": 44.11078144853025,
+      "sp_sd": 11.8812894923068,
+      "gold_mean": 17.508,
+      "sp_mean": 15.652,
+      "gold_negative": 3,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.20874808847654272,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1988,
+      "n": 10,
+      "gold_sd": 44.63686554357906,
+      "sp_sd": 11.438908504651035,
+      "gold_mean": 12.280999999999999,
+      "sp_mean": 16.655,
+      "gold_negative": 4,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.25813937224970224,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1989,
+      "n": 10,
+      "gold_sd": 19.519537107444144,
+      "sp_sd": 12.369963127583597,
+      "gold_mean": -0.658,
+      "sp_mean": 17.951,
+      "gold_negative": 5,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.42181867666938827,
+      "both_negative": [
+        1981
+      ]
+    },
+    {
+      "end": 1990,
+      "n": 10,
+      "gold_sd": 18.70969790123709,
+      "sp_sd": 12.941601695479754,
+      "gold_mean": -2.488,
+      "sp_mean": 14.471,
+      "gold_negative": 6,
+      "sp_negative": 2,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.31477708635823787,
+      "both_negative": [
+        1981,
+        1990
+      ]
+    },
+    {
+      "end": 1991,
+      "n": 10,
+      "gold_sd": 15.715596075236855,
+      "sp_sd": 11.861112183190167,
+      "gold_mean": -0.08399999999999985,
+      "sp_mean": 17.964,
+      "gold_negative": 6,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": -0.04230641771654548,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1992,
+      "n": 10,
+      "gold_sd": 14.766700865272664,
+      "sp_sd": 12.261629808290396,
+      "gold_mean": -2.219,
+      "sp_mean": 16.671,
+      "gold_negative": 7,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": -0.04787342705740427,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1993,
+      "n": 10,
+      "gold_sd": 15.007319288341346,
+      "sp_sd": 12.25013487454095,
+      "gold_mean": 1.2290000000000003,
+      "sp_mean": 15.434,
+      "gold_negative": 6,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": -0.05200432209959088,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1994,
+      "n": 10,
+      "gold_sd": 13.267255430821654,
+      "sp_sd": 12.741006239697082,
+      "gold_mean": 2.95,
+      "sp_mean": 14.952,
+      "gold_negative": 6,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": -0.1453611738740778,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1995,
+      "n": 10,
+      "gold_sd": 13.233958675401032,
+      "sp_sd": 13.691528443205716,
+      "gold_mean": 2.448,
+      "sp_mean": 15.548,
+      "gold_negative": 6,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": -0.1911155083915995,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1996,
+      "n": 10,
+      "gold_sd": 12.007710532079887,
+      "sp_sd": 13.854706420563375,
+      "gold_mean": 0.09300000000000005,
+      "sp_mean": 15.967,
+      "gold_negative": 7,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": -0.26753042546385175,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1997,
+      "n": 10,
+      "gold_sd": 10.283912409411334,
+      "sp_sd": 14.31190894946505,
+      "gold_mean": -4.501,
+      "sp_mean": 18.696,
+      "gold_negative": 8,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.29849522430478165,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1998,
+      "n": 10,
+      "gold_sd": 9.59587503971252,
+      "sp_sd": 14.597987075849419,
+      "gold_mean": -3.0580000000000003,
+      "sp_mean": 19.876,
+      "gold_negative": 8,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.31745241313412575,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 1999,
+      "n": 10,
+      "gold_sd": 9.6758042444945,
+      "sp_sd": 14.035952289270105,
+      "gold_mean": -2.689,
+      "sp_mean": 18.817,
+      "gold_negative": 7,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.32306711918271513,
+      "both_negative": [
+        1990
+      ]
+    },
+    {
+      "end": 2000,
+      "n": 10,
+      "gold_sd": 9.715043089056385,
+      "sp_sd": 15.152410149323881,
+      "gold_mean": -2.922,
+      "sp_mean": 18.22,
+      "gold_negative": 7,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.24823308127961413,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2001,
+      "n": 10,
+      "gold_sd": 9.55956466930721,
+      "sp_sd": 17.156961528455117,
+      "gold_mean": -1.991,
+      "sp_mean": 14.012,
+      "gold_negative": 6,
+      "sp_negative": 2,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.2251862902864325,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2002,
+      "n": 10,
+      "gold_sd": 12.780745457305862,
+      "sp_sd": 20.587565394890404,
+      "gold_mean": 1.139,
+      "sp_mean": 11.066,
+      "gold_negative": 5,
+      "sp_negative": 3,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.5304956653925155,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2003,
+      "n": 10,
+      "gold_sd": 13.113326554819466,
+      "sp_sd": 21.288214397225104,
+      "gold_mean": 1.36,
+      "sp_mean": 12.905000000000001,
+      "gold_negative": 5,
+      "sp_negative": 3,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.3653560197258313,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2004,
+      "n": 10,
+      "gold_sd": 13.086659704532025,
+      "sp_sd": 20.924585327100537,
+      "gold_mean": 2.0420000000000003,
+      "sp_mean": 13.846,
+      "gold_negative": 4,
+      "sp_negative": 3,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.3945361982417986,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2005,
+      "n": 10,
+      "gold_sd": 13.981724937296622,
+      "sp_sd": 19.355279756295037,
+      "gold_mean": 3.721,
+      "sp_mean": 10.609,
+      "gold_negative": 4,
+      "sp_negative": 3,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.4249438466971217,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2006,
+      "n": 10,
+      "gold_sd": 14.87924729279005,
+      "sp_sd": 18.9910626933361,
+      "gold_mean": 6.5,
+      "sp_mean": 9.902000000000001,
+      "gold_negative": 3,
+      "sp_negative": 3,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.32149105047820725,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2007,
+      "n": 10,
+      "gold_sd": 13.23013147662898,
+      "sp_sd": 17.162829991971993,
+      "gold_mean": 11.833,
+      "sp_mean": 7.140000000000001,
+      "gold_negative": 2,
+      "sp_negative": 3,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 1,
+      "correlation": -0.06618472346961368,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2008,
+      "n": 10,
+      "gold_sd": 12.774839681533733,
+      "sp_sd": 20.24672673133446,
+      "gold_mean": 12.348,
+      "sp_mean": 0.6510000000000005,
+      "gold_negative": 1,
+      "sp_negative": 4,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 2,
+      "correlation": 0.21258432891486373,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2009,
+      "n": 10,
+      "gold_sd": 12.645315382034214,
+      "sp_sd": 20.861276300573962,
+      "gold_mean": 14.767,
+      "sp_mean": 1.1560000000000006,
+      "gold_negative": 1,
+      "sp_negative": 4,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 2,
+      "correlation": 0.4364973982659855,
+      "both_negative": [
+        2000
+      ]
+    },
+    {
+      "end": 2010,
+      "n": 10,
+      "gold_sd": 11.155520058597796,
+      "sp_sd": 20.930582860706217,
+      "gold_mean": 18.235,
+      "sp_mean": 3.5410000000000004,
+      "gold_negative": 0,
+      "sp_negative": 3,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 2,
+      "correlation": 0.4499524252992191,
+      "both_negative": []
+    },
+    {
+      "end": 2011,
+      "n": 10,
+      "gold_sd": 9.662127439993052,
+      "sp_sd": 20.244442419807193,
+      "gold_mean": 19.362,
+      "sp_mean": 4.936000000000001,
+      "gold_negative": 0,
+      "sp_negative": 2,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 2,
+      "correlation": 0.38039552139682303,
+      "both_negative": []
+    },
+    {
+      "end": 2012,
+      "n": 10,
+      "gold_sd": 10.270275393905786,
+      "sp_sd": 18.077783664548654,
+      "gold_mean": 17.373,
+      "sp_mean": 8.722000000000001,
+      "gold_negative": 0,
+      "sp_negative": 1,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 1,
+      "correlation": 0.45609715054743005,
+      "both_negative": []
+    },
+    {
+      "end": 2013,
+      "n": 10,
+      "gold_sd": 17.45093760613834,
+      "sp_sd": 18.568312584137047,
+      "gold_mean": 12.623,
+      "sp_mean": 9.101,
+      "gold_negative": 1,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.1108117484564554,
+      "both_negative": []
+    },
+    {
+      "end": 2014,
+      "n": 10,
+      "gold_sd": 17.737346663654815,
+      "sp_sd": 18.61632643675975,
+      "gold_mean": 12.17,
+      "sp_mean": 9.379,
+      "gold_negative": 1,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.12251175374826136,
+      "both_negative": []
+    },
+    {
+      "end": 2015,
+      "n": 10,
+      "gold_sd": 19.149697299609375,
+      "sp_sd": 18.741542803799977,
+      "gold_mean": 9.182,
+      "sp_mean": 9.034,
+      "gold_negative": 2,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.047895046783632045,
+      "both_negative": []
+    },
+    {
+      "end": 2016,
+      "n": 10,
+      "gold_sd": 18.506045738862987,
+      "sp_sd": 18.630847180594515,
+      "gold_mean": 7.672,
+      "sp_mean": 8.65,
+      "gold_negative": 2,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.08238498162876014,
+      "both_negative": []
+    },
+    {
+      "end": 2017,
+      "n": 10,
+      "gold_sd": 16.606837413815096,
+      "sp_sd": 19.020080645932545,
+      "gold_mean": 5.7459999999999996,
+      "sp_mean": 10.263,
+      "gold_negative": 2,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 1,
+      "correlation": -0.029220677689981045,
+      "both_negative": []
+    },
+    {
+      "end": 2018,
+      "n": 10,
+      "gold_sd": 16.739383667135286,
+      "sp_sd": 11.401769112242578,
+      "gold_mean": 5.221,
+      "sp_mean": 13.495,
+      "gold_negative": 3,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.021015996097626662,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2019,
+      "n": 10,
+      "gold_sd": 16.04711690962308,
+      "sp_sd": 12.138867602320518,
+      "gold_mean": 4.625,
+      "sp_mean": 14.022,
+      "gold_negative": 3,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": -0.019447399235849577,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2020,
+      "n": 10,
+      "gold_sd": 15.242950866256542,
+      "sp_sd": 12.204244070540925,
+      "gold_mean": 4.118,
+      "sp_mean": 14.342,
+      "gold_negative": 3,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.015545057185934038,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2021,
+      "n": 10,
+      "gold_sd": 15.150073303819724,
+      "sp_sd": 12.113758431359498,
+      "gold_mean": 2.541,
+      "sp_mean": 16.979,
+      "gold_negative": 4,
+      "sp_negative": 1,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.032202276223733686,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2022,
+      "n": 10,
+      "gold_sd": 15.118794631554167,
+      "sp_sd": 16.434071112579904,
+      "gold_mean": 2.028,
+      "sp_mean": 13.586,
+      "gold_negative": 4,
+      "sp_negative": 2,
+      "gold_below_minus20": 1,
+      "sp_below_minus20": 0,
+      "correlation": 0.048710167115282484,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2023,
+      "n": 10,
+      "gold_sd": 11.244320294659383,
+      "sp_sd": 15.76909075797756,
+      "gold_mean": 6.115,
+      "sp_mean": 12.977,
+      "gold_negative": 3,
+      "sp_negative": 2,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": 0.516427140900873,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2024,
+      "n": 10,
+      "gold_sd": 12.60082047593198,
+      "sp_sd": 16.215423419284082,
+      "gold_mean": 8.699,
+      "sp_mean": 14.113,
+      "gold_negative": 3,
+      "sp_negative": 2,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": 0.5624071509180891,
+      "both_negative": [
+        2018
+      ]
+    },
+    {
+      "end": 2025,
+      "n": 10,
+      "gold_sd": 20.251524387067754,
+      "sp_sd": 15.602283344291488,
+      "gold_mean": 16.532,
+      "sp_mean": 15.753,
+      "gold_negative": 2,
+      "sp_negative": 2,
+      "gold_below_minus20": 0,
+      "sp_below_minus20": 0,
+      "correlation": 0.2995168956489438,
+      "both_negative": [
+        2018
+      ]
+    }
+  ],
+  "rebound_gold_1981": 48.367952522255194
+}

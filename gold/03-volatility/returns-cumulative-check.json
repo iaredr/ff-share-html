@@ -1,0 +1,758 @@
+[
+  {
+    "year": 1972,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 18.76,
+    "return_from_cumulative_pct": 18.755424318905067,
+    "difference_pp": 0.004575681094934225
+  },
+  {
+    "year": 1972,
+    "asset": "gold_return_pct",
+    "return_pct": 48.78,
+    "return_from_cumulative_pct": 48.78395003312197,
+    "difference_pp": 0.003950033121967067
+  },
+  {
+    "year": 1973,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -14.31,
+    "return_from_cumulative_pct": -14.308154967911024,
+    "difference_pp": 0.0018450320889762395
+  },
+  {
+    "year": 1973,
+    "asset": "gold_return_pct",
+    "return_pct": 72.96,
+    "return_from_cumulative_pct": 72.95827502862231,
+    "difference_pp": 0.0017249713776834597
+  },
+  {
+    "year": 1974,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -25.9,
+    "return_from_cumulative_pct": -25.901618452911947,
+    "difference_pp": 0.0016184529119485092
+  },
+  {
+    "year": 1974,
+    "asset": "gold_return_pct",
+    "return_pct": 66.15,
+    "return_from_cumulative_pct": 66.1469155097913,
+    "difference_pp": 0.003084490208706825
+  },
+  {
+    "year": 1975,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 37.0,
+    "return_from_cumulative_pct": 36.99504554264208,
+    "difference_pp": 0.004954457357918329
+  },
+  {
+    "year": 1975,
+    "asset": "gold_return_pct",
+    "return_pct": -24.8,
+    "return_from_cumulative_pct": -24.798857889086868,
+    "difference_pp": 0.0011421109131326546
+  },
+  {
+    "year": 1976,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 23.83,
+    "return_from_cumulative_pct": 23.8309070278361,
+    "difference_pp": 0.0009070278361029693
+  },
+  {
+    "year": 1976,
+    "asset": "gold_return_pct",
+    "return_pct": -4.1,
+    "return_from_cumulative_pct": -4.1000132448381965,
+    "difference_pp": 1.3244838196868614e-05
+  },
+  {
+    "year": 1977,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -6.98,
+    "return_from_cumulative_pct": -6.979645948685953,
+    "difference_pp": 0.00035405131404786516
+  },
+  {
+    "year": 1977,
+    "asset": "gold_return_pct",
+    "return_pct": 22.64,
+    "return_from_cumulative_pct": 22.639453694467893,
+    "difference_pp": 0.0005463055321079935
+  },
+  {
+    "year": 1978,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 6.51,
+    "return_from_cumulative_pct": 6.509263916834351,
+    "difference_pp": 0.0007360831656484379
+  },
+  {
+    "year": 1978,
+    "asset": "gold_return_pct",
+    "return_pct": 37.01,
+    "return_from_cumulative_pct": 37.01043569658901,
+    "difference_pp": 0.00043569658901532193
+  },
+  {
+    "year": 1979,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 18.52,
+    "return_from_cumulative_pct": 18.519531580531968,
+    "difference_pp": 0.00046841946803155565
+  },
+  {
+    "year": 1979,
+    "asset": "gold_return_pct",
+    "return_pct": 126.55,
+    "return_from_cumulative_pct": 126.5489150288595,
+    "difference_pp": 0.0010849711405001017
+  },
+  {
+    "year": 1980,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 31.74,
+    "return_from_cumulative_pct": 31.735097270579395,
+    "difference_pp": 0.0049027294206034355
+  },
+  {
+    "year": 1980,
+    "asset": "gold_return_pct",
+    "return_pct": 15.19,
+    "return_from_cumulative_pct": 15.18571969910749,
+    "difference_pp": 0.004280300892508748
+  },
+  {
+    "year": 1981,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -4.7,
+    "return_from_cumulative_pct": -4.702391905483316,
+    "difference_pp": 0.002391905483316137
+  },
+  {
+    "year": 1981,
+    "asset": "gold_return_pct",
+    "return_pct": -32.6,
+    "return_from_cumulative_pct": -32.598728878809524,
+    "difference_pp": 0.0012711211904772313
+  },
+  {
+    "year": 1982,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 20.42,
+    "return_from_cumulative_pct": 20.419089134471434,
+    "difference_pp": 0.0009108655285672285
+  },
+  {
+    "year": 1982,
+    "asset": "gold_return_pct",
+    "return_pct": 15.62,
+    "return_from_cumulative_pct": 15.622549808657894,
+    "difference_pp": 0.002549808657894559
+  },
+  {
+    "year": 1983,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 22.34,
+    "return_from_cumulative_pct": 22.33720077143748,
+    "difference_pp": 0.0027992285625195734
+  },
+  {
+    "year": 1983,
+    "asset": "gold_return_pct",
+    "return_pct": -16.8,
+    "return_from_cumulative_pct": -16.797201289777874,
+    "difference_pp": 0.0027987102221267435
+  },
+  {
+    "year": 1984,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 6.15,
+    "return_from_cumulative_pct": 6.146118557487723,
+    "difference_pp": 0.003881442512277289
+  },
+  {
+    "year": 1984,
+    "asset": "gold_return_pct",
+    "return_pct": -19.38,
+    "return_from_cumulative_pct": -19.377560438492804,
+    "difference_pp": 0.0024395615071952648
+  },
+  {
+    "year": 1985,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 31.24,
+    "return_from_cumulative_pct": 31.23514083381331,
+    "difference_pp": 0.004859166186687247
+  },
+  {
+    "year": 1985,
+    "asset": "gold_return_pct",
+    "return_pct": 6.0,
+    "return_from_cumulative_pct": 6.000535582780997,
+    "difference_pp": 0.0005355827809969682
+  },
+  {
+    "year": 1986,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 18.49,
+    "return_from_cumulative_pct": 18.494579998195483,
+    "difference_pp": 0.004579998195485047
+  },
+  {
+    "year": 1986,
+    "asset": "gold_return_pct",
+    "return_pct": 18.96,
+    "return_from_cumulative_pct": 18.956882014488464,
+    "difference_pp": 0.003117985511536858
+  },
+  {
+    "year": 1987,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 5.81,
+    "return_from_cumulative_pct": 5.812742401555937,
+    "difference_pp": 0.0027424015559374126
+  },
+  {
+    "year": 1987,
+    "asset": "gold_return_pct",
+    "return_pct": 24.53,
+    "return_from_cumulative_pct": 24.527470427081767,
+    "difference_pp": 0.002529572918234635
+  },
+  {
+    "year": 1988,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 16.54,
+    "return_from_cumulative_pct": 16.53717178238281,
+    "difference_pp": 0.0028282176171892104
+  },
+  {
+    "year": 1988,
+    "asset": "gold_return_pct",
+    "return_pct": -15.26,
+    "return_from_cumulative_pct": -15.255068323775811,
+    "difference_pp": 0.004931676224188664
+  },
+  {
+    "year": 1989,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 31.48,
+    "return_from_cumulative_pct": 31.4751856883259,
+    "difference_pp": 0.004814311674099514
+  },
+  {
+    "year": 1989,
+    "asset": "gold_return_pct",
+    "return_pct": -2.84,
+    "return_from_cumulative_pct": -2.8400372298945986,
+    "difference_pp": 3.722989459875592e-05
+  },
+  {
+    "year": 1990,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -3.06,
+    "return_from_cumulative_pct": -3.0644532547340453,
+    "difference_pp": 0.004453254734045231
+  },
+  {
+    "year": 1990,
+    "asset": "gold_return_pct",
+    "return_pct": -3.11,
+    "return_from_cumulative_pct": -3.111019055509534,
+    "difference_pp": 0.0010190555095341836
+  },
+  {
+    "year": 1991,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 30.23,
+    "return_from_cumulative_pct": 30.23487365163171,
+    "difference_pp": 0.004873651631708498
+  },
+  {
+    "year": 1991,
+    "asset": "gold_return_pct",
+    "return_pct": -8.56,
+    "return_from_cumulative_pct": -8.557441532344257,
+    "difference_pp": 0.002558467655743968
+  },
+  {
+    "year": 1992,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 7.49,
+    "return_from_cumulative_pct": 7.493720023459072,
+    "difference_pp": 0.0037200234590715198
+  },
+  {
+    "year": 1992,
+    "asset": "gold_return_pct",
+    "return_pct": -5.73,
+    "return_from_cumulative_pct": -5.734073641145521,
+    "difference_pp": 0.004073641145520668
+  },
+  {
+    "year": 1993,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 9.97,
+    "return_from_cumulative_pct": 9.967044493518284,
+    "difference_pp": 0.0029555064817170518
+  },
+  {
+    "year": 1993,
+    "asset": "gold_return_pct",
+    "return_pct": 17.68,
+    "return_from_cumulative_pct": 17.677584956196625,
+    "difference_pp": 0.002415043803374317
+  },
+  {
+    "year": 1994,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 1.33,
+    "return_from_cumulative_pct": 1.3259124260706079,
+    "difference_pp": 0.004087573929392185
+  },
+  {
+    "year": 1994,
+    "asset": "gold_return_pct",
+    "return_pct": -2.17,
+    "return_from_cumulative_pct": -2.1696408343475526,
+    "difference_pp": 0.000359165652447313
+  },
+  {
+    "year": 1995,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 37.2,
+    "return_from_cumulative_pct": 37.195212048683544,
+    "difference_pp": 0.004787951316458816
+  },
+  {
+    "year": 1995,
+    "asset": "gold_return_pct",
+    "return_pct": 0.98,
+    "return_from_cumulative_pct": 0.9785494633326675,
+    "difference_pp": 0.0014505366673325248
+  },
+  {
+    "year": 1996,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 22.68,
+    "return_from_cumulative_pct": 22.680967861446135,
+    "difference_pp": 0.0009678614461350321
+  },
+  {
+    "year": 1996,
+    "asset": "gold_return_pct",
+    "return_pct": -4.59,
+    "return_from_cumulative_pct": -4.586666666666661,
+    "difference_pp": 0.0033333333333391835
+  },
+  {
+    "year": 1997,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 33.1,
+    "return_from_cumulative_pct": 33.10364945338144,
+    "difference_pp": 0.0036494533814419583
+  },
+  {
+    "year": 1997,
+    "asset": "gold_return_pct",
+    "return_pct": -21.41,
+    "return_from_cumulative_pct": -21.40804918949134,
+    "difference_pp": 0.0019508105086600835
+  },
+  {
+    "year": 1998,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 28.34,
+    "return_from_cumulative_pct": 28.337951861278988,
+    "difference_pp": 0.0020481387210118385
+  },
+  {
+    "year": 1998,
+    "asset": "gold_return_pct",
+    "return_pct": -0.83,
+    "return_from_cumulative_pct": -0.8271633914410215,
+    "difference_pp": 0.002836608558978493
+  },
+  {
+    "year": 1999,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 20.89,
+    "return_from_cumulative_pct": 20.8853538695408,
+    "difference_pp": 0.004646130459200037
+  },
+  {
+    "year": 1999,
+    "asset": "gold_return_pct",
+    "return_pct": 0.85,
+    "return_from_cumulative_pct": 0.8512744015261253,
+    "difference_pp": 0.001274401526125346
+  },
+  {
+    "year": 2000,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -9.03,
+    "return_from_cumulative_pct": -9.03181802658719,
+    "difference_pp": 0.0018180265871912127
+  },
+  {
+    "year": 2000,
+    "asset": "gold_return_pct",
+    "return_pct": -5.44,
+    "return_from_cumulative_pct": -5.443555555555557,
+    "difference_pp": 0.0035555555555566443
+  },
+  {
+    "year": 2001,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -11.85,
+    "return_from_cumulative_pct": -11.849758520480613,
+    "difference_pp": 0.00024147951938680023
+  },
+  {
+    "year": 2001,
+    "asset": "gold_return_pct",
+    "return_pct": 0.75,
+    "return_from_cumulative_pct": 0.7467849890952838,
+    "difference_pp": 0.003215010904716209
+  },
+  {
+    "year": 2002,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -21.97,
+    "return_from_cumulative_pct": -21.96604719188937,
+    "difference_pp": 0.003952808110629036
+  },
+  {
+    "year": 2002,
+    "asset": "gold_return_pct",
+    "return_pct": 25.57,
+    "return_from_cumulative_pct": 25.56974687040452,
+    "difference_pp": 0.0002531295954817381
+  },
+  {
+    "year": 2003,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 28.36,
+    "return_from_cumulative_pct": 28.355797364462454,
+    "difference_pp": 0.004202635537545518
+  },
+  {
+    "year": 2003,
+    "asset": "gold_return_pct",
+    "return_pct": 19.89,
+    "return_from_cumulative_pct": 19.888001807189525,
+    "difference_pp": 0.0019981928104755298
+  },
+  {
+    "year": 2004,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 10.74,
+    "return_from_cumulative_pct": 10.742774115574893,
+    "difference_pp": 0.0027741155748923774
+  },
+  {
+    "year": 2004,
+    "asset": "gold_return_pct",
+    "return_pct": 4.65,
+    "return_from_cumulative_pct": 4.648637391407817,
+    "difference_pp": 0.0013626085921831788
+  },
+  {
+    "year": 2005,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 4.83,
+    "return_from_cumulative_pct": 4.834477788442215,
+    "difference_pp": 0.004477788442215136
+  },
+  {
+    "year": 2005,
+    "asset": "gold_return_pct",
+    "return_pct": 17.77,
+    "return_from_cumulative_pct": 17.768553924007445,
+    "difference_pp": 0.0014460759925540856
+  },
+  {
+    "year": 2006,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 15.61,
+    "return_from_cumulative_pct": 15.612558645954877,
+    "difference_pp": 0.0025586459548776475
+  },
+  {
+    "year": 2006,
+    "asset": "gold_return_pct",
+    "return_pct": 23.2,
+    "return_from_cumulative_pct": 23.19681991735971,
+    "difference_pp": 0.0031800826402879068
+  },
+  {
+    "year": 2007,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 5.48,
+    "return_from_cumulative_pct": 5.484735884925751,
+    "difference_pp": 0.004735884925750611
+  },
+  {
+    "year": 2007,
+    "asset": "gold_return_pct",
+    "return_pct": 31.92,
+    "return_from_cumulative_pct": 31.92239110129913,
+    "difference_pp": 0.002391101299128451
+  },
+  {
+    "year": 2008,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -36.55,
+    "return_from_cumulative_pct": -36.55234547610067,
+    "difference_pp": 0.0023454761006718172
+  },
+  {
+    "year": 2008,
+    "asset": "gold_return_pct",
+    "return_pct": 4.32,
+    "return_from_cumulative_pct": 4.317871810550344,
+    "difference_pp": 0.0021281894496558706
+  },
+  {
+    "year": 2009,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 25.94,
+    "return_from_cumulative_pct": 25.935232188347502,
+    "difference_pp": 0.0047678116524991765
+  },
+  {
+    "year": 2009,
+    "asset": "gold_return_pct",
+    "return_pct": 25.04,
+    "return_from_cumulative_pct": 25.035893030463384,
+    "difference_pp": 0.004106969536614713
+  },
+  {
+    "year": 2010,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 14.82,
+    "return_from_cumulative_pct": 14.821096116776111,
+    "difference_pp": 0.0010961167761109891
+  },
+  {
+    "year": 2010,
+    "asset": "gold_return_pct",
+    "return_pct": 29.24,
+    "return_from_cumulative_pct": 29.241207842244133,
+    "difference_pp": 0.001207842244134838
+  },
+  {
+    "year": 2011,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 2.1,
+    "return_from_cumulative_pct": 2.0983720579919707,
+    "difference_pp": 0.0016279420080294038
+  },
+  {
+    "year": 2011,
+    "asset": "gold_return_pct",
+    "return_pct": 12.02,
+    "return_from_cumulative_pct": 12.024218785565655,
+    "difference_pp": 0.0042187855656550255
+  },
+  {
+    "year": 2012,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 15.89,
+    "return_from_cumulative_pct": 15.890586748275147,
+    "difference_pp": 0.0005867482751469311
+  },
+  {
+    "year": 2012,
+    "asset": "gold_return_pct",
+    "return_pct": 5.68,
+    "return_from_cumulative_pct": 5.684423580860454,
+    "difference_pp": 0.004423580860454024
+  },
+  {
+    "year": 2013,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 32.15,
+    "return_from_cumulative_pct": 32.14508748015588,
+    "difference_pp": 0.00491251984411889
+  },
+  {
+    "year": 2013,
+    "asset": "gold_return_pct",
+    "return_pct": -27.61,
+    "return_from_cumulative_pct": -27.61417113825071,
+    "difference_pp": 0.004171138250711692
+  },
+  {
+    "year": 2014,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 13.52,
+    "return_from_cumulative_pct": 13.524422751558163,
+    "difference_pp": 0.004422751558163185
+  },
+  {
+    "year": 2014,
+    "asset": "gold_return_pct",
+    "return_pct": 0.12,
+    "return_from_cumulative_pct": 0.12440539021481012,
+    "difference_pp": 0.004405390214810123
+  },
+  {
+    "year": 2015,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 1.38,
+    "return_from_cumulative_pct": 1.3788891331594888,
+    "difference_pp": 0.0011108668405110933
+  },
+  {
+    "year": 2015,
+    "asset": "gold_return_pct",
+    "return_pct": -12.11,
+    "return_from_cumulative_pct": -12.106068437212269,
+    "difference_pp": 0.003931562787730769
+  },
+  {
+    "year": 2016,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 11.77,
+    "return_from_cumulative_pct": 11.773080935233038,
+    "difference_pp": 0.0030809352330383177
+  },
+  {
+    "year": 2016,
+    "asset": "gold_return_pct",
+    "return_pct": 8.1,
+    "return_from_cumulative_pct": 8.103729608268463,
+    "difference_pp": 0.003729608268463025
+  },
+  {
+    "year": 2017,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 21.61,
+    "return_from_cumulative_pct": 21.605483785048875,
+    "difference_pp": 0.004516214951124198
+  },
+  {
+    "year": 2017,
+    "asset": "gold_return_pct",
+    "return_pct": 12.66,
+    "return_from_cumulative_pct": 12.662468659039172,
+    "difference_pp": 0.0024686590391720387
+  },
+  {
+    "year": 2018,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -4.23,
+    "return_from_cumulative_pct": -4.2268698215047635,
+    "difference_pp": 0.0031301784952368905
+  },
+  {
+    "year": 2018,
+    "asset": "gold_return_pct",
+    "return_pct": -0.93,
+    "return_from_cumulative_pct": -0.929360303381066,
+    "difference_pp": 0.0006396966189340381
+  },
+  {
+    "year": 2019,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 31.21,
+    "return_from_cumulative_pct": 31.211679319407224,
+    "difference_pp": 0.0016793194072235451
+  },
+  {
+    "year": 2019,
+    "asset": "gold_return_pct",
+    "return_pct": 19.08,
+    "return_from_cumulative_pct": 19.07738138463797,
+    "difference_pp": 0.0026186153620280095
+  },
+  {
+    "year": 2020,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 18.02,
+    "return_from_cumulative_pct": 18.02320191840543,
+    "difference_pp": 0.003201918405430604
+  },
+  {
+    "year": 2020,
+    "asset": "gold_return_pct",
+    "return_pct": 24.17,
+    "return_from_cumulative_pct": 24.16938613990198,
+    "difference_pp": 0.0006138600980207798
+  },
+  {
+    "year": 2021,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 28.47,
+    "return_from_cumulative_pct": 28.468850836578863,
+    "difference_pp": 0.0011491634211360235
+  },
+  {
+    "year": 2021,
+    "asset": "gold_return_pct",
+    "return_pct": -3.75,
+    "return_from_cumulative_pct": -3.7545116897376274,
+    "difference_pp": 0.004511689737627389
+  },
+  {
+    "year": 2022,
+    "asset": "sp500_total_return_pct",
+    "return_pct": -18.04,
+    "return_from_cumulative_pct": -18.037505125140473,
+    "difference_pp": 0.0024948748595257086
+  },
+  {
+    "year": 2022,
+    "asset": "gold_return_pct",
+    "return_pct": 0.55,
+    "return_from_cumulative_pct": 0.549425003203563,
+    "difference_pp": 0.0005749967964370217
+  },
+  {
+    "year": 2023,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 26.06,
+    "return_from_cumulative_pct": 26.06068357559268,
+    "difference_pp": 0.0006835755926815068
+  },
+  {
+    "year": 2023,
+    "asset": "gold_return_pct",
+    "return_pct": 13.26,
+    "return_from_cumulative_pct": 13.262116037876304,
+    "difference_pp": 0.002116037876303878
+  },
+  {
+    "year": 2024,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 24.88,
+    "return_from_cumulative_pct": 24.878612451475558,
+    "difference_pp": 0.001387548524441229
+  },
+  {
+    "year": 2024,
+    "asset": "gold_return_pct",
+    "return_pct": 25.96,
+    "return_from_cumulative_pct": 25.957115033038967,
+    "difference_pp": 0.002884966961033797
+  },
+  {
+    "year": 2025,
+    "asset": "sp500_total_return_pct",
+    "return_pct": 17.78,
+    "return_from_cumulative_pct": 17.783675310242142,
+    "difference_pp": 0.003675310242140739
+  },
+  {
+    "year": 2025,
+    "asset": "gold_return_pct",
+    "return_pct": 66.22,
+    "return_from_cumulative_pct": 66.2157386831227,
+    "difference_pp": 0.004261316877304466
+  }
+]
