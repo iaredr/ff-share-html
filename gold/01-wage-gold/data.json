@@ -1,0 +1,654 @@
+{
+  "updated": "2026-11-06",
+  "annual": [
+    {
+      "year": 2005,
+      "nonprivate": 18200,
+      "private": null,
+      "gold": 117.15543056802792,
+      "gold_usd": 444.8333333333333,
+      "fx": 8.1917,
+      "cpi": 100.0
+    },
+    {
+      "year": 2006,
+      "nonprivate": 20856,
+      "private": null,
+      "gold": 154.91158156741287,
+      "gold_usd": 604.4166666666666,
+      "fx": 7.9718,
+      "cpi": 101.49999999999999
+    },
+    {
+      "year": 2007,
+      "nonprivate": 24721,
+      "private": null,
+      "gold": 170.31707957913352,
+      "gold_usd": 696.6666666666666,
+      "fx": 7.604,
+      "cpi": 106.37199999999999
+    },
+    {
+      "year": 2008,
+      "nonprivate": 28898,
+      "private": null,
+      "gold": 194.65318825707612,
+      "gold_usd": 871.75,
+      "fx": 6.9451,
+      "cpi": 112.647948
+    },
+    {
+      "year": 2009,
+      "nonprivate": 32244,
+      "private": 18199,
+      "gold": 213.69196256541971,
+      "gold_usd": 973.0,
+      "fx": 6.831,
+      "cpi": 111.859412364
+    },
+    {
+      "year": 2010,
+      "nonprivate": 36539,
+      "private": 20759,
+      "gold": 266.54193848836866,
+      "gold_usd": 1224.6666666666667,
+      "fx": 6.7695,
+      "cpi": 115.55077297201198
+    },
+    {
+      "year": 2011,
+      "nonprivate": 41799,
+      "private": 24556,
+      "gold": 325.84568380685556,
+      "gold_usd": 1569.1666666666667,
+      "fx": 6.4588,
+      "cpi": 121.79051471250064
+    },
+    {
+      "year": 2012,
+      "nonprivate": 46769,
+      "private": 28752,
+      "gold": 338.8445883216074,
+      "gold_usd": 1669.5833333333333,
+      "fx": 6.3125,
+      "cpi": 124.95706809502566
+    },
+    {
+      "year": 2013,
+      "nonprivate": 51483,
+      "private": 32706,
+      "gold": 281.0854251509272,
+      "gold_usd": 1411.6666666666667,
+      "fx": 6.1932,
+      "cpi": 128.20595186549633
+    },
+    {
+      "year": 2014,
+      "nonprivate": 56360,
+      "private": 36390,
+      "gold": 249.94714738771583,
+      "gold_usd": 1265.5833333333333,
+      "fx": 6.1428,
+      "cpi": 130.77007090280625
+    },
+    {
+      "year": 2015,
+      "nonprivate": 62029,
+      "private": 39589,
+      "gold": 232.43752929897533,
+      "gold_usd": 1160.75,
+      "fx": 6.2284,
+      "cpi": 132.60085189544554
+    },
+    {
+      "year": 2016,
+      "nonprivate": 67569,
+      "private": 42833,
+      "gold": 266.7300750120642,
+      "gold_usd": 1249.0,
+      "fx": 6.6423,
+      "cpi": 135.25286893335445
+    },
+    {
+      "year": 2017,
+      "nonprivate": 74318,
+      "private": 45761,
+      "gold": 272.97232893269353,
+      "gold_usd": 1257.5,
+      "fx": 6.7518,
+      "cpi": 137.41691483628813
+    },
+    {
+      "year": 2018,
+      "nonprivate": 82413,
+      "private": 49575,
+      "gold": 270.03845917315584,
+      "gold_usd": 1269.25,
+      "fx": 6.6174,
+      "cpi": 140.30267004785017
+    },
+    {
+      "year": 2019,
+      "nonprivate": 90501,
+      "private": 53604,
+      "gold": 308.8637385065582,
+      "gold_usd": 1392.5833333333333,
+      "fx": 6.8985,
+      "cpi": 144.37144747923784
+    },
+    {
+      "year": 2020,
+      "nonprivate": 97379,
+      "private": 57727,
+      "gold": 392.57593221861293,
+      "gold_usd": 1770.25,
+      "fx": 6.8976,
+      "cpi": 147.98073366621878
+    },
+    {
+      "year": 2021,
+      "nonprivate": 106837,
+      "private": 62884,
+      "gold": 373.2705494518864,
+      "gold_usd": 1799.5833333333333,
+      "fx": 6.4515,
+      "cpi": 149.31256026921477
+    },
+    {
+      "year": 2022,
+      "nonprivate": 114029,
+      "private": 65237,
+      "gold": 389.410632543819,
+      "gold_usd": 1800.75,
+      "fx": 6.7261,
+      "cpi": 152.29881147459906
+    },
+    {
+      "year": 2023,
+      "nonprivate": 120698,
+      "private": 68340,
+      "gold": 440.1429625706667,
+      "gold_usd": 1942.75,
+      "fx": 7.0467,
+      "cpi": 152.60340909754825
+    },
+    {
+      "year": 2024,
+      "nonprivate": 124110,
+      "private": 69476,
+      "gold": 546.6801134270623,
+      "gold_usd": 2387.5833333333335,
+      "fx": 7.1217,
+      "cpi": 152.90861591574335
+    },
+    {
+      "year": 2025,
+      "nonprivate": 129441,
+      "private": 71590,
+      "gold": 790.3389871192792,
+      "gold_usd": 3441.5,
+      "fx": 7.1429,
+      "cpi": 152.90861591574335
+    }
+  ],
+  "industries": {
+    "nonprivate": [
+      {
+        "category": "合计",
+        "wage_2025": 129441,
+        "wage_2024": 124110,
+        "growth_percent_published": 4.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "农、林、牧、渔业",
+        "wage_2025": 74424,
+        "wage_2024": 67475,
+        "growth_percent_published": 10.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "采矿业",
+        "wage_2025": 143361,
+        "wage_2024": 140706,
+        "growth_percent_published": 1.9,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "制造业",
+        "wage_2025": 113594,
+        "wage_2024": 107987,
+        "growth_percent_published": 5.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "电力、热力、燃气及水生产和供应业",
+        "wage_2025": 160897,
+        "wage_2024": 150285,
+        "growth_percent_published": 7.1,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "建筑业",
+        "wage_2025": 92036,
+        "wage_2024": 89519,
+        "growth_percent_published": 2.8,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "批发和零售业",
+        "wage_2025": 135749,
+        "wage_2024": 129658,
+        "growth_percent_published": 4.7,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "交通运输、仓储和邮政业",
+        "wage_2025": 133981,
+        "wage_2024": 127889,
+        "growth_percent_published": 4.8,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "住宿和餐饮业",
+        "wage_2025": 62461,
+        "wage_2024": 60240,
+        "growth_percent_published": 3.7,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "信息传输、软件和信息技术服务业",
+        "wage_2025": 248752,
+        "wage_2024": 238966,
+        "growth_percent_published": 4.1,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "金融业",
+        "wage_2025": 211164,
+        "wage_2024": 201883,
+        "growth_percent_published": 4.6,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "房地产业",
+        "wage_2025": 89679,
+        "wage_2024": 91912,
+        "growth_percent_published": -2.4,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "租赁和商务服务业",
+        "wage_2025": 110162,
+        "wage_2024": 110353,
+        "growth_percent_published": -0.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "科学研究和技术服务业",
+        "wage_2025": 182064,
+        "wage_2024": 175425,
+        "growth_percent_published": 3.8,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "水利、环境和公共设施管理业",
+        "wage_2025": 70172,
+        "wage_2024": 68315,
+        "growth_percent_published": 2.7,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "居民服务、修理和其他服务业",
+        "wage_2025": 70226,
+        "wage_2024": 68159,
+        "growth_percent_published": 3.0,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "教育",
+        "wage_2025": 133539,
+        "wage_2024": 126185,
+        "growth_percent_published": 5.8,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "卫生和社会工作",
+        "wage_2025": 146266,
+        "wage_2024": 143173,
+        "growth_percent_published": 2.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "文化、体育和娱乐业",
+        "wage_2025": 129447,
+        "wage_2024": 126040,
+        "growth_percent_published": 2.7,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "公共管理、社会保障和社会组织",
+        "wage_2025": 119465,
+        "wage_2024": 114840,
+        "growth_percent_published": 4.0,
+        "source_ids": [
+          "W02"
+        ]
+      }
+    ],
+    "private": [
+      {
+        "category": "合计",
+        "wage_2025": 71590,
+        "wage_2024": 69476,
+        "growth_percent_published": 3.0,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "农、林、牧、渔业",
+        "wage_2025": 46552,
+        "wage_2024": 46433,
+        "growth_percent_published": 0.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "采矿业",
+        "wage_2025": 79169,
+        "wage_2024": 76010,
+        "growth_percent_published": 4.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "制造业",
+        "wage_2025": 76055,
+        "wage_2024": 71467,
+        "growth_percent_published": 6.4,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "电力、热力、燃气及水生产和供应业",
+        "wage_2025": 66451,
+        "wage_2024": 63574,
+        "growth_percent_published": 4.5,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "建筑业",
+        "wage_2025": 66275,
+        "wage_2024": 65494,
+        "growth_percent_published": 1.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "批发和零售业",
+        "wage_2025": 69622,
+        "wage_2024": 67059,
+        "growth_percent_published": 3.8,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "交通运输、仓储和邮政业",
+        "wage_2025": 73133,
+        "wage_2024": 67973,
+        "growth_percent_published": 7.6,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "住宿和餐饮业",
+        "wage_2025": 55123,
+        "wage_2024": 54042,
+        "growth_percent_published": 2.0,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "信息传输、软件和信息技术服务业",
+        "wage_2025": 128166,
+        "wage_2024": 123193,
+        "growth_percent_published": 4.0,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "金融业",
+        "wage_2025": 140451,
+        "wage_2024": 135339,
+        "growth_percent_published": 3.8,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "房地产业",
+        "wage_2025": 53338,
+        "wage_2024": 55979,
+        "growth_percent_published": -4.7,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "租赁和商务服务业",
+        "wage_2025": 68919,
+        "wage_2024": 69214,
+        "growth_percent_published": -0.4,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "科学研究和技术服务业",
+        "wage_2025": 83560,
+        "wage_2024": 82387,
+        "growth_percent_published": 1.4,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "水利、环境和公共设施管理业",
+        "wage_2025": 49527,
+        "wage_2024": 49007,
+        "growth_percent_published": 1.1,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "居民服务、修理和其他服务业",
+        "wage_2025": 52059,
+        "wage_2024": 52139,
+        "growth_percent_published": -0.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "教育",
+        "wage_2025": 63908,
+        "wage_2024": 60719,
+        "growth_percent_published": 5.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "卫生和社会工作",
+        "wage_2025": 75631,
+        "wage_2024": 75287,
+        "growth_percent_published": 0.5,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "文化、体育和娱乐业",
+        "wage_2025": 64015,
+        "wage_2024": 61669,
+        "growth_percent_published": 3.8,
+        "source_ids": [
+          "W02"
+        ]
+      }
+    ]
+  },
+  "regions": {
+    "nonprivate": [
+      {
+        "category": "合计",
+        "wage_2025": 129441,
+        "wage_2024": 124110,
+        "growth_percent_published": 4.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "东部地区",
+        "wage_2025": 149902,
+        "wage_2024": 143712,
+        "growth_percent_published": 4.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "中部地区",
+        "wage_2025": 102645,
+        "wage_2024": 98090,
+        "growth_percent_published": 4.6,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "西部地区",
+        "wage_2025": 114989,
+        "wage_2024": 110376,
+        "growth_percent_published": 4.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "东北地区",
+        "wage_2025": 103803,
+        "wage_2024": 98889,
+        "growth_percent_published": 5.0,
+        "source_ids": [
+          "W02"
+        ]
+      }
+    ],
+    "private": [
+      {
+        "category": "合计",
+        "wage_2025": 71590,
+        "wage_2024": 69476,
+        "growth_percent_published": 3.0,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "东部地区",
+        "wage_2025": 80149,
+        "wage_2024": 77585,
+        "growth_percent_published": 3.3,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "中部地区",
+        "wage_2025": 58627,
+        "wage_2024": 57363,
+        "growth_percent_published": 2.2,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "西部地区",
+        "wage_2025": 60923,
+        "wage_2024": 60047,
+        "growth_percent_published": 1.5,
+        "source_ids": [
+          "W02"
+        ]
+      },
+      {
+        "category": "东北地区",
+        "wage_2025": 54430,
+        "wage_2024": 53058,
+        "growth_percent_published": 2.6,
+        "source_ids": [
+          "W02"
+        ]
+      }
+    ]
+  },
+  "method": "美元月均价的全年简单平均×年均汇率÷31.1034768；折算参考价，不是国内成交价",
+  "latest": {
+    "date": "2026-11-06",
+    "price": 868.44,
+    "instrument": "上海金午盘基准价",
+    "source": "https://sge.com.cn/h5_index"
+  }
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "number": 1,
+    "label": "国家统计局，SDDS 年度工资序列（2005—2025）",
+    "url": "https://www.stats.gov.cn/english/Statisticaldata/nsdp/201508/t20150831_1238096.html",
+    "note": "与2010年统计年鉴及2015、2025工资公告交叉核对。采用就业人员工资，不用在岗职工工资替代。",
+    "links": [
+      [
+        "2010年统计年鉴",
+        "https://www.stats.gov.cn/sj/ndsj/2010/html/E0412C.HTM"
+      ],
+      [
+        "2015非私营公告",
+        "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1899114.html"
+      ],
+      [
+        "2015私营公告",
+        "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1899115.html"
+      ]
+    ]
+  },
+  {
+    "number": 2,
+    "label": "国家统计局，2025年城镇单位就业人员年平均工资情况",
+    "url": "https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html",
+    "note": "2026-05-15。含税前定义、调查范围和行业数据。2024年扩样的口径说明另见下列解读。",
+    "links": [
+      [
+        "2024年工资统计解读",
+        "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959829.html"
+      ]
+    ]
+  },
+  {
+    "number": 3,
+    "label": "世界银行，Commodity Price Data（Pink Sheet）",
+    "url": "https://www.worldbank.org/en/research/commodity-markets",
+    "note": "月度美元黄金价格经公开数据镜像取得；2023—2025年度与2026近期月价另用世界银行2026年11月官方PDF复核。本文取十二个月简单平均，可能与日加权年均数略有不同。",
+    "links": [
+      [
+        "2026年11月官方价格表",
+        "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-November-2026.pdf"
+      ],
+      [
+        "World Bank数据镜像",
+        "https://github.com/datasets/gold-prices/blob/main/data/monthly.csv"
+      ]
+    ]
+  },
+  {
+    "number": 4,
+    "label": "国家统计局，中国统计年鉴2012：人民币汇率（年平均价）",
+    "url": "https://www.stats.gov.cn/sj/ndsj/2012/html/R0602C.HTM",
+    "note": "2005—2011年。2012—2024取南京统计年鉴2025所列全国汇率；2024年值7.1217另与国家统计局公报核对。原表元/100美元已除以100。",
+    "links": [
+      [
+        "南京统计年鉴2025全国汇率表",
+        "https://tjj.nanjing.gov.cn/material/njnj_2025/zonghe/1-15.html"
+      ],
+      [
+        "2024年统计公报",
+        "https://www.stats.gov.cn/zwfwck/sjfb/202502/t20250228_1958817.html"
+      ]
+    ]
+  },
+  {
+    "number": 5,
+    "label": "国家统计局，2025年国民经济和社会发展统计公报",
+    "url": "https://www.stats.gov.cn/english/PressRelease/202602/t20260228_1962661.html",
+    "note": "2026-02-28，2025人民币兑美元年平均汇率7.1429。重量换算采用LBMA：1金衡盎司＝31.1034768克。",
+    "links": [
+      [
+        "LBMA金衡盎司定义",
+        "https://www.lbma.org.uk/wonders-of-gold/items/the-troy-ounce"
+      ]
+    ]
+  },
+  {
+    "number": 6,
+    "label": "泉州市统计局，2025年统计年鉴：历年全国居民消费价格指数",
+    "url": "https://tjj.quanzhou.gov.cn/tsys/UpLoadFiles/43sjfb/129ndsj/qztjnj2025/cn/html/0502_5-2.html",
+    "note": "使用全国列，2005—2024；2005—2009另与国家统计局2010年鉴核对。",
+    "links": [
+      [
+        "国家统计局2010年鉴价格表",
+        "https://www.stats.gov.cn/sj/ndsj/2010/html/I0901C.HTM"
+      ]
+    ]
+  },
+  {
+    "number": 7,
+    "label": "国家统计局，2025年12月份居民消费价格发布",
+    "url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260109_1962273.html",
+    "note": "2026-01-09，2025全年全国CPI与上年持平；用于年度链累计。",
+    "links": []
+  },
+  {
+    "number": 8,
+    "label": "上海黄金交易所，上海金基准价",
+    "url": "https://sge.com.cn/h5_index",
+    "note": "2026-11-06午盘868.44元/克。日价单独用作固定2025工资的情景，未混入年度曲线。该首页滚动更新，本文保留本次核验的日期与数值。",
+    "links": []
+  },
+  {
+    "number": 9,
+    "label": "计算说明与教学样本",
+    "url": null,
+    "note": "克重＝年平均工资÷12÷参考金价；相对变化＝终点克重÷起点克重−1。五人示例[4000,5000,6000,7000,28000]为虚构教学数据，均值10000、中位数6000。个人输入和溢价为用户设定情景。所有中间量和脚本随页面归档。",
+    "links": []
+  }
+]

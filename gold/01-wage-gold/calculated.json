@@ -1,0 +1,150 @@
+{
+  "annual": [
+    {
+      "year": 2005,
+      "nonprivate_grams": 12.945764949290961,
+      "private_grams": null,
+      "decimal_crosscheck": "12.945764949290963965082099866354774"
+    },
+    {
+      "year": 2006,
+      "nonprivate_grams": 11.219303181948824,
+      "private_grams": null,
+      "decimal_crosscheck": "11.219303181948826381754005022117055"
+    },
+    {
+      "year": 2007,
+      "nonprivate_grams": 12.095576899415821,
+      "private_grams": null,
+      "decimal_crosscheck": "12.095576899415821086040924609786130"
+    },
+    {
+      "year": 2008,
+      "nonprivate_grams": 12.371575766260914,
+      "private_grams": null,
+      "decimal_crosscheck": "12.371575766260914181057775023009437"
+    },
+    {
+      "year": 2009,
+      "nonprivate_grams": 12.57417437577888,
+      "private_grams": 7.0970536988214805,
+      "decimal_crosscheck": "12.574174375778880001588791078938092"
+    },
+    {
+      "year": 2010,
+      "nonprivate_grams": 11.423780752609558,
+      "private_grams": 6.490223176425787,
+      "decimal_crosscheck": "11.423780752609560094068520273513698"
+    },
+    {
+      "year": 2011,
+      "nonprivate_grams": 10.689876138008598,
+      "private_grams": 6.280068863966581,
+      "decimal_crosscheck": "10.689876138008599138524958607129380"
+    },
+    {
+      "year": 2012,
+      "nonprivate_grams": 11.50207735638237,
+      "private_grams": 7.071088288197437,
+      "decimal_crosscheck": "11.502077356382370685302663506115672"
+    },
+    {
+      "year": 2013,
+      "nonprivate_grams": 15.263153533116755,
+      "private_grams": 9.696340528992417,
+      "decimal_crosscheck": "15.263153533116756937712457524542860"
+    },
+    {
+      "year": 2014,
+      "nonprivate_grams": 18.79063920414038,
+      "private_grams": 12.132564951005472,
+      "decimal_crosscheck": "18.790639204140379601240947241364889"
+    },
+    {
+      "year": 2015,
+      "nonprivate_grams": 22.23859180108795,
+      "private_grams": 14.1934193814711,
+      "decimal_crosscheck": "22.238591801087950004753364954287402"
+    },
+    {
+      "year": 2016,
+      "nonprivate_grams": 21.11029286721912,
+      "private_grams": 13.382130479681459,
+      "decimal_crosscheck": "21.110292867219117419404110976781064"
+    },
+    {
+      "year": 2017,
+      "nonprivate_grams": 22.68789181263024,
+      "private_grams": 13.969975204361964,
+      "decimal_crosscheck": "22.687891812630246542899656476261363"
+    },
+    {
+      "year": 2018,
+      "nonprivate_grams": 25.432488472303923,
+      "private_grams": 15.298746751294905,
+      "decimal_crosscheck": "25.432488472303924584519266475174326"
+    },
+    {
+      "year": 2019,
+      "nonprivate_grams": 24.417725552589797,
+      "private_grams": 14.462688373841432,
+      "decimal_crosscheck": "24.417725552589798610176355897151717"
+    },
+    {
+      "year": 2020,
+      "nonprivate_grams": 20.670947963635555,
+      "private_grams": 12.253892657521536,
+      "decimal_crosscheck": "20.670947963635554792931748346854018"
+    },
+    {
+      "year": 2021,
+      "nonprivate_grams": 23.85155578549311,
+      "private_grams": 14.038968091718681,
+      "decimal_crosscheck": "23.851555785493113901683849196777341"
+    },
+    {
+      "year": 2022,
+      "nonprivate_grams": 24.40204727999406,
+      "private_grams": 13.960627194880011,
+      "decimal_crosscheck": "24.402047279994063255110263017279257"
+    },
+    {
+      "year": 2023,
+      "nonprivate_grams": 22.85204472638089,
+      "private_grams": 12.93897775108842,
+      "decimal_crosscheck": "22.852044726380892945913162885523377"
+    },
+    {
+      "year": 2024,
+      "nonprivate_grams": 18.91874195892053,
+      "private_grams": 10.590593153959897,
+      "decimal_crosscheck": "18.918741958920532882423101420452246"
+    },
+    {
+      "year": 2025,
+      "nonprivate_grams": 13.648257489253846,
+      "private_grams": 7.5484487423280315,
+      "decimal_crosscheck": "13.648257489253844078853295295163577"
+    }
+  ],
+  "key_metrics": {
+    "gram2005": 12.945764949290961,
+    "gram2015": 22.23859180108795,
+    "gram2018": 25.432488472303923,
+    "gram2025": 13.648257489253846,
+    "private2025": 7.5484487423280315,
+    "change2015": -0.38628049782423046,
+    "change2005": 0.05426427427923919,
+    "wage_ratio2015": 2.0867819890696286,
+    "gold_ratio2015": 3.400221080919755,
+    "fixed2015price2025wage": 46.40709283278185,
+    "wage_ratio2005": 7.1121428571428575,
+    "gold_ratio2005": 6.746072147806737,
+    "cpi_ratio2005": 1.5290861591574336,
+    "latest_fixed_wage_grams": 12.420835060568375
+  },
+  "checks": {
+    "yearly_decimal_crosschecks": 21,
+    "all_passed": true
+  }
+}

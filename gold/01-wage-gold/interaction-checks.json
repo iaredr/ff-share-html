@@ -1,0 +1,63 @@
+{
+  "page": "01-wage-gold",
+  "interactionTests": [
+    {
+      "control": "historyYear",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "2005 年起",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "2011 年起",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "2015 年起",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "2018 年起",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "2021 年起",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "salary",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "personalYear",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "available",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "premium",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "known calculation",
+      "expected": 39.111193145187364,
+      "actual": 39.11,
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "at": "2026-11-06T15:09:23.873Z"
+}

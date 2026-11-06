@@ -1,0 +1,486 @@
+[
+  {
+    "width": 360,
+    "height": 21325,
+    "documentWidth": 345,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero-grams",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "division",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "full-history",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "indexed-race",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "counterfactual",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "start-comparison",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "groups",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "industries",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "mean-median",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "latest-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "three-rulers",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-calculator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "article": "01-wage-gold",
+      "years": 21,
+      "privateStart": 2009,
+      "gram2005": 12.945764949290961,
+      "gram2015": 22.23859180108795,
+      "gram2025": 13.648257489253846,
+      "private2025": 7.5484487423280315,
+      "change2015": -0.38628049782423046,
+      "latest": {
+        "date": "2026-11-06",
+        "price": 868.44,
+        "instrument": "上海金午盘基准价",
+        "source": "https://sge.com.cn/h5_index"
+      },
+      "personal": {
+        "salary": 10000,
+        "year": 2025,
+        "available": 1,
+        "premium": 0,
+        "price": 790.3389871192792,
+        "grams": 12.652798562360159,
+        "theory": 12.652798562360159
+      }
+    },
+    "pass": true
+  },
+  {
+    "width": 390,
+    "height": 20478,
+    "documentWidth": 375,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero-grams",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "division",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "full-history",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "indexed-race",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "counterfactual",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "start-comparison",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "groups",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "industries",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "mean-median",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "latest-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "three-rulers",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-calculator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "article": "01-wage-gold",
+      "years": 21,
+      "privateStart": 2009,
+      "gram2005": 12.945764949290961,
+      "gram2015": 22.23859180108795,
+      "gram2025": 13.648257489253846,
+      "private2025": 7.5484487423280315,
+      "change2015": -0.38628049782423046,
+      "latest": {
+        "date": "2026-11-06",
+        "price": 868.44,
+        "instrument": "上海金午盘基准价",
+        "source": "https://sge.com.cn/h5_index"
+      },
+      "personal": {
+        "salary": 10000,
+        "year": 2025,
+        "available": 1,
+        "premium": 0,
+        "price": 790.3389871192792,
+        "grams": 12.652798562360159,
+        "theory": 12.652798562360159
+      }
+    },
+    "pass": true
+  },
+  {
+    "width": 768,
+    "height": 17345,
+    "documentWidth": 753,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero-grams",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "division",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "full-history",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "indexed-race",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "counterfactual",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "start-comparison",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "groups",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "industries",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "mean-median",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "latest-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "three-rulers",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-calculator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "article": "01-wage-gold",
+      "years": 21,
+      "privateStart": 2009,
+      "gram2005": 12.945764949290961,
+      "gram2015": 22.23859180108795,
+      "gram2025": 13.648257489253846,
+      "private2025": 7.5484487423280315,
+      "change2015": -0.38628049782423046,
+      "latest": {
+        "date": "2026-11-06",
+        "price": 868.44,
+        "instrument": "上海金午盘基准价",
+        "source": "https://sge.com.cn/h5_index"
+      },
+      "personal": {
+        "salary": 10000,
+        "year": 2025,
+        "available": 1,
+        "premium": 0,
+        "price": 790.3389871192792,
+        "grams": 12.652798562360159,
+        "theory": 12.652798562360159
+      }
+    },
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "height": 15616,
+    "documentWidth": 1425,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "hero-grams",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "division",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "full-history",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "indexed-race",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "counterfactual",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "start-comparison",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "groups",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "industries",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "mean-median",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "latest-scenario",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "three-rulers",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-calculator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": {
+      "article": "01-wage-gold",
+      "years": 21,
+      "privateStart": 2009,
+      "gram2005": 12.945764949290961,
+      "gram2015": 22.23859180108795,
+      "gram2025": 13.648257489253846,
+      "private2025": 7.5484487423280315,
+      "change2015": -0.38628049782423046,
+      "latest": {
+        "date": "2026-11-06",
+        "price": 868.44,
+        "instrument": "上海金午盘基准价",
+        "source": "https://sge.com.cn/h5_index"
+      },
+      "personal": {
+        "salary": 10000,
+        "year": 2025,
+        "available": 1,
+        "premium": 0,
+        "price": 790.3389871192792,
+        "grams": 12.652798562360159,
+        "theory": 12.652798562360159
+      }
+    },
+    "pass": true
+  }
+]
