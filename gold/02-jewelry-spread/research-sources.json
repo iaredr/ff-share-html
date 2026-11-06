@@ -1,0 +1,179 @@
+[
+  {
+    "id": "J1",
+    "title": "开屏消费观｜金价震荡，“炒金”退潮！昆明市场黄金消费回归理性",
+    "publisher": "春城晚报·开屏新闻",
+    "url": "https://www.ccwb.cn/content/202611/05/c934289.html",
+    "published": "2026-11-05",
+    "observed_date": "2026-11-03",
+    "accessed": "2026-11-06",
+    "type": "记者现场走访及品牌小程序，一手采访",
+    "web_ref": "turn12view0",
+    "facts": {
+      "brand": "周大福",
+      "jewelry_cny_g": 1185,
+      "repurchase_reference_cny_g": 821,
+      "investment_bar_cny_g": 916,
+      "craft_fee_included": false
+    },
+    "scope": "昆明市场走访当日参考报价；不是已成交小票，不代表任何首饰都能按此回收。报道明确最终成交以门店公示及回购规则为准。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J2",
+    "title": "上海黄金交易所每日交易行情 2026-11-03",
+    "publisher": "上海黄金交易所",
+    "url": "https://www.sge.com.cn/sjzx/quotation_daily_new?end_date=2026-11-03&start_date=2026-11-03",
+    "published": "2026-11-03",
+    "accessed": "2026-11-06",
+    "type": "交易所一手行情",
+    "web_ref": "turn14search0",
+    "facts": {
+      "contract": "Au99.99",
+      "open": 836.0,
+      "high": 849.99,
+      "low": 834.0,
+      "close": 840.01,
+      "weighted_average": 844.56,
+      "volume_kg_two_way": 7442.78
+    },
+    "scope": "人民币元/克，交易所标准黄金。收盘价和均价不同；不是首饰回收承诺，也不是品牌的实际采购成本。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J3",
+    "title": "金价“退烧” 金店“发热”",
+    "publisher": "上海证券报·中国证券网（东方财富转载）",
+    "url": "https://finance.eastmoney.com/a/202611043921965428.html",
+    "published": "2026-11-04",
+    "accessed": "2026-11-06",
+    "type": "权威财经媒体交叉验证",
+    "web_ref": "turn11search4",
+    "facts": {
+      "ctf_jewelry_2026_11_03_cny_g": 1185,
+      "sge_au9999_2026_11_03_close_rounded": 840
+    },
+    "scope": "用于交叉核对挂牌价和交易所收盘价；不验证821回购价。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J4",
+    "title": "金价涨涨跌跌，旧首饰如何处理？",
+    "publisher": "新华网",
+    "url": "https://www.xinhuanet.com/fortune/20251031/381a7df6729d4806b0efee0c48d45bbf/c.html",
+    "published": "2025-10-31",
+    "accessed": "2026-11-06",
+    "type": "一手采访/权威媒体",
+    "web_ref": "turn12view2",
+    "facts": {
+      "some_brands_exchange_only": true,
+      "purchase_craft_fee_not_recovered": true,
+      "acceptance_rules_vary": true
+    },
+    "scope": "只引用回购准入、工费不回收、换新与现金不同的一般机制，不把2025历史费率当2026通用最新费率。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J5",
+    "title": "Gold Repo",
+    "publisher": "中国工商银行",
+    "url": "https://www.icbc.com.cn/ICBC/EN/PreciousMetal/FinanceWealthManagement/GoldRepo/",
+    "published": null,
+    "accessed": "2026-11-06",
+    "type": "银行一手业务说明",
+    "web_ref": "turn14search4",
+    "facts": {
+      "minimum_purity_pct": 99.0,
+      "pricing": "回购基础价格减去价差；基础价参照SGE Au99.99实时相关价格",
+      "settlement_basis": "检测后的成色、实际重量和确认价格"
+    },
+    "scope": "不同网点适用产品不同；不将其当对所有首饰的无条件承诺。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J6",
+    "title": "黄金回购",
+    "publisher": "中国工商银行",
+    "url": "https://big5.icbc.com.cn/ICBC/%E7%BD%91%E4%B8%8A%E9%BB%84%E9%87%91/%E8%B4%B5%E9%87%91%E5%B1%9E%E4%B8%9A%E5%8A%A1/n%E8%9E%8D%E8%B5%84%E7%90%86%E8%B4%A2/%E9%BB%84%E9%87%91%E5%9B%9E%E8%B4%AD/",
+    "published": null,
+    "accessed": "2026-11-06",
+    "type": "银行一手业务说明",
+    "web_ref": "turn14search2",
+    "facts": {
+      "fire_assay_destructive": true,
+      "weekday_hours": "09:00–15:30，具体以网点为准",
+      "closed_weekends_holidays": true
+    },
+    "scope": "火熔检验会改变首饰形态；引用办理条件，不引用费率。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J7",
+    "title": "关于黄金有关税收政策的公告",
+    "publisher": "财政部、国家税务总局",
+    "url": "https://szs.mof.gov.cn/zhengcefabu/202510/t20251031_3975421.htm",
+    "published": "2025-11-01",
+    "document_signed": "2025-10-29",
+    "document_number": "2025年第11号",
+    "accessed": "2026-11-06",
+    "type": "政策一手原文",
+    "web_ref": "turn17view1",
+    "facts": {
+      "effective_start": "2025-11-01",
+      "effective_end": "2027-12-31",
+      "noninvestment_ordinary_invoice_input_deduction_pct": 6,
+      "investment_definition_purity_pct_minimum": 99.5
+    },
+    "scope": "非投资用途购入标准黄金的一般纳税人按普通发票注明金额6%扣除率计算进项税额；不是首饰零售统一征收6%的消费税，也不能由此推出每克涨价固定幅度。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J8",
+    "title": "婚嫁首飾－定價足金 常见问答",
+    "publisher": "周大福香港官方网站",
+    "url": "https://www.chowtaifook.com/zh-hk/eshop/wedding/fixed-price-pure-gold",
+    "published": null,
+    "accessed": "2026-11-06",
+    "type": "品牌官方说明",
+    "web_ref": "turn17search0",
+    "facts": {
+      "recovery_basis": "当日金价与实际黄金重量",
+      "design_craft_fees_in_recovery": false
+    },
+    "scope": "香港站解释金饰定价与回收机制；不能用于证明中国内地具体回购承诺。",
+    "public_bibliography": false
+  },
+  {
+    "id": "J9",
+    "title": "中国黄金，调整回购规则",
+    "publisher": "中国黄金公告，北京日报转载",
+    "url": "https://news.bjd.com.cn/2026/02/07/11572138.shtml",
+    "published": "2026-02-07",
+    "document_signed": "2026-02-05",
+    "accessed": "2026-11-06",
+    "type": "公司公告全文转载",
+    "web_ref": "turn5search3",
+    "facts": {
+      "effective": "2026-02-07",
+      "closed_sge_nontrading_days": true,
+      "reservation_and_limits": true
+    },
+    "scope": "中国黄金品牌渠道的业务规则，不外推全部品牌。",
+    "public_bibliography": true
+  },
+  {
+    "id": "J10",
+    "title": "上海黄金交易所2026-11-03日交易行情",
+    "publisher": "中国有色金属报·中国有色网",
+    "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=475187",
+    "published": "2026-11-04",
+    "accessed": "2026-11-06",
+    "type": "交易所行情转载交叉核对",
+    "web_ref": "turn14search1",
+    "facts": {
+      "au9999_close": 840.01,
+      "au9999_weighted_average": 844.56
+    },
+    "public_bibliography": true
+  }
+]

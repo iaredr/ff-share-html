@@ -1,0 +1,67 @@
+{
+  "page": "02-jewelry-spread",
+  "interactionTests": [
+    {
+      "control": "3 克",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "10 克",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "30 克",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "calcWeight",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "calcFee",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "calcDiscount",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "calcExtra",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "reboundRange",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "personalPaid",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "personalWeight",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "personalRate",
+      "changed": true,
+      "errors": []
+    },
+    {
+      "control": "personalExtra",
+      "changed": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "at": "2026-11-06T15:17:29.622Z"
+}

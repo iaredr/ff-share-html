@@ -1,0 +1,10 @@
+{
+  "static_checks": "passed",
+  "main_chinese_characters": 4265,
+  "evidence_modules": 12,
+  "citations": 8,
+  "external_resource_tags": 0,
+  "js_syntax": "passed",
+  "numeric_cross_check": "passed",
+  "browser_check": "Requires parent-agent viewport, screenshot, offline and runtime verification; not asserted here."
+}

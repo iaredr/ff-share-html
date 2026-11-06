@@ -1,0 +1,68 @@
+{
+  "topic": "02 jewelry-spread",
+  "research_asof": "2026-11-06",
+  "status": "research_ready_as_dated_case",
+  "quote_date": "2026-11-03",
+  "currency": "CNY",
+  "unit": "yuan_per_gram",
+  "brand": "周大福",
+  "retail_quote": 1185,
+  "retail_source": "1",
+  "buyback_reference": 821,
+  "buyback_source": "1",
+  "bar_quote": 916,
+  "bar_source": "1",
+  "sge_close": 840.01,
+  "sge_weighted_average": 844.56,
+  "sge_source": "2",
+  "separately_billed_craft_fee_actual": null,
+  "extra_buyback_deductions_actual": null,
+  "actual_transaction_receipt": null,
+  "hero_claim_type": "公开参考报价的静态测算，不是实际成交损失、实时行情或全国统一回购价",
+  "baseline_assumptions": {
+    "weight_g": 10,
+    "craft_fee_cny_g": 0,
+    "extra_deductions": 0,
+    "retail_discount_cny_g": 0,
+    "note": "0表示未纳入计算，不表示实际免工费/免扣费；基线只算报价差"
+  },
+  "scenario_inputs": {
+    "weights_g": [
+      3,
+      10,
+      30
+    ],
+    "craft_fees_cny_g": [
+      0,
+      30,
+      60,
+      100
+    ],
+    "retail_discounts_cny_g": [
+      0,
+      50,
+      100
+    ],
+    "buyback_price_change_pct": [
+      -20,
+      -10,
+      0,
+      10,
+      20,
+      30,
+      40,
+      44.3361753958587,
+      50
+    ]
+  },
+  "latest_quote_rejected": {
+    "date": "2026-11-06",
+    "jewelry_quote_seen": 1229,
+    "third_party_ctf_buyback_seen": [
+      841,
+      852
+    ],
+    "reason": "回收站点之间报价和换新标签混淆且不同；未找到最新品牌一手现金回购条件。不可混用中国黄金泛化857回收价与周大福首饰。11/3为本次可核实的最新同日同品牌参考快照。"
+  },
+  "visual_benchmark": "sge_weighted_average"
+}

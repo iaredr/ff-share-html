@@ -1,0 +1,390 @@
+[
+  {
+    "width": 360,
+    "height": 18192,
+    "documentWidth": 345,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "receipt",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "price-ladder",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "invoice",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "fee-sensitivity",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "denominator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rebound",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "weight",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "discount",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "settlement",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tax",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "conditions",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-card",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": null,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "height": 17502,
+    "documentWidth": 375,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "receipt",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "price-ladder",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "invoice",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "fee-sensitivity",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "denominator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rebound",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "weight",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "discount",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "settlement",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tax",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "conditions",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-card",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": null,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "height": 13502,
+    "documentWidth": 753,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "receipt",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "price-ladder",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "invoice",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "fee-sensitivity",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "denominator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rebound",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "weight",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "discount",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "settlement",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tax",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "conditions",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-card",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": null,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "height": 14808,
+    "documentWidth": 1425,
+    "overflow": [],
+    "tinyChartText": [],
+    "figures": [
+      {
+        "id": "receipt",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "price-ladder",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "invoice",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "fee-sensitivity",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "denominator",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "rebound",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "weight",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "discount",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "settlement",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "tax",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "conditions",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      },
+      {
+        "id": "personal-card",
+        "question": true,
+        "finding": true,
+        "meta": true,
+        "visible": true
+      }
+    ],
+    "errors": [],
+    "resources": [],
+    "checks": null,
+    "pass": true
+  }
+]
